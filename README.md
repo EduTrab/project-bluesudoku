@@ -4,12 +4,12 @@ ONE-PARAGRAPH DESCRIPTION OF YOUR GAME
 
 ## Team Members
 
-* FIRSTNAME LASTNAME (EMAIL), GITHUBACCOUNT
+* Chengjiang He (chengjiang.he@usi.ch), CodingCarson
 * FIRSTNAME LASTNAME (EMAIL), GITHUBACCOUNT
 
 ## Mentor
 
-* TA NAME (TA must have agreed to mentor you)
+* Igor Moreno Santos
 
 ## Project Structure
 
