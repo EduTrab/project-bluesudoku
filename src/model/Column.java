@@ -24,4 +24,12 @@ public class Column
         }
     }
 
+    /**
+     * An accessor method which returns the list of cells in this column.
+     * @return The list of cells in this column
+     */
+    public ArrayList<Cell> getCells()
+    {
+        return this.columnCells;
+    }
 }

@@ -29,5 +29,14 @@ public class SubGrid
             }
         }
     }
+    
+    /**
+     * An accessor method which returns the list of cells in this subgird.
+     * @return The list of cells in this subgird
+     */
+    public ArrayList<Cell> getCells()
+    {
+        return this.subGridCells;
+    }
 
 }

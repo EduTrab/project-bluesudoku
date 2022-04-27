@@ -25,5 +25,14 @@ public class Row
             this.rowCells.set(i, theGrid.getCells().get(i + (row - 1) * 9));
         }
     }
+    
+    /**
+     * An accessor method which returns the list of cells in this row
+     * @return The list of cells in this row
+     */
+    public ArrayList<Cell> getCells()
+    {
+        return this.rowCells;
+    }
 
 }
