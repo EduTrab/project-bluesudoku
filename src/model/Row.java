@@ -1,7 +1,9 @@
 package model;
 
+import java.util.ArrayList;
+
 /**
- * Row is an array consists of 9 cell objects in the same row as its elements.
+ * A row is an array consists of 9 cell objects in the same row as its elements.
  * For example row1 contains cell1,1, cell2,1, cell3,1, ..., cell9,1
  *
  * @author Chengjiang He
@@ -11,16 +13,16 @@ public class Row
 {
     // TODO: To store the cells in a row, we should use 9 fields or a list?\
     
-    private Cell[] rowCells;
+    private ArrayList<Cell> rowCells;
     
     /**
      * Constructor for objects of class Row
      */
     public Row(Grid theGrid, int row)
     {
-        rowCells = new Cell[9];
+        rowCells = new ArrayList<Cell>();
         for(int i = 0; i < 8; i++){
-            rowCells[i] = theGrid.cells[i + (row - 1) * 9]; 
+            this.rowCells.set(i, theGrid.getCells().get(i + (row - 1) * 9));
         }
     }
 

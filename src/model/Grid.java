@@ -1,35 +1,33 @@
 package model;
 
+import java.util.ArrayList;
 
 /**
- * Write a description of class Grid here.
+ * A Grid is a 9x9 Sudoku grid, which can be divided into 9 subgrids or 9 rows or 9 columns.
+ * It is actually a ArrayList of Cell and consists of 81 cells as elements.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Chengjiang He
+ * @version 2022.04.27
  */
 public class Grid
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Cell> cells;
 
     /**
      * Constructor for objects of class Grid
      */
     public Grid()
     {
-        // initialise instance variables
-        x = 0;
+       this.cells = new ArrayList<Cell>(); 
+    }
+    
+    public void addCell(Cell cell){
+        this.cells.add(cell);
+    }
+    
+    public ArrayList<Cell> getCells(){
+        return this.cells;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+
 }
