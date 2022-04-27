@@ -2,20 +2,20 @@ package model;
 
 
 /**
- * Write a description of class Board here.
+ * Write a description of class Grid here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Board
+public class Grid
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class Board
+     * Constructor for objects of class Grid
      */
-    public Board()
+    public Grid()
     {
         // initialise instance variables
         x = 0;
