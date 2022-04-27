@@ -1,10 +1,14 @@
 # Project PROJECTNAME
 
 ONE-PARAGRAPH DESCRIPTION OF YOUR GAME
+BlueSudoku
+The classic sudoku game consists of a 9 × 9 grid with some squares beeing filled with numbers from 1-9. 
+The object of the puzzle is to fill the remaining squares, using all the numbers 1–9 exactly once in each row, column, and the nine 3 × 3 subgrids.
 
 ## Team Members
 
 * Chengjiang He (chengjiang.he@usi.ch), CodingCarson
+* Eduardo Trabattoni (trabae@usi.ch), EduTrab
 * FIRSTNAME LASTNAME (EMAIL), GITHUBACCOUNT
 
 ## Mentor
