@@ -21,10 +21,20 @@ public class Grid
        this.cells = new ArrayList<Cell>(); 
     }
     
+    /**
+     * Add a cell into the current grid.
+     * 
+     * @param cell The cell needs to be added
+     */
     public void addCell(Cell cell){
         this.cells.add(cell);
     }
     
+    /**
+     * Get the list of all cells of the current grid.
+     * 
+     * @return The list of all cells of the current grid
+     */
     public ArrayList<Cell> getCells(){
         return this.cells;
     }
