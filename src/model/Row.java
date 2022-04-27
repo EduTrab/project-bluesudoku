@@ -1,7 +1,7 @@
 package model;
 
 /**
- * Row is a arraylist consists of 9 cell objects in the same row as its elements.
+ * Row is an array consists of 9 cell objects in the same row as its elements.
  * For example row1 contains cell1,1, cell2,1, cell3,1, ..., cell9,1
  *
  * @author Chengjiang He
@@ -19,8 +19,8 @@ public class Row
     public Row(Grid theGrid, int row)
     {
         rowCells = new Cell[9];
-        for(int i = 0; i < 9; i++){
-            rowCells[i] = cells[i + (row - 1) * 9]; 
+        for(int i = 0; i < 8; i++){
+            rowCells[i] = theGrid.cells[i + (row - 1) * 9]; 
         }
     }
 
