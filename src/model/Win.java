@@ -11,7 +11,6 @@ import java.util.HashSet;
  */
 public class Win
 {
-    // instance variables - replace the example below with your own
     private boolean ifwin;
 
     /**
@@ -54,14 +53,49 @@ public class Win
      * @return True if there is no same elements in the subgrid, otherwise return false
 
      */
-    public boolean testColumn(SubGrid subgrid)
+    public boolean testSubGrid(SubGrid subgrid)
     {
         HashSet<Cell> set = new HashSet<Cell>(subgrid.getCells());
         ifwin = subgrid.getCells().size() == set.size();
         return ifwin;
     }
     
-    public boolean testAll(Grid grid){
-        return true;
+    /**
+     * Return true if all rows met the win conditional, otherwise return false
+     * @param grid The current grid
+     * @return True if all rows met the win conditional, otherwise return false
+     */
+    public boolean testAllRows(Grid grid){
+        for(int i = 1; i < 9; i++){
+            Row currentRow = new Row(grid, i);
+            ifwin = testRow(currentRow);
+        }
+        return ifwin;
+    }
+    
+    /**
+     * Return true if all columns met the win conditional, otherwise return false
+     * @param grid The current grid
+     * @return True if all columns met the win conditional, otherwise return false
+     */
+    public boolean testAllColumns(Grid grid){
+        for(int i = 1; i < 9; i++){
+            Column currentColumn = new Column(grid, i);
+            ifwin = testColumn(currentColumn);
+        }
+        return ifwin;
+    }
+    
+    /**
+     * Return true if all subgrids met the win conditional, otherwise return false
+     * @param grid The current grid
+     * @return True if all subgrids met the win conditional, otherwise return false
+     */
+    public boolean testAllSubGrids(Grid grid){
+        for(int i = 1; i < 9; i++){
+            SubGrid currentSubGrid = new SubGrid(grid, i);
+            ifwin = testSubGrid(currentSubGrid);
+        }
+        return ifwin;
     }
 }
