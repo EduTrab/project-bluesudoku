@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class Row
 {
-    // TODO: To store the cells in a row, we should use 9 fields or a list?\
+    // TODO: To store the cells in a row, we should use 9 fields or a list?
     
     private ArrayList<Cell> rowCells;
     

@@ -37,6 +37,33 @@ public class Cell
     }
 
     /**
+     * Accessor method to get the value of current cell
+     * @return The value of current cell
+     */
+    public int getValue()
+    {
+        return this.value;
+    }
+    
+    /**
+     * Accessor method to get the x coordinate of current cell
+     * @return The x coordinate of current cell
+     */
+    public int getXCoordinate()
+    {
+        return this.x;
+    }
+    
+    /**
+     * Accessor method to get the y coordinate of current cell
+     * @return The y coordinate of current cell
+     */
+    public int getYCoordinate()
+    {
+        return this.y;
+    }
+    
+    /**
      * Change the value of a cell.
      * @param cellValue A integer number represents the new value of the cell (0 if the cell should be empty)
      */
