@@ -7,7 +7,7 @@ import java.util.HashSet;
  * This class defines the conditions to win the game
  *
  * @author Chengjiang He
- * @version 2022.04.27
+ * @version 2022.04.28
  */
 public class Win
 {
@@ -22,6 +22,15 @@ public class Win
     }
 
     /**
+     * Successor method to get ifwin
+     * @return ifwin
+     */
+    public boolean getIfwin()
+    {
+        return this.ifwin;
+    }
+    
+    /**
      * Return true if there is no same elements in the row, otherwise return false
      * @param  row The row needs to be tested
      * @return True if there is no same elements in the row, otherwise return false
@@ -31,7 +40,7 @@ public class Win
     {
         HashSet<Cell> set = new HashSet<Cell>(row.getCells());
         ifwin = row.getCells().size() == set.size();
-        return ifwin;
+        return this.ifwin;
     }
     
     /**
@@ -43,8 +52,8 @@ public class Win
     public boolean testColumn(Column column)
     {
         HashSet<Cell> set = new HashSet<Cell>(column.getCells());
-        ifwin = column.getCells().size() == set.size();
-        return ifwin;
+        this.ifwin = column.getCells().size() == set.size();
+        return this.ifwin;
     }
     
     /**
@@ -56,8 +65,8 @@ public class Win
     public boolean testSubGrid(SubGrid subgrid)
     {
         HashSet<Cell> set = new HashSet<Cell>(subgrid.getCells());
-        ifwin = subgrid.getCells().size() == set.size();
-        return ifwin;
+        this.ifwin = subgrid.getCells().size() == set.size();
+        return this.ifwin;
     }
     
     /**
@@ -65,12 +74,13 @@ public class Win
      * @param grid The current grid
      * @return True if all rows met the win conditional, otherwise return false
      */
-    public boolean testAllRows(Grid grid){
+    public boolean testAllRows(Grid grid)
+    {
         for(int i = 1; i < 9; i++){
             Row currentRow = new Row(grid, i);
-            ifwin = testRow(currentRow);
+            this.ifwin = testRow(currentRow);
         }
-        return ifwin;
+        return this.ifwin;
     }
     
     /**
@@ -78,12 +88,13 @@ public class Win
      * @param grid The current grid
      * @return True if all columns met the win conditional, otherwise return false
      */
-    public boolean testAllColumns(Grid grid){
+    public boolean testAllColumns(Grid grid)
+    {
         for(int i = 1; i < 9; i++){
             Column currentColumn = new Column(grid, i);
-            ifwin = testColumn(currentColumn);
+            this.ifwin = testColumn(currentColumn);
         }
-        return ifwin;
+        return this.ifwin;
     }
     
     /**
@@ -91,11 +102,21 @@ public class Win
      * @param grid The current grid
      * @return True if all subgrids met the win conditional, otherwise return false
      */
-    public boolean testAllSubGrids(Grid grid){
+    public boolean testAllSubGrids(Grid grid)
+    {
         for(int i = 1; i < 9; i++){
             SubGrid currentSubGrid = new SubGrid(grid, i);
-            ifwin = testSubGrid(currentSubGrid);
+            this.ifwin = testSubGrid(currentSubGrid);
         }
-        return ifwin;
+        return this.ifwin;
+    }
+    
+    /**
+     * Return true if all win conditions are met, otherwise return false
+     * @param grid The current grid
+     */
+    public void testAll(Grid grid)
+    {
+        this.ifwin = testAllRows(grid) && testAllColumns(grid) && testAllSubGrids(grid);
     }
 }

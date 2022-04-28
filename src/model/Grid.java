@@ -12,16 +12,6 @@ import java.util.ArrayList;
 public class Grid
 {
     private ArrayList<Cell> cells;
-    
-    private Row row1;
-    private Row row2;
-    private Row row3;
-    private Row row4;
-    private Row row5;
-    private Row row6;
-    private Row row7;
-    private Row row8;
-    private Row row9;
 
     /**
      * Constructor for objects of class Grid
