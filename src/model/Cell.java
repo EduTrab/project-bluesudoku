@@ -3,19 +3,19 @@ package model;
 /**
  * A cell is the basic unit of a Sudoku grids, which has three fields (a x
  * coordinate, a y coordinate and a value. All this three fields are integer
- * numbers from 1 to 9 (inclusive) )
+ * numbers from 1 to 9 (inclusive) ).
  *
  * @author Chengjiang He
  * @version 2022.04.27
  */
 public class Cell {
-    // instance variables - replace the example below with your own
+    // instance variables - replace the example below with your own.
     private int x;
     private int y;
     private int value;
 
     /**
-     * Constructor for objects of class Cell (unfilled ones)
+     * Constructor for objects of class Cell (unfilled ones).
      */
     public Cell(int xCoordinate, int yCoordinate) {
         this.x = xCoordinate;
@@ -24,7 +24,7 @@ public class Cell {
     }
 
     /**
-     * Constructor for objects of class Cell
+     * Constructor for objects of class Cell.
      */
     public Cell(int xCoordinate, int yCoordinate, int cellValue) {
         this.x = xCoordinate;
@@ -33,7 +33,7 @@ public class Cell {
     }
 
     /**
-     * Accessor method to get the value of current cell
+     * Accessor method to get the value of current cell.
      * 
      * @return The value of current cell
      */
@@ -42,7 +42,7 @@ public class Cell {
     }
 
     /**
-     * Accessor method to get the x coordinate of current cell
+     * Accessor method to get the x coordinate of current cell.
      * 
      * @return The x coordinate of current cell
      */
@@ -51,7 +51,7 @@ public class Cell {
     }
 
     /**
-     * Accessor method to get the y coordinate of current cell
+     * Accessor method to get the y coordinate of current cell.
      * 
      * @return The y coordinate of current cell
      */

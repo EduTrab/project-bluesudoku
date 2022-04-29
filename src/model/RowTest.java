@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
  */
 public class RowTest {
     /**
-     * Default constructor for test class RowTest
+     * Default constructor for test class RowTest.
      */
     public RowTest() {
     }

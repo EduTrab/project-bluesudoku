@@ -3,7 +3,7 @@ package model;
 import java.util.HashSet;
 
 /**
- * This class defines the conditions to win the game
+ * This class defines the conditions to win the game.
  *
  * @author Chengjiang He
  * @version 2022.04.28
@@ -12,14 +12,14 @@ public class Win {
     private boolean ifwin;
 
     /**
-     * Constructor for objects of class Win
+     * Constructor for objects of class Win.
      */
     public Win() {
         ifwin = false;
     }
 
     /**
-     * Successor method to get ifwin
+     * Successor method to get ifwin.
      * 
      * @return ifwin
      */
@@ -28,7 +28,7 @@ public class Win {
     }
 
     /**
-     * Return true if there is no same elements in the row, otherwise return false
+     * Return true if there is no same elements in the row, otherwise return false.
      * 
      * @param row The row needs to be tested
      * @return True if there is no same elements in the row, otherwise return false
@@ -42,7 +42,7 @@ public class Win {
 
     /**
      * Return true if there is no same elements in the column, otherwise return
-     * false
+     * false.
      * 
      * @param row The row needs to be tested
      * @return True if there is no same elements in the column, otherwise return
@@ -57,7 +57,7 @@ public class Win {
 
     /**
      * Return true if there is no same elements in the subgrid, otherwise return
-     * false
+     * false.
      * 
      * @param row The row needs to be tested
      * @return True if there is no same elements in the subgrid, otherwise return
@@ -71,7 +71,7 @@ public class Win {
     }
 
     /**
-     * Return true if all rows met the win conditional, otherwise return false
+     * Return true if all rows met the win conditional, otherwise return false.
      * 
      * @param grid The current grid
      * @return True if all rows met the win conditional, otherwise return false
@@ -85,7 +85,7 @@ public class Win {
     }
 
     /**
-     * Return true if all columns met the win conditional, otherwise return false
+     * Return true if all columns met the win conditional, otherwise return false.
      * 
      * @param grid The current grid
      * @return True if all columns met the win conditional, otherwise return false
@@ -99,7 +99,7 @@ public class Win {
     }
 
     /**
-     * Return true if all subgrids met the win conditional, otherwise return false
+     * Return true if all subgrids met the win conditional, otherwise return false.
      * 
      * @param grid The current grid
      * @return True if all subgrids met the win conditional, otherwise return false
@@ -113,7 +113,7 @@ public class Win {
     }
 
     /**
-     * Return true if all win conditions are met, otherwise return false
+     * Return true if all win conditions are met, otherwise return false.
      * 
      * @param grid The current grid
      */

@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
  */
 public class SubGridTest {
     /**
-     * Default constructor for test class SubGridTest
+     * Default constructor for test class SubGridTest.
      */
     public SubGridTest() {
     }

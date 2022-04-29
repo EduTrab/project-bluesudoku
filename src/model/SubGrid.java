@@ -15,7 +15,7 @@ public class SubGrid {
     private ArrayList<Cell> subGridCells;
 
     /**
-     * Constructor for objects of class subGrid
+     * Constructor for objects of class subGrid.
      */
     public SubGrid(Grid theGrid, int subGrid) {
         int remainder = subGrid % 3;

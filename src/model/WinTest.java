@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
  */
 public class WinTest {
     /**
-     * Default constructor for test class WinTest
+     * Default constructor for test class WinTest.
      */
     public WinTest() {
     }

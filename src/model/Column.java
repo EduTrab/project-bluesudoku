@@ -14,7 +14,7 @@ public class Column {
     private ArrayList<Cell> columnCells;
 
     /**
-     * Constructor for objects of class Column
+     * Constructor for objects of class Column.
      */
     public Column(Grid theGrid, int column) {
         columnCells = new ArrayList<Cell>();

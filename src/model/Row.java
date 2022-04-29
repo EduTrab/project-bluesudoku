@@ -15,7 +15,7 @@ public class Row {
     private ArrayList<Cell> rowCells;
 
     /**
-     * Constructor for objects of class Row
+     * Constructor for objects of class Row.
      */
     public Row(Grid theGrid, int row) {
         rowCells = new ArrayList<Cell>();
@@ -27,7 +27,7 @@ public class Row {
     /**
      * An accessor method which returns the list of cells in this row
      * 
-     * @return The list of cells in this row
+     * @return The list of cells in this row.
      */
     public ArrayList<Cell> getCells() {
         return this.rowCells;
