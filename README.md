@@ -1,4 +1,4 @@
-# Project PROJECTNAME
+# Project BlueSudoku
 
 BlueSudoku
 The classic sudoku game consists of a 9 × 9 grid with some squares beeing filled with numbers from 1-9.
