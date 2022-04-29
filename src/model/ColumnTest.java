@@ -1,7 +1,5 @@
 package model;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,16 +8,14 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class ColumnTest.
  *
- * @author  (your name)
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class ColumnTest
-{
+public class ColumnTest {
     /**
      * Default constructor for test class ColumnTest
      */
-    public ColumnTest()
-    {
+    public ColumnTest() {
     }
 
     /**
@@ -28,8 +24,7 @@ public class ColumnTest
      * Called before every test case method.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
     }
 
     /**
@@ -38,7 +33,6 @@ public class ColumnTest
      * Called after every test case method.
      */
     @AfterEach
-    public void tearDown()
-    {
+    public void tearDown() {
     }
 }

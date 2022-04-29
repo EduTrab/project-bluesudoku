@@ -1,7 +1,5 @@
 package model;
 
-
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,16 +8,14 @@ import org.junit.jupiter.api.Test;
 /**
  * The test class SubGridTest.
  *
- * @author  (your name)
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class SubGridTest
-{
+public class SubGridTest {
     /**
      * Default constructor for test class SubGridTest
      */
-    public SubGridTest()
-    {
+    public SubGridTest() {
     }
 
     /**
@@ -28,8 +24,7 @@ public class SubGridTest
      * Called before every test case method.
      */
     @BeforeEach
-    public void setUp()
-    {
+    public void setUp() {
     }
 
     /**
@@ -38,7 +33,6 @@ public class SubGridTest
      * Called after every test case method.
      */
     @AfterEach
-    public void tearDown()
-    {
+    public void tearDown() {
     }
 }

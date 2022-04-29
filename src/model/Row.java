@@ -9,29 +9,27 @@ import java.util.ArrayList;
  * @author Chengjiang He
  * @version 2022.04.27
  */
-public class Row
-{
+public class Row {
     // TODO: To store the cells in a row, we should use 9 fields or a list?
-    
+
     private ArrayList<Cell> rowCells;
-    
+
     /**
      * Constructor for objects of class Row
      */
-    public Row(Grid theGrid, int row)
-    {
+    public Row(Grid theGrid, int row) {
         rowCells = new ArrayList<Cell>();
-        for(int i = 0; i < 8; i++){
+        for (int i = 0; i < 8; i++) {
             this.rowCells.set(i, theGrid.getCells().get(i + (row - 1) * 9));
         }
     }
-    
+
     /**
      * An accessor method which returns the list of cells in this row
+     * 
      * @return The list of cells in this row
      */
-    public ArrayList<Cell> getCells()
-    {
+    public ArrayList<Cell> getCells() {
         return this.rowCells;
     }
 
