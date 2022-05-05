@@ -32,5 +32,18 @@ public class Row {
     public ArrayList<Cell> getCells() {
         return this.rowCells;
     }
+    
+    /**
+     * Test if the sum of the values of all cells in this row equals to 45
+     * 
+     * @return True if the sum of the values of all cells in this row equals to 45, other wise false
+     */
+    public boolean testSum(){
+        int sum = 0;
+        for(int i = 0; i < 8; i++){
+            sum = sum + this.getCells().get(i).getValue();
+        }
+        return sum == 45;
+    }
 
 }
