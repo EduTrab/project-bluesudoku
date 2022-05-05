@@ -57,6 +57,7 @@ public class Game {
         Cells.get(36).changeValue(9);
         Cells.get(37).changeValue(8);
         Cells.get(40).changeValue(7);
+        Cells.get(41).changeValue(2);
         Cells.get(44).changeValue(1);
         Cells.get(45).changeValue(6);
         Cells.get(50).changeValue(9);
@@ -68,12 +69,10 @@ public class Game {
         Cells.get(56).changeValue(8);
         Cells.get(60).changeValue(9);
         Cells.get(63).changeValue(4);
-        Cells.get(64).changeValue(7);
-        Cells.get(65).changeValue(8);
-        Cells.get(69).changeValue(9);
-        Cells.get(72).changeValue(4);
-        Cells.get(76).changeValue(6);
-        Cells.get(79).changeValue(8);
+        Cells.get(67).changeValue(6);
+        Cells.get(70).changeValue(8);
+        Cells.get(74).changeValue(1);
+        Cells.get(78).changeValue(3);
         //this.printGrid();
     }
 
