@@ -1,7 +1,6 @@
 package tui;
 
 import java.util.Scanner;
-
 import model.Game;
 import model.Grid;
 import model.*;
@@ -13,6 +12,10 @@ import model.*;
  */
 public class Main {
 
+    /**
+     * this is the main funktion of the tui.
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int option;
@@ -20,6 +23,7 @@ public class Main {
 
         Game game = new Game();
         game.initialize();
+
         while (true) {
             game.printGrid();
             System.out.println(
@@ -43,10 +47,16 @@ public class Main {
         }
 
     }
-
+    /**
+     * this method gives instructions to the user.
+     */
     public static void askForNumbers() {
         System.out.println("Enter 3 numbers from 1-9 first number = your colum; second number = row; third number = value:");
     }
+    /**
+     * this method halps with the experianc of the player as it creats a break in the game.
+     * @param scanner
+     */
     public static void Pausa(Scanner scanner){
         System.out.println("Click any key to continue ...");
         scanner.next();
