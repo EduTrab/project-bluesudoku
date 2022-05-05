@@ -182,7 +182,7 @@ public class Game {
                            "┊" + Integer.toString(Cells.get(59).getValue()) +
                            "┃" + Integer.toString(Cells.get(60).getValue()) +
                            "┊" + Integer.toString(Cells.get(61).getValue()) +
-                           "┊" + Integer.toString(Cells.get(62).getValue()) + "*");
+                           "┊" + Integer.toString(Cells.get(62).getValue()) + "┃");
         System.out.println("┃" + Integer.toString(Cells.get(63).getValue()) +
                            "┊" + Integer.toString(Cells.get(64).getValue()) +
                            "┊" + Integer.toString(Cells.get(65).getValue()) +
