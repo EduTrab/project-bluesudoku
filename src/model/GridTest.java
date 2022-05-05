@@ -19,14 +19,8 @@ public class GridTest {
     public GridTest() {
     }
 
-
-   
-
-    
-    
-
     @Test
-    public void testGetCells() {
+    public void testAddAndGetCells() {
         model.Grid grid1 = new model.Grid();
         model.Cell cell1 = new model.Cell(1, 4);
         model.Cell cell2 = new model.Cell(7, 9, 9);

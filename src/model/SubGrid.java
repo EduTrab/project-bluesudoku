@@ -25,7 +25,13 @@ public class SubGrid {
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
                 int current = i * 3 + j;
-                this.subGridCells.set(current, theGrid.getCells().get(current + (remainder - 1) * 3 + quotient * 9));
+                Cell objectCell = theGrid.getCells().get(current + (remainder - 1) * 3 + quotient * 9);
+                if(objectCell == null) {
+                    this.subGridCells.set(current, null);
+                }
+                else {
+                    this.subGridCells.set(current, objectCell);
+                }
             }
         }
     }

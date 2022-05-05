@@ -19,7 +19,13 @@ public class Column {
     public Column(Grid theGrid, int column) {
         columnCells = new ArrayList<Cell>();
         for (int i = 0; i < 8; i++) {
-            this.columnCells.set(i, theGrid.getCells().get((column - 1) + i * 9));
+            Cell objectCell = theGrid.getCells().get((column - 1) + i * 9);
+            if(objectCell == null) {
+                this.columnCells.set(i, null);
+            }
+            else {
+                this.columnCells.set(i, theGrid.getCells().get((column - 1) + i * 9));
+            }
         }
     }
 

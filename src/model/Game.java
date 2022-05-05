@@ -20,6 +20,13 @@ public class Game {
         this.grid = new Grid();
         this.win = new AllWin();
     }
+    
+    /**
+     * An accessor method to get the grid of current game
+     */
+    public Grid getGrid() {
+        return this.grid;
+    }
 
     // TODO: An algorithm to randomly generate the values
     // Now we just give a determined Sudoku

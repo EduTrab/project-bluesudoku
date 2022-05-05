@@ -20,7 +20,13 @@ public class Row {
     public Row(Grid theGrid, int row) {
         rowCells = new ArrayList<Cell>();
         for (int i = 0; i < 9; i++) {
-            this.rowCells.add(theGrid.getCells().get(i + (row - 1) * 9));
+            Cell objectCell = theGrid.getCells().get(i + (row - 1) * 9);
+            if(objectCell == null) {
+                this.rowCells.set(i, null);
+            }
+            else {
+                this.rowCells.set(i, theGrid.getCells().get(i + (row - 1) * 9));
+            }  
         }
     }
 

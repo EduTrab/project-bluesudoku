@@ -19,10 +19,6 @@ public class CellTest {
     public CellTest() {
     }
 
-    
-
-    
-
     @Test
     public void testCreate() {
         model.Cell cell1 = new model.Cell(1, 3);
