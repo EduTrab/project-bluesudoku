@@ -19,8 +19,8 @@ public class Row {
      */
     public Row(Grid theGrid, int row) {
         rowCells = new ArrayList<Cell>();
-        for (int i = 0; i < 8; i++) {
-            this.rowCells.set(i, theGrid.getCells().get(i + (row - 1) * 9));
+        for (int i = 0; i < 9; i++) {
+            this.rowCells.add(theGrid.getCells().get(i + (row - 1) * 9));
         }
     }
 

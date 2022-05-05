@@ -17,6 +17,7 @@ public class AllWin {
      */
     public AllWin() {
         ifwin = false;
+        singleKindWin = new SingleKindWin();
     }
 
     /**

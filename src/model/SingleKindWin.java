@@ -17,6 +17,7 @@ public class SingleKindWin {
      */
     public SingleKindWin() {
         ifwin = false;
+        singleUnitWin = new SingleUnitWin();
     }
 
     /**
@@ -35,7 +36,7 @@ public class SingleKindWin {
      * @return True if all rows met the win conditional, otherwise return false
      */
     public boolean testAllRows(Grid grid) {
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i <= 9; i++) {
             Row currentRow = new Row(grid, i);
             this.ifwin = this.singleUnitWin.testRow(currentRow);
         }

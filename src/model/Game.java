@@ -29,10 +29,10 @@ public class Game {
      */
     public void initialize() {
         ArrayList<Cell> Cells = this.grid.getCells();
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                int current = i * 9 + j;
-                Cells.add(current, new Cell(j+1, i+1));
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                //int current = i * 9 + j;
+                Cells.add(new Cell(j+1, i+1));
             }
         }
         Cells.get(1).changeValue(3);
@@ -74,9 +74,7 @@ public class Game {
         Cells.get(72).changeValue(4);
         Cells.get(76).changeValue(6);
         Cells.get(79).changeValue(8);
-        Cells.get(83).changeValue(1);
-        Cells.get(87).changeValue(3);
-        this.printGrid();
+        //this.printGrid();
     }
 
     /**
@@ -88,7 +86,7 @@ public class Game {
      */
     public void changeCellValue(int x, int y, int value) {
         this.grid.getCells().get((y - 1) * 9 + (x - 1)).changeValue(value);
-        this.printGrid();
+        //this.printGrid();
     }
 
     /**
@@ -98,7 +96,7 @@ public class Game {
      */
     public void emptyCell(int x, int y) {
         this.changeCellValue(x, y, 0);
-        this.printGrid();
+        //this.printGrid();
     }
 
     /**
@@ -110,7 +108,7 @@ public class Game {
             System.out.println("You win!");
         } else {
             System.out.println("Whoops...Try it again.");
-            this.printGrid();
+            //this.printGrid();
         }
     }
     

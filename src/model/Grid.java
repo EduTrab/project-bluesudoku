@@ -3,8 +3,8 @@ package model;
 import java.util.ArrayList;
 
 /**
- * A Grid is a 9x9 Sudoku grid, which can be divided into 9 subgrids or 9 rows
- * or 9 columns.
+ * A Grid is a 9x9 Sudoku grid, which can be divided into 9 subgrids and 9 rows
+ * and 9 columns.
  * It is actually a ArrayList of Cell and consists of 81 cells as elements.
  *
  * @author Chengjiang He
