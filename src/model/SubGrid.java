@@ -11,16 +11,17 @@ import java.util.ArrayList;
  * @author Chengjiang He
  * @version 2022.04.27
  */
-public class SubGrid {
+public class SubGrid extends cellCollection{
     private ArrayList<Cell> subGridCells;
 
     /**
      * Constructor for objects of class subGrid.
      */
     public SubGrid(Grid theGrid, int subGrid) {
+        super(theGrid, subGrid);
+        
         int remainder = subGrid % 3;
         int quotient = subGrid / 3;
-
         subGridCells = new ArrayList<Cell>();
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
@@ -34,28 +35,6 @@ public class SubGrid {
                 }
             }
         }
-    }
-
-    /**
-     * An accessor method which returns the list of cells in this subgird.
-     * 
-     * @return The list of cells in this subgird
-     */
-    public ArrayList<Cell> getCells() {
-        return this.subGridCells;
-    }
-    
-    /**
-     * Test if the sum of the values of all cells in this subgrid equals to 45
-     * 
-     * @return True if the sum of the values of all cells in this row equals to 45, other wise false
-     */
-    public boolean testSum(){
-        int sum = 0;
-        for(int i = 0; i < 8; i++){
-            sum = sum + this.getCells().get(i).getValue();
-        }
-        return sum == 45;
     }
 
 }
