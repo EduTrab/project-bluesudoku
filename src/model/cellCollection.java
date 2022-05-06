@@ -27,18 +27,18 @@ public class cellCollection {
     public ArrayList<Cell> getCells() {
         return this.Cells;
     }
-    
+
     /**
      * Test if the sum of the values of all cells in this collection equals to 45
      * 
-     * @return True if the sum of the values of all cells in this collection equals to 45, other wise false
+     * @return True if the sum of the values of all cells in this collection equals
+     *         to 45, other wise false
      */
-    public boolean testSum(){
+    public boolean testSum() {
         int sum = 0;
-        for(int i = 0; i < 8; i++){
+        for (int i = 0; i < 8; i++) {
             sum = sum + this.getCells().get(i).getValue();
         }
         return sum == 45;
     }
 }
-

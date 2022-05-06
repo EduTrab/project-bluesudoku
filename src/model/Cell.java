@@ -10,16 +10,16 @@ package model;
  */
 public class Cell {
     // instance variables - replace the example below with your own.
-    private int x;
-    private int y;
+    private int xvalue;
+    private int yvalue;
     private int value;
 
     /**
      * Constructor for objects of class Cell (unfilled ones).
      */
     public Cell(int xCoordinate, int yCoordinate) {
-        this.x = xCoordinate;
-        this.y = yCoordinate;
+        this.xvalue = xCoordinate;
+        this.yvalue = yCoordinate;
         this.value = 0; // 0 means this cell is not filled
     }
 
@@ -27,8 +27,8 @@ public class Cell {
      * Constructor for objects of class Cell.
      */
     public Cell(int xCoordinate, int yCoordinate, int cellValue) {
-        this.x = xCoordinate;
-        this.y = yCoordinate;
+        this.xvalue = xCoordinate;
+        this.yvalue = yCoordinate;
         this.value = cellValue;
     }
 
@@ -47,7 +47,7 @@ public class Cell {
      * @return The x coordinate of current cell
      */
     public int getXCoordinate() {
-        return this.x;
+        return this.xvalue;
     }
 
     /**
@@ -56,7 +56,7 @@ public class Cell {
      * @return The y coordinate of current cell
      */
     public int getYCoordinate() {
-        return this.y;
+        return this.yvalue;
     }
 
     /**

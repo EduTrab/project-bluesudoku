@@ -28,13 +28,14 @@ public class AllWin {
     public boolean getIfwin() {
         return this.ifwin;
     }
-    
+
     /**
      * Return true if all win conditions are met, otherwise return false.
      * 
      * @param grid The current grid
      */
     public void testAll(Grid grid) {
-        this.ifwin = this.singleKindWin.testAllRows(grid) && this.singleKindWin.testAllColumns(grid) && this.singleKindWin.testAllSubGrids(grid);
+        this.ifwin = this.singleKindWin.testAllRows(grid) && this.singleKindWin.testAllColumns(grid)
+                && this.singleKindWin.testAllSubGrids(grid);
     }
 }

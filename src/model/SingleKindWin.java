@@ -28,7 +28,7 @@ public class SingleKindWin {
     public boolean getIfwin() {
         return this.ifwin;
     }
-    
+
     /**
      * Return true if all rows met the win conditional, otherwise return false.
      * 

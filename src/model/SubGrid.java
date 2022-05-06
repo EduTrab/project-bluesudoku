@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author Chengjiang He
  * @version 2022.04.27
  */
-public class SubGrid extends cellCollection{
+public class SubGrid extends cellCollection {
     private ArrayList<Cell> subGridCells;
 
     /**
@@ -19,7 +19,7 @@ public class SubGrid extends cellCollection{
      */
     public SubGrid(Grid theGrid, int subGrid) {
         super(theGrid, subGrid);
-        
+
         int remainder = subGrid % 3;
         int quotient = subGrid / 3;
         subGridCells = new ArrayList<Cell>();
@@ -27,10 +27,9 @@ public class SubGrid extends cellCollection{
             for (int j = 0; j < 2; j++) {
                 int current = i * 3 + j;
                 Cell objectCell = theGrid.getCells().get(current + (remainder - 1) * 3 + quotient * 9);
-                if(objectCell == null) {
+                if (objectCell == null) {
                     this.subGridCells.set(current, null);
-                }
-                else {
+                } else {
                     this.subGridCells.set(current, objectCell);
                 }
             }

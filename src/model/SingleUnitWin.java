@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 /**
  * This class defines the conditions to win the game.
- *
- * @author Chengjiang He
+ * Chengjiang He
+ * @author trabae@usi.ch
  * @version 2022.04.28
  */
 public class SingleUnitWin {
@@ -47,6 +47,12 @@ public class SingleUnitWin {
      * @return True if there is no same elements in the column, otherwise return
      *         false
      * 
+     */
+    /**
+     * Return true if there is no same elements in the column, otherwise return
+     * false.
+     * @param column
+     * @return
      */
     public boolean testColumn(Column column) {
         this.ifwin = column.testSum();

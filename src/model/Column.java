@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author Chengjiang He
  * @version 2022.04.27
  */
-public class Column extends cellCollection{
+public class Column extends cellCollection {
     private ArrayList<Cell> columnCells;
 
     /**
@@ -18,14 +18,13 @@ public class Column extends cellCollection{
      */
     public Column(Grid theGrid, int column) {
         super(theGrid, column);
-        
+
         columnCells = new ArrayList<Cell>();
         for (int i = 0; i < 8; i++) {
             Cell objectCell = theGrid.getCells().get((column - 1) + i * 9);
-            if(objectCell == null) {
+            if (objectCell == null) {
                 this.columnCells.set(i, null);
-            }
-            else {
+            } else {
                 this.columnCells.set(i, theGrid.getCells().get((column - 1) + i * 9));
             }
         }
