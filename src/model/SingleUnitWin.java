@@ -72,4 +72,5 @@ public class SingleUnitWin {
         this.ifwin = subgrid.testSum();
         return this.ifwin;
     }
+    
 }

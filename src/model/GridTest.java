@@ -27,5 +27,13 @@ public class GridTest {
         grid1.addCell(cell2);
         assertEquals(cell1, grid1.getCells().get(0));
         assertEquals(cell2, grid1.getCells().get(1));
+        model.Grid grid2 = new model.Grid();
+        model.Cell cell3 = new model.Cell(1, 4);
+        assertEquals(0, grid2.getCells().size());
+        grid2.addCell(cell3);
+        assertEquals(1, grid2.getCells().size());
+        assertEquals(cell3, grid2.getCells().get(0));
     }
+    
+    
 }
