@@ -52,7 +52,7 @@ public class SingleUnitWin {
      * Return true if there is no same elements in the column, otherwise return
      * false.
      * @param column
-     * @return
+     * @return this.ifwin
      */
     public boolean testColumn(Column column) {
         this.ifwin = column.testSum();

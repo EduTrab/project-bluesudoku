@@ -16,7 +16,7 @@ public class Row extends cellCollection {
 
     
     /**
-     * Constructor for objects of class Row.
+     * Constructor for objects of class Row with param theGrid and row.
      * @param theGrid
      * @param row
      */

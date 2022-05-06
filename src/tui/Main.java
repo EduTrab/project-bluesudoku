@@ -39,10 +39,12 @@ public class Main {
                 game.changeCellValue(colum, row, value);
             } else if (option == 2) {
                 break;
-            } else {
+            } else if (option == 3){
                 game.checkWin();
                 Pausa(in);
 
+            } else {
+                Pausa(in);
             }
 
         }
@@ -56,11 +58,9 @@ public class Main {
         System.out.println(
                 "Enter 3 numbers from 1-9 first number = your colum; second number = row; third number = value:");
     }
-
     /**
      * this method halps with the experianc of the player as it creats a break in
      * the game.
-     * 
      * @param scanner
      */
     public static void Pausa(Scanner scanner) {

@@ -6,17 +6,17 @@ import java.util.ArrayList;
  * A cellCollection is an array consists of 9 cell objects as its
  * elements.
  *
- * @author Chengjiang He
+ * @author trabae@usi.ch
  * @version 2022.05.06
  */
 public class cellCollection {
-    private ArrayList<Cell> Cells;
+    private ArrayList<Cell> cells;
 
     /**
      * Constructor for objects of class Column.
      */
     public cellCollection(Grid theGrid, int number) {
-        Cells = new ArrayList<Cell>();
+        cells = new ArrayList<Cell>();
     }
 
     /**
@@ -25,7 +25,7 @@ public class cellCollection {
      * @return The list of cells in this collection
      */
     public ArrayList<Cell> getCells() {
-        return this.Cells;
+        return this.cells;
     }
 
     /**
