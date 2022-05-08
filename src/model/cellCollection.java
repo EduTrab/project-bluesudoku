@@ -9,13 +9,13 @@ import java.util.ArrayList;
  * @author trabae@usi.ch
  * @version 2022.05.06
  */
-public class cellCollection {
+public class CellCollection {
     private ArrayList<Cell> cells;
 
     /**
      * Constructor for objects of class Column.
      */
-    public cellCollection(Grid theGrid, int number) {
+    public CellCollection(Grid theGrid, int number) {
         cells = new ArrayList<Cell>();
     }
 

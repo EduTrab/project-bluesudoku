@@ -10,19 +10,15 @@ import java.util.ArrayList;
  * @author Chengjiang He
  * @version 2022.04.27
  */
-public class Column extends cellCollection {
-    private ArrayList<Cell> columnCells;
-
+public class Column extends CellCollection {
     /**
      * Constructor for objects of class Column.
      */
     public Column(Grid theGrid, int column) {
         super(theGrid, column);
-
-        columnCells = new ArrayList<Cell>();
         for (int i = 0; i < 8; i++) {
             Cell objectCell = theGrid.getCells().get((column - 1) + i * 9);
-            this.columnCells.add(theGrid.getCells().get((column - 1) + i * 9));
+            this.getCells().add(theGrid.getCells().get((column - 1) + i * 9));
         }
     }
 

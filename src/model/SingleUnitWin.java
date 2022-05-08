@@ -42,15 +42,6 @@ public class SingleUnitWin {
     /**
      * Return true if there is no same elements in the column, otherwise return
      * false.
-     * 
-     * @param row The row needs to be tested
-     * @return True if there is no same elements in the column, otherwise return
-     *         false
-     * 
-     */
-    /**
-     * Return true if there is no same elements in the column, otherwise return
-     * false.
      * @param column
      * @return this.ifwin
      */

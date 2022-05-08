@@ -1,17 +1,15 @@
 package model;
 
-
-
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * The test class SingleUnitWinTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  Chengjiang He
+ * @version 2022.05.08
  */
 public class SingleUnitWinTest
 {
@@ -21,24 +19,44 @@ public class SingleUnitWinTest
     public SingleUnitWinTest()
     {
     }
-
-    /**
-     * Sets up the test fixture.
-     *
-     * Called before every test case method.
-     */
-    @BeforeEach
-    public void setUp()
+    
+    @Test
+    public void testTestRow()
     {
+        model.Game game1 = new model.Game();
+        game1.initialize();
+        model.Row row1 = new model.Row(game1.getGrid(), 1);
+        model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
+        assertEquals(false, singleUn1.testRow(row1));
+    }
+    
+    @Test
+    public void testTestColumn()
+    {
+        model.Game game1 = new model.Game();
+        game1.initialize();
+        model.Column column1 = new model.Column(game1.getGrid(), 1);
+        model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
+        assertEquals(false, singleUn1.testColumn(column1));
+    }
+    
+
+    @Test
+    public void testTestSubGrid()
+    {
+        model.Game game1 = new model.Game();
+        game1.initialize();
+        model.SubGrid subGrid1 = new model.SubGrid(game1.getGrid(), 1);
+        model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
     }
 
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
-    @AfterEach
-    public void tearDown()
+    @Test
+    public void testGetIfwin()
     {
+        model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
+        assertEquals(false, singleUn1.getIfwin());
     }
 }
+
+
+
