@@ -10,7 +10,7 @@ import org.junit.Test;
  * The test class CellTest.
  *
  * @author Chengjiang He
- * @version 2022.04.28
+ * @version 2022.05.08
  */
 public class CellTest {
     /**
@@ -42,4 +42,30 @@ public class CellTest {
         assertEquals(0, cell1.getValue());
         assertEquals(9, cell2.getValue());
     }
+
+    @Test
+    public void testGetValue()
+    {
+        model.Cell cell1 = new model.Cell(1, 3);
+        model.Cell cell2 = new model.Cell(2, 4, 6);
+        assertEquals(0, cell1.getValue());
+        assertEquals(6, cell2.getValue());
+    }
+
+    @Test
+    public void testGetXCoordinate()
+    {
+        model.Cell cell1 = new model.Cell(2, 7);
+        assertEquals(2, cell1.getXCoordinate());
+    }
+
+    @Test
+    public void testGetYCoordinate()
+    {
+        model.Cell cell1 = new model.Cell(2, 7);
+        assertEquals(7, cell1.getYCoordinate());
+    }
 }
+
+
+

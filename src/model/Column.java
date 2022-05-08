@@ -22,11 +22,7 @@ public class Column extends cellCollection {
         columnCells = new ArrayList<Cell>();
         for (int i = 0; i < 8; i++) {
             Cell objectCell = theGrid.getCells().get((column - 1) + i * 9);
-            if (objectCell == null) {
-                this.columnCells.set(i, null);
-            } else {
-                this.columnCells.set(i, theGrid.getCells().get((column - 1) + i * 9));
-            }
+            this.columnCells.add(theGrid.getCells().get((column - 1) + i * 9));
         }
     }
 

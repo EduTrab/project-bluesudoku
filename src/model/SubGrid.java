@@ -27,11 +27,7 @@ public class SubGrid extends cellCollection {
             for (int j = 0; j < 2; j++) {
                 int current = i * 3 + j;
                 Cell objectCell = theGrid.getCells().get(current + (remainder - 1) * 3 + quotient * 9);
-                if (objectCell == null) {
-                    this.subGridCells.set(current, null);
-                } else {
-                    this.subGridCells.set(current, objectCell);
-                }
+                this.subGridCells.add(objectCell);
             }
         }
     }

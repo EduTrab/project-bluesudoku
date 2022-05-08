@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * The main class of the sudoku game, which the player directly interact with.
  *
  * @author Chengjiang He
- * @version 2022.04.28
+ * @version 2022.05.08
  */
 public class Game {
     // instance variables - replace the example below with your own
@@ -42,6 +42,7 @@ public class Game {
                 Cells.add(new Cell(j + 1, i + 1));
             }
         }
+        // TODO: Improve this piece by creating a method can import external sudoku grid
         Cells.get(1).changeValue(3);
         Cells.get(2).changeValue(2);
         Cells.get(3).changeValue(1);
