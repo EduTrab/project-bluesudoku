@@ -119,173 +119,26 @@ public class Game {
     }
 
     /**
+     * Print a single row of the grid
+     */
+    public void printRow(int start, int end) {
+        System.out.println("━━━━━━━━━━━━━━━━━━━");
+        ArrayList<Cell> Cells = this.grid.getCells();
+        String print = "┃";
+        for(int i = start; i < end; i++){
+            print = print + Integer.toString(Cells.get(i).getValue()) + "┃";
+        }
+        System.out.println(print);
+    }
+    
+    /**
      * Print the current grid
      */
     public void printGrid() {
-        ArrayList<Cell> Cells = this.grid.getCells();
-        System.out.println("━━━━━━━━━━━━━━━━━━━━");
-        System.out.println("┃" + Integer.toString(Cells.get(0).getValue())
-                + "┊" + Integer.toString(Cells.get(1).getValue())
-                + "┊" + Integer.toString(Cells.get(2).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(3).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(4).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(5).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(6).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(7).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(8).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(9).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(10).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(11).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(12).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(13).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(14).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(15).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(16).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(17).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(18).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(19).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(20).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(21).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(22).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(23).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(24).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(25).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(26).getValue())
-                + "┃");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━");
-        System.out.println("┃" + Integer.toString(Cells.get(27).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(28).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(29).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(30).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(31).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(32).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(33).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(34).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(35).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(36).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(37).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(38).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(39).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(40).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(41).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(42).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(43).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(44).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(45).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(46).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(47).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(48).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(49).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(50).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(51).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(52).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(53).getValue())
-                + "┃");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━");
-        System.out.println("┃" + Integer.toString(Cells.get(54).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(55).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(56).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(57).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(58).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(59).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(60).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(61).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(62).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(63).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(64).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(65).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(66).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(67).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(68).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(69).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(70).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(71).getValue())
-                + "┃");
-        System.out.println("┃" + Integer.toString(Cells.get(72).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(73).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(74).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(75).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(76).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(77).getValue())
-                +
-                "┃" + Integer.toString(Cells.get(78).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(79).getValue())
-                +
-                "┊" + Integer.toString(Cells.get(80).getValue())
-                + "┃");
-        System.out.println("━━━━━━━━━━━━━━━━━━━━");
+        for(int i = 0, j = 9; j < 81 ; i = i + 9, j = j + 9){
+            printRow(i, j);
+        }
+        System.out.println("━━━━━━━━━━━━━━━━━━━");
+        
     }
 }
