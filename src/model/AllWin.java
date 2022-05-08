@@ -11,13 +11,13 @@ import java.util.HashSet;
 public class AllWin {
     private boolean ifwin;
     private SingleKindWin singleKindWin;
-
+    
     /**
      * Constructor for objects of class Win.
      */
     public AllWin() {
         ifwin = false;
-        singleKindWin = new SingleKindWin();
+        singleKindWin = new SingleKindWin();   
     }
 
     /**
@@ -42,7 +42,8 @@ public class AllWin {
      * @param grid The current grid
      */
     public void testAll(Grid grid) {
-        this.ifwin = this.singleKindWin.testAllRows(grid) && this.singleKindWin.testAllColumns(grid)
-                && this.singleKindWin.testAllSubGrids(grid);
+        this.ifwin = this.singleKindWin.testAllRows(grid) && 
+                     this.singleKindWin.testAllColumns(grid) && 
+                     this.singleKindWin.testAllSubGrids(grid);
     }
 }

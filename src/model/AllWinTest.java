@@ -36,12 +36,18 @@ public class AllWinTest
     {
         model.Game game1 = new model.Game();
         model.Game game2 = new model.Game();
+        model.Game game3 = new model.Game();
+        model.AllWin allWin1 = new model.AllWin();
         game1.initialize();
         game2.initialize();
+        game3.initialize();
         game2.generateSudokuSolution();
-        model.AllWin allWin1 = new model.AllWin();
+        game3.generateSudokuSolution();
+        game3.changeCellValue(3, 1, 6);
+        game3.changeCellValue(4, 1, 4);
         allWin1.testAll(game1.getGrid());
         allWin1.testAll(game2.getGrid());
+        allWin1.testAll(game3.getGrid());
     }
 }
 
