@@ -24,15 +24,26 @@ public class AllWinTest
     public void testGetIfwin()
     {
         model.AllWin allWin1 = new model.AllWin();
+        model.AllWin allWin2 = new model.AllWin();
+        allWin2.changeIfwin();
         assertEquals(false, allWin1.getIfwin());
+        assertEquals(true, allWin2.getIfwin());
     }
+
 
     @Test
     public void testTestAll()
     {
         model.Game game1 = new model.Game();
+        model.Game game2 = new model.Game();
+        game1.initialize();
+        game2.initialize();
+        game2.generateSudokuSolution();
         model.AllWin allWin1 = new model.AllWin();
+        allWin1.testAll(game1.getGrid());
+        allWin1.testAll(game2.getGrid());
     }
 }
+
 
 

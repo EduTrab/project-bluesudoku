@@ -26,6 +26,20 @@ public class CellCollectionTest
         model.Game game1 = new model.Game();
         game1.initialize();
         model.SubGrid subGrid1 = new model.SubGrid(game1.getGrid(), 1);
+        model.CellCollection cellCollection1 = new model.CellCollection(game1.getGrid(), 1);
+        cellCollection1.fillTrueSum();
+        assertEquals(false, subGrid1.testSum());
+        assertEquals(true, cellCollection1.testSum());
+    }
+
+    @Test
+    public void testFillTrueSum()
+    {
+        model.Game game1 = new model.Game();
+        game1.initialize();
+        model.Column column1 = new model.Column(game1.getGrid(), 1);
+        column1.fillTrueSum();
     }
 }
+
 

@@ -50,7 +50,9 @@ public class SingleKindWinTest
     public void testTestAllSubGrids()
     {
         model.Game game1 = new model.Game();
+        game1.initialize();
         model.SingleKindWin singleKi1 = new model.SingleKindWin();
+        assertEquals(false, singleKi1.testAllSubGrids(game1.getGrid()));
     }
 }
 

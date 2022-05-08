@@ -17,13 +17,13 @@ public class SubGrid extends CellCollection {
      */
     public SubGrid(Grid theGrid, int subGrid) {
         super(theGrid, subGrid);
-        int remainder = subGrid % 3;
-        int quotient = subGrid / 3;
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
-                int current = i * 3 + j;
-                Cell objectCell = theGrid.getCells().get(current + (remainder - 1) * 3 + quotient * 9);
-                this.getCells().add(objectCell);
+        int left = (subGrid - 1) % 3;
+        int down = (subGrid - 1) / 3;
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                int current = (i * 9 + j) + (left * 3) + (down * 27);
+                Cell objectCell = theGrid.getCells().get(current);
+                this.getCells().set(i * 3 + j, objectCell);
             }
         }
     }

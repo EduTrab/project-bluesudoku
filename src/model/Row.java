@@ -18,8 +18,9 @@ public class Row extends CellCollection {
     public Row(Grid theGrid, int row) {
         super(theGrid, row);
         for (int i = 0; i < 9; i++) {
-            Cell objectCell = theGrid.getCells().get(i + (row - 1) * 9);
-            this.getCells().add(theGrid.getCells().get(i + (row - 1) * 9));
+            int current = i + (row - 1) * 9;
+            Cell objectCell = theGrid.getCells().get(current);
+            this.getCells().set(i, objectCell);
         }
     }
 }

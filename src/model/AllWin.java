@@ -28,6 +28,13 @@ public class AllWin {
     public boolean getIfwin() {
         return this.ifwin;
     }
+    
+    /**
+     * Mutator method to change the value of ifwin
+     */
+    public void changeIfwin() {
+        this.ifwin = true;
+    }
 
     /**
      * Return true if all win conditions are met, otherwise return false.

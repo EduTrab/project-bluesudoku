@@ -16,9 +16,10 @@ public class Column extends CellCollection {
      */
     public Column(Grid theGrid, int column) {
         super(theGrid, column);
-        for (int i = 0; i < 8; i++) {
-            Cell objectCell = theGrid.getCells().get((column - 1) + i * 9);
-            this.getCells().add(theGrid.getCells().get((column - 1) + i * 9));
+        for (int i = 0; i < 9; i++) {
+            int current = (column - 1) + i * 9;
+            Cell objectCell = theGrid.getCells().get(current);
+            this.getCells().set(i, objectCell);
         }
     }
 

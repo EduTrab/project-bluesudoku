@@ -48,6 +48,7 @@ public class SingleUnitWinTest
         game1.initialize();
         model.SubGrid subGrid1 = new model.SubGrid(game1.getGrid(), 1);
         model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
+        assertEquals(false, singleUn1.testSubGrid(subGrid1));
     }
 
     @Test

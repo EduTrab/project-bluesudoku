@@ -36,7 +36,7 @@ public class SingleKindWin {
      * @return True if all rows met the win conditional, otherwise return false
      */
     public boolean testAllRows(Grid grid) {
-        for (int i = 1; i <= 9; i++) {
+        for (int i = 1; i < 10; i++) {
             Row currentRow = new Row(grid, i);
             this.ifwin = this.singleUnitWin.testRow(currentRow);
         }
@@ -50,7 +50,7 @@ public class SingleKindWin {
      * @return True if all columns met the win conditional, otherwise return false
      */
     public boolean testAllColumns(Grid grid) {
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i < 10; i++) {
             Column currentColumn = new Column(grid, i);
             this.ifwin = this.singleUnitWin.testColumn(currentColumn);
         }
@@ -64,7 +64,7 @@ public class SingleKindWin {
      * @return True if all subgrids met the win conditional, otherwise return false
      */
     public boolean testAllSubGrids(Grid grid) {
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i < 10; i++) {
             SubGrid currentSubGrid = new SubGrid(grid, i);
             this.ifwin = this.singleUnitWin.testSubGrid(currentSubGrid);
         }
