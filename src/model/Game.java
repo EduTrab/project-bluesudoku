@@ -126,7 +126,12 @@ public class Game {
         ArrayList<Cell> Cells = this.grid.getCells();
         String print = "┃";
         for(int i = start; i < end; i++){
-            print = print + Integer.toString(Cells.get(i).getValue()) + "┃";
+            if (i % 3 == 2){
+                print = print + Integer.toString(Cells.get(i).getValue()) + "┃";
+            }
+            else {
+                print = print + Integer.toString(Cells.get(i).getValue()) + "┆";
+            }     
         }
         System.out.println(print);
     }
