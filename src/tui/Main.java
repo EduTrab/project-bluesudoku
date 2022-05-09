@@ -1,10 +1,8 @@
 package tui;
 
-import model.Game;
-
 import java.util.Scanner;
 
-
+import model.Game;
 
 /**
  * text user interface.
@@ -12,34 +10,38 @@ import java.util.Scanner;
  * @author trabae@usi.ch
  */
 public class Main {
-
+    private static int option;
+    private static int column = -99;
+    private static int row = -99;
+    private static int value = -99;
+    
     /**
      * this is the main funktion of the tui.
      * 
      * @param args is the main arguments of the tui
      */
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int option;
-        int colum; 
-        int row; 
-        int value;
-
+        
+        
         Game game = new Game();
         game.initialize();
-
+        
         while (true) {
+            Scanner in = new Scanner(System.in);
             game.printGrid();
             System.out.println(
                     "Enter your choice: press 1 to choose the colum 1-9 and row 1-9 and value 1-9 ; to end the game enter 2; to check your solion enter 3");
-            option = Integer.parseInt(in.next());
+            
+            try{
+                option = Integer.parseInt(in.next());
+            } catch (Exception e) {
+                continue;
+            }
+            
 
             if (option == 1) {
-                askForNumbers();
-                colum = Integer.parseInt(in.next());
-                row = Integer.parseInt(in.next());
-                value = Integer.parseInt(in.next());
-                game.changeCellValue(colum, row, value);
+                play(game);
+
             } else if (option == 2) {
                 break;
             } else if (option == 3) {
@@ -49,9 +51,55 @@ public class Main {
             } else {
                 pausa(in);
             }
+        }
+        System.out.println("Good bye");
+    }
+
+    private static void play(Game game) {
+        Scanner in = new Scanner(System.in);
+
+        askForNumbers();
+        try{
+            column = Integer.parseInt(in.next());
+            row = Integer.parseInt(in.next());
+            value = Integer.parseInt(in.next());
+        }
+        catch (Exception e){
+            System.out.println("Wrong input type");
+            play(game);
+        }
+        
+        while (!(1 <= column && column <= 9)) {
+            System.out.println("Wrong column try again");
+            column = askNum();
+        } 
+        
+        while (!(1 <= row && row <= 9)) {
+            System.out.println("Wrong row try again");
+            row = askNum();
+
+
+        } 
+        
+        while (!(1 <= value && value <= 9)) {
+            System.out.println("Wrong value try again");
+            value = askNum();
+
 
         }
-        // add a goodby messeg
+
+        game.changeCellValue(column, row, value);
+
+    }
+
+    private static int askNum(){
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Give me a num fom 1 to 9...");
+
+        int res = Integer.parseInt(in.next());
+        
+        return res;
     }
 
     /**
