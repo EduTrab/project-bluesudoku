@@ -5,8 +5,8 @@ import java.util.HashSet;
 /**
  * This class defines the conditions to win the game.
  *
- * @author Chengjiang He
- * @version 2022.04.28
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class SingleKindWin {
     private boolean ifwin;

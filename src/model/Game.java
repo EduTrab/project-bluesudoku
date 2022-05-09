@@ -5,8 +5,8 @@ import java.util.ArrayList;
 /**
  * The main class of the sudoku game, which the player directly interact with.
  *
- * @author Chengjiang He
- * @version 2022.05.08
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class Game {
     // instance variables - replace the example below with your own

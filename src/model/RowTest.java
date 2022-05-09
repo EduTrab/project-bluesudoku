@@ -8,8 +8,8 @@ import org.junit.Test;
 /**
  * The test class RowTest.
  *
- * @author Chengjiang He
- * @version 2022.05.08
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class RowTest {
     /**

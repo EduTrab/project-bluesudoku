@@ -5,8 +5,8 @@ package model;
  * coordinate, a y coordinate and a value. All this three fields are integer
  * numbers from 1 to 9 (inclusive) ).
  *
- * @author Chengjiang He
- * @version 2022.04.27
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class Cell {
     // instance variables - replace the example below with your own.

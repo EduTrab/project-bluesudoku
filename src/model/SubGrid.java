@@ -8,8 +8,8 @@ import java.util.ArrayList;
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3
  *
- * @author Chengjiang He
- * @version 2022.05.08
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class SubGrid extends CellCollection {
     /**

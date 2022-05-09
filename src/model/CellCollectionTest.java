@@ -8,8 +8,8 @@ import org.junit.Test;
 /**
  * The test class cellCollectionTest.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class CellCollectionTest {
     /**

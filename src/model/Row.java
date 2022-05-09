@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * For example row1 contains cell1,1, cell2,1, cell3,1, ..., cell9,1
  *
  * @author hech@usi.ch
- * @version 2022.05.08
+ * @version 2022.05.09
  */
 public class Row extends CellCollection {
     /**
