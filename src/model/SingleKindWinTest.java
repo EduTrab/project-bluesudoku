@@ -22,11 +22,7 @@ public class SingleKindWinTest {
     public SingleKindWinTest() {
     }
 
-    @Test
-    public void testGetIfwin() {
-        model.SingleKindWin singleKi1 = new model.SingleKindWin();
-        assertEquals(false, singleKi1.getIfwin());
-    }
+    
 
     @Test
     public void testTestAllRows() {

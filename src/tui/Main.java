@@ -1,8 +1,9 @@
 package tui;
 
+import model.Game;
+
 import java.util.Scanner;
 
-import model.Game;
 
 /**
  * text user interface.
@@ -14,30 +15,28 @@ public class Main {
     private static int column = -99;
     private static int row = -99;
     private static int value = -99;
-    
+
     /**
      * this is the main funktion of the tui.
      * 
      * @param args is the main arguments of the tui
      */
     public static void main(String[] args) {
-        
-        
+
         Game game = new Game();
         game.initialize();
-        
+
         while (true) {
             Scanner in = new Scanner(System.in);
             game.printGrid();
             System.out.println(
                     "Enter your choice: press 1 to choose the colum 1-9 and row 1-9 and value 1-9 ; to end the game enter 2; to check your solion enter 3");
-            
-            try{
+
+            try {
                 option = Integer.parseInt(in.next());
-            } catch (Exception e) {
+            } catch (Exception exception) {
                 continue;
             }
-            
 
             if (option == 1) {
                 play(game);
@@ -59,32 +58,29 @@ public class Main {
         Scanner in = new Scanner(System.in);
 
         askForNumbers();
-        try{
+        try {
             column = Integer.parseInt(in.next());
             row = Integer.parseInt(in.next());
             value = Integer.parseInt(in.next());
-        }
-        catch (Exception e){
+        } catch (Exception exception) {
             System.out.println("Wrong input type");
             play(game);
         }
-        
+
         while (!(1 <= column && column <= 9)) {
             System.out.println("Wrong column try again");
             column = askNum();
-        } 
-        
+        }
+
         while (!(1 <= row && row <= 9)) {
             System.out.println("Wrong row try again");
             row = askNum();
 
+        }
 
-        } 
-        
         while (!(1 <= value && value <= 9)) {
             System.out.println("Wrong value try again");
             value = askNum();
-
 
         }
 
@@ -92,13 +88,13 @@ public class Main {
 
     }
 
-    private static int askNum(){
+    private static int askNum() {
         Scanner in = new Scanner(System.in);
 
         System.out.println("Give me a num fom 1 to 9...");
 
         int res = Integer.parseInt(in.next());
-        
+
         return res;
     }
 
