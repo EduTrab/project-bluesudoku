@@ -13,8 +13,8 @@ public class Row extends CellCollection {
     /**
      * Constructor for objects of class Row with param theGrid and row.
      * 
-     * @param theGrid
-     * @param row
+     * @param theGrid .
+     * @param row     .
      */
     public Row(Grid theGrid, int row) {
         super(theGrid, row);

@@ -8,12 +8,12 @@ import org.junit.Test;
 /**
  * The test class cellCollectionTest.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author trabae@usi.ch
+ * @version 2022.05.06
  */
 public class CellCollectionTest {
     /**
-     * Default constructor for test class CellCollectionTest
+     * Default constructor for test class CellCollectionTest.
      */
     public CellCollectionTest() {
     }

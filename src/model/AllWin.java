@@ -5,7 +5,7 @@ import java.util.HashSet;
 /**
  * This class defines the conditions to win the game.
  *
- * @author Chengjiang He
+ * @author hech@usi.ch
  * @version 2022.04.28
  */
 public class AllWin {
@@ -30,7 +30,7 @@ public class AllWin {
     }
 
     /**
-     * Mutator method to change the value of ifwin
+     * Mutator method to change the value of ifwin.
      */
     public void changeIfwin() {
         this.ifwin = true;
@@ -39,11 +39,11 @@ public class AllWin {
     /**
      * Return true if all win conditions are met, otherwise return false.
      * 
-     * @param grid The current grid
+     * @param grid The current grid.
      */
     public void testAll(Grid grid) {
-        this.ifwin = this.singleKindWin.testAllRows(grid) &&
-                this.singleKindWin.testAllColumns(grid) &&
-                this.singleKindWin.testAllSubGrids(grid);
+        this.ifwin = this.singleKindWin.testAllRows(grid)
+                && this.singleKindWin.testAllColumns(grid)
+                && this.singleKindWin.testAllSubGrids(grid);
     }
 }

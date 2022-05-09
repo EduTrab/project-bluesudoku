@@ -1,26 +1,29 @@
 package tui;
 
-import java.util.Scanner;
 import model.Game;
-import model.Grid;
-import model.*;
+
+import java.util.Scanner;
+
+
 
 /**
- * DESCRIBE THIS CLASS
+ * text user interface.
  * 
- * @author YOUR_USI_EMAIL
+ * @author trabae@usi.ch
  */
 public class Main {
 
     /**
      * this is the main funktion of the tui.
      * 
-     * @param args
+     * @param args is the main arguments of the tui
      */
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int option;
-        int colum, row, value;
+        int colum; 
+        int row; 
+        int value;
 
         Game game = new Game();
         game.initialize();
@@ -41,10 +44,10 @@ public class Main {
                 break;
             } else if (option == 3) {
                 game.checkWin();
-                Pausa(in);
+                pausa(in);
 
             } else {
-                Pausa(in);
+                pausa(in);
             }
 
         }
@@ -63,9 +66,9 @@ public class Main {
      * this method halps with the experianc of the player as it creats a break in
      * the game.
      * 
-     * @param scanner
+     * @param scanner allows interactiv tui
      */
-    public static void Pausa(Scanner scanner) {
+    public static void pausa(Scanner scanner) {
         System.out.println("Click any key to continue ...");
         scanner.next();
     }

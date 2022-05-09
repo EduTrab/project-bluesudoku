@@ -4,9 +4,9 @@ import java.util.HashSet;
 
 /**
  * This class defines the conditions to win the game.
- * Chengjiang He
  * 
  * @author trabae@usi.ch
+ * @author hech@usi.ch
  * @version 2022.04.28
  */
 public class SingleUnitWin {
@@ -24,6 +24,7 @@ public class SingleUnitWin {
      * 
      * @return ifwin
      */
+
     public boolean getIfwin() {
         return this.ifwin;
     }
@@ -54,7 +55,7 @@ public class SingleUnitWin {
 
     /**
      * Return true if there is no same elements in the subgrid, otherwise return
-     * false
+     * false.
      * 
      * @param subgrid the subgrid needs to be tested
      * @return ifwin

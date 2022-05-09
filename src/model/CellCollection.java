@@ -14,6 +14,9 @@ public class CellCollection {
 
     /**
      * Constructor for objects of class Column.
+     * 
+     * @param theGrid .
+     * @param number  .
      */
     public CellCollection(Grid theGrid, int number) {
         cells = new ArrayList<Cell>();
@@ -25,14 +28,14 @@ public class CellCollection {
     /**
      * An accessor method which returns the list of cells in this collection.
      * 
-     * @return The list of cells in this collection
+     * @return cells The list of cells in this collection
      */
     public ArrayList<Cell> getCells() {
         return this.cells;
     }
 
     /**
-     * Test if the sum of the values of all cells in this collection equals to 45
+     * Test if the sum of the values of all cells in this collection equals to 45.
      * 
      * @return True if the sum of the values of all cells in this collection equals
      *         to 45, other wise false

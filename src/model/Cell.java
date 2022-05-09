@@ -5,7 +5,7 @@ package model;
  * coordinate, a y coordinate and a value. All this three fields are integer
  * numbers from 1 to 9 (inclusive) ).
  *
- * @author Chengjiang He
+ * @author hech@usi.ch
  * @version 2022.04.27
  */
 public class Cell {
@@ -16,19 +16,26 @@ public class Cell {
 
     /**
      * Constructor for objects of class Cell (unfilled ones).
+     * 
+     * @param xcoordinate .
+     * @param ycoordinate .
      */
-    public Cell(int xCoordinate, int yCoordinate) {
-        this.xvalue = xCoordinate;
-        this.yvalue = yCoordinate;
+    public Cell(int xcoordinate, int ycoordinate) {
+        this.xvalue = xcoordinate;
+        this.yvalue = ycoordinate;
         this.value = 0; // 0 means this cell is not filled
     }
 
     /**
      * Constructor for objects of class Cell.
+     * 
+     * @param xcoordinate .
+     * @param ycoordinate .
+     * @param cellValue   .
      */
-    public Cell(int xCoordinate, int yCoordinate, int cellValue) {
-        this.xvalue = xCoordinate;
-        this.yvalue = yCoordinate;
+    public Cell(int xcoordinate, int ycoordinate, int cellValue) {
+        this.xvalue = xcoordinate;
+        this.yvalue = ycoordinate;
         this.value = cellValue;
     }
 

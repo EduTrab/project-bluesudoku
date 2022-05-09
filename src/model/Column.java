@@ -7,12 +7,15 @@ import java.util.ArrayList;
  * elements.
  * For example row1 contains cell1,1, cell1,2, cell1,3, ..., cell1,9
  *
- * @author Chengjiang He
+ * @author hech@usi.ch
  * @version 2022.04.27
  */
 public class Column extends CellCollection {
     /**
      * Constructor for objects of class Column.
+     * 
+     * @param theGrid .
+     * @param column  .
      */
     public Column(Grid theGrid, int column) {
         super(theGrid, column);

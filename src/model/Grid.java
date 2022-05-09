@@ -14,7 +14,7 @@ public class Grid {
     private ArrayList<Cell> cells;
 
     /**
-     * Constructor for objects of class Grid
+     * Constructor for objects of class Grid.
      */
     public Grid() {
         this.cells = new ArrayList<Cell>();

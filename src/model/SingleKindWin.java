@@ -5,7 +5,7 @@ import java.util.HashSet;
 /**
  * This class defines the conditions to win the game.
  *
- * @author Chengjiang He
+ * @author hech@usi.ch
  * @version 2022.04.28
  */
 public class SingleKindWin {
@@ -15,6 +15,7 @@ public class SingleKindWin {
     /**
      * Constructor for objects of class Win.
      */
+
     public SingleKindWin() {
         ifwin = false;
         singleUnitWin = new SingleUnitWin();
@@ -25,11 +26,10 @@ public class SingleKindWin {
      * 
      * @return ifwin
      */
-    public boolean getIfwin() {
-        return this.ifwin;
-    }
-
     /**
+     * public boolean getIfwin() {
+     * return this.ifwin;
+     * }
      * Return true if all rows met the win conditional, otherwise return false.
      * 
      * @param grid The current grid
