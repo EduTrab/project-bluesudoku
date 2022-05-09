@@ -6,7 +6,11 @@ import java.util.HashSet;
  * This class defines the conditions to win the game.
  *
  * @author hech@usi.ch
+<<<<<<< HEAD
  * @version 2022.04.28
+=======
+ * @version 2022.05.09
+>>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
  */
 public class AllWin {
     private boolean ifwin;

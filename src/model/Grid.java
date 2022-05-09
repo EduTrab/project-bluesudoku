@@ -7,8 +7,8 @@ import java.util.ArrayList;
  * and 9 columns.
  * It is actually a ArrayList of Cell and consists of 81 cells as elements.
  *
- * @author trabae@usi.ch
- * @version 2022.04.27
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class Grid {
     private ArrayList<Cell> cells;

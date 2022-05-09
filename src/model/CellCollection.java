@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * A cellCollection is an array consists of 9 cell objects as its
  * elements.
  *
- * @author trabae@usi.ch
- * @version 2022.05.06
+ * @author hech@usi.ch
+ * @version 2022.05.09
  */
 public class CellCollection {
     private ArrayList<Cell> cells;
@@ -45,7 +45,6 @@ public class CellCollection {
         for (int i = 0; i < 10; i++) {
             sum = sum + this.getCells().get(i).getValue();
         }
-        System.out.println(sum);
         return sum == 45;
     }
 
