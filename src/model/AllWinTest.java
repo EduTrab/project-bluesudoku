@@ -8,21 +8,18 @@ import org.junit.Test;
 /**
  * The test class AllWinTest.
  *
- * @author  Chengjiang He
+ * @author Chengjiang He
  * @version 2022.05.08
  */
-public class AllWinTest
-{
+public class AllWinTest {
     /**
      * Default constructor for test class AllWinTest
      */
-    public AllWinTest()
-    {
+    public AllWinTest() {
     }
 
     @Test
-    public void testGetIfwin()
-    {
+    public void testGetIfwin() {
         model.AllWin allWin1 = new model.AllWin();
         model.AllWin allWin2 = new model.AllWin();
         allWin2.changeIfwin();
@@ -30,10 +27,8 @@ public class AllWinTest
         assertEquals(true, allWin2.getIfwin());
     }
 
-
     @Test
-    public void testTestAll()
-    {
+    public void testTestAll() {
         model.Game game1 = new model.Game();
         model.Game game2 = new model.Game();
         model.Game game3 = new model.Game();
@@ -50,6 +45,3 @@ public class AllWinTest
         allWin1.testAll(game3.getGrid());
     }
 }
-
-
-

@@ -8,21 +8,18 @@ import org.junit.Test;
 /**
  * The test class cellCollectionTest.
  *
- * @author  (your name)
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class CellCollectionTest
-{
+public class CellCollectionTest {
     /**
      * Default constructor for test class CellCollectionTest
      */
-    public CellCollectionTest()
-    {
+    public CellCollectionTest() {
     }
 
     @Test
-    public void testTestSum()
-    {
+    public void testTestSum() {
         model.Game game1 = new model.Game();
         game1.initialize();
         model.SubGrid subGrid1 = new model.SubGrid(game1.getGrid(), 1);
@@ -33,13 +30,10 @@ public class CellCollectionTest
     }
 
     @Test
-    public void testFillTrueSum()
-    {
+    public void testFillTrueSum() {
         model.Game game1 = new model.Game();
         game1.initialize();
         model.Column column1 = new model.Column(game1.getGrid(), 1);
         column1.fillTrueSum();
     }
 }
-
-

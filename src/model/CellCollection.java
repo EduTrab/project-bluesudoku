@@ -17,7 +17,7 @@ public class CellCollection {
      */
     public CellCollection(Grid theGrid, int number) {
         cells = new ArrayList<Cell>();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             cells.add(new Cell(0, 0, 0));
         }
     }
@@ -45,7 +45,7 @@ public class CellCollection {
         System.out.println(sum);
         return sum == 45;
     }
-    
+
     /**
      * Fill the cellCollection with cells of values whose sum is 45. In order to
      * test.

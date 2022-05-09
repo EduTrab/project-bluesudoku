@@ -44,8 +44,7 @@ public class CellTest {
     }
 
     @Test
-    public void testGetValue()
-    {
+    public void testGetValue() {
         model.Cell cell1 = new model.Cell(1, 3);
         model.Cell cell2 = new model.Cell(2, 4, 6);
         assertEquals(0, cell1.getValue());
@@ -53,19 +52,14 @@ public class CellTest {
     }
 
     @Test
-    public void testGetXCoordinate()
-    {
+    public void testGetXCoordinate() {
         model.Cell cell1 = new model.Cell(2, 7);
         assertEquals(2, cell1.getXCoordinate());
     }
 
     @Test
-    public void testGetYCoordinate()
-    {
+    public void testGetYCoordinate() {
         model.Cell cell1 = new model.Cell(2, 7);
         assertEquals(7, cell1.getYCoordinate());
     }
 }
-
-
-

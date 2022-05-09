@@ -5,6 +5,7 @@ import java.util.HashSet;
 /**
  * This class defines the conditions to win the game.
  * Chengjiang He
+ * 
  * @author trabae@usi.ch
  * @version 2022.04.28
  */
@@ -31,8 +32,8 @@ public class SingleUnitWin {
      * Return true if there is no same elements in the row, otherwise return false.
      * 
      * @param row The row needs to be tested
-     * @return True if there is no same elements in the row, otherwise return false
-     * 
+     * @return ifwin True if there is no same elements in the row, otherwise return
+     *         false
      */
     public boolean testRow(Row row) {
         ifwin = row.testSum();
@@ -42,7 +43,8 @@ public class SingleUnitWin {
     /**
      * Return true if there is no same elements in the column, otherwise return
      * false.
-     * @param column
+     * 
+     * @param column the column needs to be tested
      * @return this.ifwin
      */
     public boolean testColumn(Column column) {
@@ -52,16 +54,14 @@ public class SingleUnitWin {
 
     /**
      * Return true if there is no same elements in the subgrid, otherwise return
-     * false.
+     * false
      * 
-     * @param row The row needs to be tested
-     * @return True if there is no same elements in the subgrid, otherwise return
-     *         false
-     * 
+     * @param subgrid the subgrid needs to be tested
+     * @return ifwin
      */
     public boolean testSubGrid(SubGrid subgrid) {
         this.ifwin = subgrid.testSum();
         return this.ifwin;
     }
-    
+
 }

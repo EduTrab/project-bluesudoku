@@ -34,6 +34,5 @@ public class GridTest {
         assertEquals(1, grid2.getCells().size());
         assertEquals(cell3, grid2.getCells().get(0));
     }
-    
-    
+
 }
