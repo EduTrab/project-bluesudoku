@@ -244,7 +244,7 @@ public class Game {
      */
 
     public void printGrid() {
-        for (int i = 0, j = 9; j < 81; i = i + 9, j = j + 9) {
+        for (int i = 0, j = 9; j < 82; i = i + 9, j = j + 9) {
             printRow(i, j);
         }
         System.out.println("━━━━━━━━━━━━━━━━━━━");
