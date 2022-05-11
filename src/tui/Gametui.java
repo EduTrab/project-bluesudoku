@@ -4,24 +4,21 @@ import model.Game;
 
 import java.util.Scanner;
 
-
 /**
  * Write a description of class gametui here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author trabae@usi.ch
+ * @version 10/05.2022
  */
-public class Gametui
-{
+public class Gametui {
     private int option;
     private int column = -99;
     private int row = -99;
     private int value = -99;
 
+    
     /**
-     * this is the main funktion of the tui.
-     * 
-     * @param args is the main arguments of the tui
+     * this creats the tui.
      */
     public void gametuimain() {
 
@@ -119,4 +116,3 @@ public class Gametui
         scanner.next();
     }
 }
-
