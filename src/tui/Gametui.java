@@ -31,7 +31,7 @@ public class Gametui {
             Scanner in = new Scanner(System.in);
             game.printGrid();
             System.out.println(
-                    "to play the game insert 1 and press enter\n to exit the game insert 2 and press enter\n to check your solution insert 3 and press enter");
+                    "to play the game insert 1 and press enter\nto exit the game insert 2 and press enter\nto check your solution insert 3 and press enter");
 
             try {
                 option = Integer.parseInt(in.next());
