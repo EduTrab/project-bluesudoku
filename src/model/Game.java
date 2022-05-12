@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.io.*;
 
 /**
  * The main class of the sudoku game, which the player directly interact with.
@@ -11,11 +12,13 @@ import java.util.ArrayList;
 =======
  * @version 2022.05.09
 >>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
+ * @version 2022.05.12
  */
 public class Game {
-    // instance variables - replace the example below with your own
     private Grid grid;
     private AllWin win;
+    private SudokuReader reader;
+    
 
     /**
      * Constructor for objects of class Game.
@@ -23,6 +26,7 @@ public class Game {
     public Game() {
         this.grid = new Grid();
         this.win = new AllWin();
+        this.reader = new SudokuReader();
     }
 
     /**
@@ -34,15 +38,11 @@ public class Game {
         return this.grid;
     }
 
-    // TODO: An algorithm to randomly generate the values
-    // Now we just give a determined Sudoku
-
     /**
      * A tempoary method to generate an empty grid the fill some cells to generate
-     * a determined Sudoku. It will soon be replaced by a better one without code
-     * duplication.
+     * a determined Sudoku. 
      */
-    public void initialize() {
+    public void initialize(String pathFile) {
         ArrayList<Cell> cells = this.grid.getCells();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
@@ -50,135 +50,25 @@ public class Game {
                 cells.add(new Cell(i, j));
             }
         }
-        // TODO: Improve this piece by creating a method can import external sudoku grid
-        cells.get(1).changeValue(3);
-        cells.get(2).changeValue(2);
-        cells.get(3).changeValue(1);
-        cells.get(4).changeValue(5);
-        cells.get(11).changeValue(5);
-        cells.get(15).changeValue(2);
-        cells.get(17).changeValue(8);
-        cells.get(18).changeValue(1);
-        cells.get(19).changeValue(9);
-        cells.get(21).changeValue(2);
-        cells.get(23).changeValue(4);
-        cells.get(24).changeValue(7);
-        cells.get(26).changeValue(3);
-        cells.get(27).changeValue(2);
-        cells.get(28).changeValue(5);
-        cells.get(29).changeValue(7);
-        cells.get(31).changeValue(3);
-        cells.get(33).changeValue(6);
-        cells.get(34).changeValue(4);
-        cells.get(36).changeValue(9);
-        cells.get(37).changeValue(8);
-        cells.get(40).changeValue(7);
-        cells.get(41).changeValue(2);
-        cells.get(44).changeValue(1);
-        cells.get(45).changeValue(6);
-        cells.get(50).changeValue(9);
-        cells.get(51).changeValue(8);
-        cells.get(52).changeValue(2);
-        cells.get(53).changeValue(7);
-        cells.get(54).changeValue(3);
-        cells.get(55).changeValue(7);
-        cells.get(56).changeValue(8);
-        cells.get(60).changeValue(9);
-        cells.get(63).changeValue(4);
-        cells.get(67).changeValue(6);
-        cells.get(70).changeValue(8);
-        cells.get(74).changeValue(1);
-        cells.get(78).changeValue(3);
-        // this.printGrid();
+        try {
+            reader.readSudokuFile(cells, pathFile);
+        }
+        catch (FileNotFoundException exception) {
+            System.out.println("Exception throw :" + exception);
+        }
     }
 
     /**
-     * A tempoary method to generate a Sudoku solution. It will soon be replaced
-     * by a better one without code duplication.
+     * A tempoary method to generate a Sudoku solution.
      */
     public void generateSudokuSolution() {
         ArrayList<Cell> cells = this.grid.getCells();
-        cells.get(0).changeValue(5);
-        cells.get(1).changeValue(3);
-        cells.get(2).changeValue(4);
-        cells.get(3).changeValue(6);
-        cells.get(4).changeValue(7);
-        cells.get(5).changeValue(8);
-        cells.get(6).changeValue(9);
-        cells.get(7).changeValue(1);
-        cells.get(8).changeValue(2);
-        cells.get(9).changeValue(6);
-        cells.get(10).changeValue(7);
-        cells.get(11).changeValue(2);
-        cells.get(12).changeValue(1);
-        cells.get(13).changeValue(9);
-        cells.get(14).changeValue(5);
-        cells.get(15).changeValue(3);
-        cells.get(16).changeValue(4);
-        cells.get(17).changeValue(8);
-        cells.get(18).changeValue(1);
-        cells.get(19).changeValue(9);
-        cells.get(20).changeValue(8);
-        cells.get(21).changeValue(3);
-        cells.get(22).changeValue(4);
-        cells.get(23).changeValue(2);
-        cells.get(24).changeValue(5);
-        cells.get(25).changeValue(6);
-        cells.get(26).changeValue(7);
-        cells.get(27).changeValue(8);
-        cells.get(28).changeValue(5);
-        cells.get(29).changeValue(9);
-        cells.get(30).changeValue(7);
-        cells.get(31).changeValue(6);
-        cells.get(32).changeValue(1);
-        cells.get(33).changeValue(4);
-        cells.get(34).changeValue(2);
-        cells.get(35).changeValue(3);
-        cells.get(36).changeValue(4);
-        cells.get(37).changeValue(2);
-        cells.get(38).changeValue(6);
-        cells.get(39).changeValue(8);
-        cells.get(40).changeValue(5);
-        cells.get(41).changeValue(3);
-        cells.get(42).changeValue(7);
-        cells.get(43).changeValue(9);
-        cells.get(44).changeValue(1);
-        cells.get(45).changeValue(7);
-        cells.get(46).changeValue(1);
-        cells.get(47).changeValue(3);
-        cells.get(48).changeValue(9);
-        cells.get(49).changeValue(2);
-        cells.get(50).changeValue(4);
-        cells.get(51).changeValue(8);
-        cells.get(52).changeValue(5);
-        cells.get(53).changeValue(6);
-        cells.get(54).changeValue(9);
-        cells.get(55).changeValue(6);
-        cells.get(56).changeValue(1);
-        cells.get(57).changeValue(5);
-        cells.get(58).changeValue(3);
-        cells.get(59).changeValue(7);
-        cells.get(60).changeValue(2);
-        cells.get(61).changeValue(8);
-        cells.get(62).changeValue(4);
-        cells.get(63).changeValue(2);
-        cells.get(64).changeValue(8);
-        cells.get(65).changeValue(7);
-        cells.get(66).changeValue(4);
-        cells.get(67).changeValue(1);
-        cells.get(68).changeValue(9);
-        cells.get(69).changeValue(6);
-        cells.get(70).changeValue(3);
-        cells.get(71).changeValue(5);
-        cells.get(72).changeValue(3);
-        cells.get(73).changeValue(4);
-        cells.get(74).changeValue(5);
-        cells.get(75).changeValue(2);
-        cells.get(76).changeValue(8);
-        cells.get(77).changeValue(6);
-        cells.get(78).changeValue(1);
-        cells.get(79).changeValue(7);
-        cells.get(80).changeValue(9);
+        try {
+            reader.readSudokuFile(cells, "/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/sampleSolution1.txt");
+        }
+        catch (FileNotFoundException exception) {
+            System.out.println("Exception throw :" + exception);
+        }
     }
 
     /**

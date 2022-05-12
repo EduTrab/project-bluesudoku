@@ -20,10 +20,10 @@ public class Gametui {
     /**
      * this creats the tui.
      */
-    public void gametuimain() {
+    public void gametuimain(String filePath) {
 
         Game game = new Game();
-        game.initialize();
+        game.initialize(filePath);
 
         while (true) {
             Scanner in = new Scanner(System.in);

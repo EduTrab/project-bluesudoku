@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.io.*;
 
 /**
  * The test class AllWinTest.
@@ -14,6 +15,7 @@ import org.junit.Test;
 =======
  * @version 2022.05.09
 >>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
+ * @version 2022.05.12
  */
 public class AllWinTest {
     /**
@@ -37,9 +39,9 @@ public class AllWinTest {
         model.Game game2 = new model.Game();
         model.Game game3 = new model.Game();
         model.AllWin allWin1 = new model.AllWin();
-        game1.initialize();
-        game2.initialize();
-        game3.initialize();
+        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game2.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game3.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
         game2.generateSudokuSolution();
         game3.generateSudokuSolution();
         game3.changeCellValue(3, 1, 6);
