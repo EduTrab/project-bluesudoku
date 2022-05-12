@@ -1,24 +1,23 @@
 package model;
 
-import java.util.ArrayList;
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  * The main class of the sudoku game, which the player directly interact with.
  *
  * @author hech@usi.ch
-<<<<<<< HEAD
+ *         <<<<<<< HEAD
  * @version 2022.05.08
-=======
+ *          =======
  * @version 2022.05.09
->>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
+ *          >>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
  * @version 2022.05.12
  */
 public class Game {
     private Grid grid;
     private AllWin win;
     private SudokuReader reader;
-    
 
     /**
      * Constructor for objects of class Game.
@@ -40,7 +39,9 @@ public class Game {
 
     /**
      * A tempoary method to generate an empty grid the fill some cells to generate
-     * a determined Sudoku. 
+     * a determined Sudoku.
+     * 
+     * @param pathFile .
      */
     public void initialize(String pathFile) {
         ArrayList<Cell> cells = this.grid.getCells();
@@ -52,8 +53,7 @@ public class Game {
         }
         try {
             reader.readSudokuFile(cells, pathFile);
-        }
-        catch (FileNotFoundException exception) {
+        } catch (FileNotFoundException exception) {
             System.out.println("Exception throw :" + exception);
         }
     }
@@ -64,9 +64,9 @@ public class Game {
     public void generateSudokuSolution() {
         ArrayList<Cell> cells = this.grid.getCells();
         try {
-            reader.readSudokuFile(cells, "/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/sampleSolution1.txt");
-        }
-        catch (FileNotFoundException exception) {
+            reader.readSudokuFile(cells,
+                    "/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/sampleSolution1.txt");
+        } catch (FileNotFoundException exception) {
             System.out.println("Exception throw :" + exception);
         }
     }
