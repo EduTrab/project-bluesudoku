@@ -23,9 +23,9 @@ public class Main {
      * @param args     is the main arguments of the tui
      * @param filePath .
      */
-    public static void main(String[] args, String filePath) {
+    public static void main(String[] args) {
         Gametui gametui = new Gametui();
-        gametui.gametuimain(filePath);
+        gametui.gametuimain(args[0]);
     }
 
 }
