@@ -25,12 +25,12 @@ public class AllWinTest {
     }
 
     @Test
-    public void testGetIfwin() {
+    public void testisIfwin() {
         model.AllWin allWin1 = new model.AllWin();
         model.AllWin allWin2 = new model.AllWin();
         allWin2.changeIfwin();
-        assertEquals(false, allWin1.getIfwin());
-        assertEquals(true, allWin2.getIfwin());
+        assertEquals(false, allWin1.isIfwin());
+        assertEquals(true, allWin2.isIfwin());
     }
 
     @Test

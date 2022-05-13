@@ -1,6 +1,6 @@
 package model;
 
-import java.util.ArrayList;
+
 
 /**
  * A SubGrid is an array consists of 9 cell objects in the same 9x9 subgrid as

@@ -1,6 +1,6 @@
 package model;
 
-import java.util.HashSet;
+2
 
 /**
  * This class defines the conditions to win the game.
@@ -25,11 +25,11 @@ public class AllWin {
     }
 
     /**
-     * Successor method to get ifwin.
+     * Successor method to is ifwin.
      * 
      * @return ifwin
      */
-    public boolean getIfwin() {
+    public boolean isIfwin() {
         return this.ifwin;
     }
 

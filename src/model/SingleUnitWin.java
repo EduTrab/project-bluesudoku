@@ -1,6 +1,6 @@
 package model;
 
-import java.util.HashSet;
+
 
 /**
  * This class defines the conditions to win the game.

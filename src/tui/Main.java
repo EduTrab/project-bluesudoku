@@ -9,6 +9,7 @@ import java.util.Scanner;
  * 
  * @author trabae@usi.ch
  */
+
 public class Main {
     private Gametui gametui;
 
