@@ -102,7 +102,7 @@ public class Game {
 
     public void checkWin() {
         this.win.testAll(this.grid);
-        if (this.win.getIfwin() == true) {
+        if (this.win.isIfwin() == true) {
             System.out.println("You win!");
         } else {
             System.out.println("Whoops...Try it again.");
