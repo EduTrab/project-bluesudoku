@@ -1,8 +1,6 @@
 package tui;
 
-import model.Game;
 
-import java.util.Scanner;
 
 /**
  * text user interface.

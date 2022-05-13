@@ -1,6 +1,6 @@
 package model;
 
-import java.util.ArrayList;
+
 
 /**
  * A row is an array consists of 9 cell objects in the same row as its elements.

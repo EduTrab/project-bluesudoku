@@ -54,6 +54,6 @@ public class SingleUnitWinTest {
     @Test
     public void testGetIfwin() {
         model.SingleUnitWin singleUn1 = new model.SingleUnitWin();
-        assertEquals(false, singleUn1.getIfwin());
+        assertEquals(false, singleUn1.isIfwin());
     }
 }
