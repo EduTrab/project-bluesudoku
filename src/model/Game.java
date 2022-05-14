@@ -97,7 +97,8 @@ public class Game {
     }
 
     /**
-     * TODO:If met the win conditions, show win page.
+     * Print "You win!" if all test conditions are met, otherwise print
+     * "Whoops...Try it again."
      */
 
     public void checkWin() {
@@ -108,37 +109,5 @@ public class Game {
             System.out.println("Whoops...Try it again.");
             // this.printGrid();
         }
-    }
-
-    /**
-     * Print a single row of the grid.
-     * 
-     * @param start .
-     * @param end   .
-     */
-    public void printRow(int start, int end) {
-        System.out.println("━━━━━━━━━━━━━━━━━━━");
-        ArrayList<Cell> cells = this.grid.getCells();
-        String print = "┃";
-        for (int i = start; i < end; i++) {
-            if (i % 3 == 2) {
-                print = print + Integer.toString(cells.get(i).getValue()) + "┃";
-            } else {
-                print = print + Integer.toString(cells.get(i).getValue()) + "┆";
-            }
-        }
-        System.out.println(print);
-    }
-
-    /**
-     * Print the current grid.
-     */
-
-    public void printGrid() {
-        for (int i = 0, j = 9; j < 82; i = i + 9, j = j + 9) {
-            printRow(i, j);
-        }
-        System.out.println("━━━━━━━━━━━━━━━━━━━");
-
     }
 }

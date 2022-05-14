@@ -38,43 +38,41 @@ public class GameTest {
     @Test
     public void testInitialize() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game1.initialize("../sudokuFiles/easy1.txt");
     }
 
     @Test
     public void testChangeCellValue() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game1.initialize("../sudokuFiles/easy1.txt");
         game1.changeCellValue(3, 5, 9);
     }
 
     @Test
     public void testEmptyCell() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game1.initialize("../sudokuFiles/easy1.txt");
         game1.emptyCell(3, 9);
     }
 
     @Test
     public void testPrintRow() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game1.printRow(0, 9);
+        game1.initialize("../sudokuFiles/easy1.txt");
     }
 
     @Test
     public void testPrintGrid() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game1.printGrid();
+        game1.initialize("../sudokuFiles/easy1.txt");
     }
 
     @Test
     public void testCheckWin() {
         model.Game game1 = new model.Game();
         model.Game game2 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game2.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game1.initialize("../sudokuFiles/easy1.txt");
+        game2.initialize("../sudokuFiles/easy1.txt");
         game2.generateSudokuSolution();
         game1.checkWin();
         game2.checkWin();

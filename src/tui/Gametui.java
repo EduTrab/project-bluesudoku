@@ -1,7 +1,8 @@
 package tui;
 
+import model.Cell;
 import model.Game;
-
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -15,6 +16,7 @@ public class Gametui {
     private int column = -99;
     private int row = -99;
     private int value = -99;
+    private Game game;
 
     
   
@@ -24,12 +26,12 @@ public class Gametui {
      */
     public void gametuimain(String filePath) {
 
-        Game game = new Game();
+        this.game = new Game();
         game.initialize(filePath);
 
         while (true) {
             Scanner in = new Scanner(System.in);
-            game.printGrid();
+            this.printGrid();
             System.out.println(
                     "to play the game insert 1 and press enter\nto exit the game insert 2 and press enter\nto check your solution insert 3 and press enter");
 
@@ -116,5 +118,39 @@ public class Gametui {
     public void pausa(Scanner scanner) {
         System.out.println("Click any key to continue ...");
         scanner.next();
+    }
+    
+    /**
+     * Print a single row of the grid.
+     * 
+     * @param start .
+     * @param end   .
+     */
+    public void printRow(int start, int end) {
+        ArrayList<Cell> cells = this.game.getGrid().getCells();
+        String print = "┃";
+        for (int i = start; i < end; i++) {
+            if (i % 3 == 2) {
+                print = print + Integer.toString(cells.get(i).getValue()) + "┃";
+            } else {
+                print = print + Integer.toString(cells.get(i).getValue()) + "┆";
+            }
+        }
+        System.out.println(print);
+    }
+    
+    /**
+     * Print the current grid.
+     */
+
+    public void printGrid() {
+        System.out.println("━━━━━━━━━━━━━━━━━━━");
+        for (int i = 0, j = 9; j < 82; i = i + 9, j = j + 9) {
+            printRow(i, j);
+            if(j < 81) {
+                System.out.println(" ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ");
+            }
+        }
+        System.out.println("━━━━━━━━━━━━━━━━━━━");
     }
 }
