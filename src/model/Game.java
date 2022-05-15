@@ -60,19 +60,6 @@ public class Game {
     }
 
     /**
-     * A tempoary method to generate a Sudoku solution.
-     */
-    public void generateSudokuSolution() {
-        ArrayList<Cell> cells = this.grid.getCells();
-        try {
-            reader.readSudokuFile(cells,
-                    "/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/sampleSolution1.txt");
-        } catch (FileNotFoundException exception) {
-            System.out.println("Exception throw :" + exception);
-        }
-    }
-
-    /**
      * Change the value of a cell.
      * 
      * @param xcoordinate The x coordinate of the object cell

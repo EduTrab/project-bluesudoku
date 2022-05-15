@@ -38,16 +38,15 @@ public class AllWinTest {
         model.Game game1 = new model.Game();
         model.Game game2 = new model.Game();
         model.Game game3 = new model.Game();
+        model.Game game4 = new model.Game();
         model.AllWin allWin1 = new model.AllWin();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game2.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game3.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
-        game2.generateSudokuSolution();
-        game3.generateSudokuSolution();
-        game3.changeCellValue(3, 1, 6);
-        game3.changeCellValue(4, 1, 4);
+        game1.initialize("sudokuFiles/easy1.txt");
+        game2.initialize("sudokuFiles/sampleSolution1.txt");
+        game3.initialize("sudokuFiles/onlySubgrid.txt");
+        game4.initialize("sudokuFiles/onlyColumn.txt");
         allWin1.testAll(game1.getGrid());
         allWin1.testAll(game2.getGrid());
         allWin1.testAll(game3.getGrid());
+        allWin1.testAll(game4.getGrid());
     }
 }

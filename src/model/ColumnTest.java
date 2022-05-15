@@ -27,7 +27,7 @@ public class ColumnTest {
     @Test
     public void testConstructor() {
         model.Game game1 = new model.Game();
-        game1.initialize("/Users/carsonhe/Desktop/project-bluesudoku/src/sudokuFiles/easy1.txt");
+        game1.initialize("sudokuFiles/easy1.txt");
         model.Column column1 = new model.Column(game1.getGrid(), 4);
     }
 }

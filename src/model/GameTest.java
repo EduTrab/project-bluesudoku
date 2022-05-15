@@ -1,80 +1,59 @@
 package model;
 
 import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import java.io.*;
+
 
 /**
  * The test class GameTest.
  *
- * @author hech@usi.ch
-<<<<<<< HEAD
- * @version 2022.05.08
-=======
- * @version 2022.05.09
->>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
- * @version 2022.05.12
+ * @author  (your name)
+ * @version (a version number or a date)
  */
-public class GameTest {
+public class GameTest
+{
     /**
      * Default constructor for test class GameTest
      */
-    public GameTest() {
+    public GameTest()
+    {
     }
 
     @Test
-    public void testConstructor() {
+    public void TestInitialize()
+    {
         model.Game game1 = new model.Game();
+        game1.initialize("sudokuFiles/easy1.txt");
     }
 
     @Test
-    public void testGetGrid() {
+    public void testChangeValue()
+    {
         model.Game game1 = new model.Game();
-        game1.getGrid();
+        game1.initialize("sudokuFiles/easy1.txt");
+        game1.changeCellValue(1, 1, 1);
     }
 
     @Test
-    public void testInitialize() {
+    public void testEmptyCell()
+    {
         model.Game game1 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
+        game1.initialize("sudokuFiles/easy1.txt");
+        game1.emptyCell(1, 1);
     }
 
     @Test
-    public void testChangeCellValue() {
-        model.Game game1 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
-        game1.changeCellValue(3, 5, 9);
-    }
-
-    @Test
-    public void testEmptyCell() {
-        model.Game game1 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
-        game1.emptyCell(3, 9);
-    }
-
-    @Test
-    public void testPrintRow() {
-        model.Game game1 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
-    }
-
-    @Test
-    public void testPrintGrid() {
-        model.Game game1 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
-    }
-
-    @Test
-    public void testCheckWin() {
+    public void testCheckWin()
+    {
         model.Game game1 = new model.Game();
         model.Game game2 = new model.Game();
-        game1.initialize("../sudokuFiles/easy1.txt");
-        game2.initialize("../sudokuFiles/easy1.txt");
-        game2.generateSudokuSolution();
+        game1.initialize("sudokuFiles/easy1.txt");
+        game2.initialize("sudokuFiles/sampleSolution1.txt");
         game1.checkWin();
         game2.checkWin();
     }
 }
+
+
+
+
