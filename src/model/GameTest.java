@@ -7,8 +7,8 @@ import org.junit.Test;
 /**
  * The test class GameTest.
  *
- * @author  (your name)
- * @version (a version number or a date)
+ * @author  hech@usi.ch
+ * @version 2022.05.19
  */
 public class GameTest
 {

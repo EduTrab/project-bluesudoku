@@ -10,11 +10,6 @@ import java.io.*;
  * The test class AllWinTest.
  *
  * @author hech@usi.ch
-<<<<<<< HEAD
- * @version 2022.05.08
-=======
- * @version 2022.05.09
->>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
  * @version 2022.05.12
  */
 public class AllWinTest {

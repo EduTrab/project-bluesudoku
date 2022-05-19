@@ -7,15 +7,9 @@ package model;
  * its elements.
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3
-<<<<<<< HEAD
- * 
- * @author hech@usi.ch
- * @version 2022.05.08
-=======
- *
+
  * @author hech@usi.ch
  * @version 2022.05.09
->>>>>>> 0091b78ff2447580070c0e74e81ef2ec5a924750
  */
 public class SubGrid extends CellCollection {
     /**
