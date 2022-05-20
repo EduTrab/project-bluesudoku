@@ -13,19 +13,16 @@ import java.util.Scanner;
  * @version 10/05.2022
  */
 public class Gametui {
-    private int option;
-    private int column = -99;
-    private int row = -99;
-    private int value = -99;
     private Game game;
-
+    
     /**
      * this creats the tui.
      * 
      * @param filePath .
      */
     public void gametuimain(String filePath) {
-
+        int option;
+        
         this.game = new Game();
         game.initialize(filePath);
 
@@ -63,7 +60,11 @@ public class Gametui {
     }
 
     private void play(Game game) {
+        int column = -99;
+        int row = -99;
+        int value = -99;
         Scanner in = new Scanner(System.in);
+
 
         askForNumbers();
         try {
