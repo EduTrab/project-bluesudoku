@@ -48,6 +48,11 @@ public class Gametui {
                 break;
             } else if (option == 3) {
                 game.checkWin();
+                if (this.game.getWin().isIfwin() == true) {
+                    System.out.println("You win!");
+                } else {
+                    System.out.println("Whoops...Try it again.");
+                }
                 pausa(in);
 
             } else {

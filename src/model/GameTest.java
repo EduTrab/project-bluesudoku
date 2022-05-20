@@ -51,6 +51,7 @@ public class GameTest
         game2.initialize("sudokuFiles/sampleSolution1.txt");
         game1.checkWin();
         game2.checkWin();
+        game1.getWin();
     }
 }
 

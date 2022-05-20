@@ -32,6 +32,15 @@ public class Game {
     public Grid getGrid() {
         return this.grid;
     }
+    
+    /**
+     * An accessor method to get the win statu of current game.
+     * 
+     * @return win
+     */
+    public AllWin getWin() {
+        return this.win;
+    }
 
     /**
      * A tempoary method to generate an empty grid the fill some cells to generate
@@ -85,11 +94,5 @@ public class Game {
 
     public void checkWin() {
         this.win.testAll(this.grid);
-        if (this.win.isIfwin() == true) {
-            System.out.println("You win!");
-        } else {
-            System.out.println("Whoops...Try it again.");
-            // this.printGrid();
-        }
     }
 }
