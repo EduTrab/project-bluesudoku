@@ -2,6 +2,7 @@ package tui;
 
 import model.Cell;
 import model.Game;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,10 +19,9 @@ public class Gametui {
     private int value = -99;
     private Game game;
 
-    
-  
     /**
      * this creats the tui.
+     * 
      * @param filePath .
      */
     public void gametuimain(String filePath) {
@@ -119,7 +119,7 @@ public class Gametui {
         System.out.println("Click any key to continue ...");
         scanner.next();
     }
-    
+
     /**
      * Print a single row of the grid.
      * 
@@ -138,7 +138,7 @@ public class Gametui {
         }
         System.out.println(print);
     }
-    
+
     /**
      * Print the current grid.
      */
@@ -147,7 +147,7 @@ public class Gametui {
         System.out.println("━━━━━━━━━━━━━━━━━━━");
         for (int i = 0, j = 9; j < 82; i = i + 9, j = j + 9) {
             printRow(i, j);
-            if(j < 81) {
+            if (j < 81) {
                 System.out.println(" ┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄ ");
             }
         }
