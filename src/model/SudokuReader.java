@@ -15,11 +15,7 @@ import java.util.Scanner;
  */
 
 public class SudokuReader {
-    /**
-     * Constructor for objects of class SudokuReader.
-     */
-    public SudokuReader() {
-    }
+   
 
     /**
      * An example of a method - replace this comment with your own.
