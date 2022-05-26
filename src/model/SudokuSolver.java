@@ -4,8 +4,21 @@ package model;
 public class SudokuSolver {
     // size of grid
     private static final int GridSize = 9;
+    private int[][] sudoku;
+    
+    public SudokuSolver () {
+        
+    }
+    
+    public int getGridSize() {
+        return this.GridSize;
+    }
+    
+    public int[][] getSudoku() {
+        return this.sudoku;
+    }
 
-    public static void main(String[] args) {
+    public static boolean solveResult() {
 
         // this will be our starting sudoku grd
         int[][] sudoku = {
@@ -20,22 +33,8 @@ public class SudokuSolver {
                 { 0, 0, 7, 0, 4, 0, 2, 0, 3 }
         };
 
-        if (solveSudoku(sudoku)) {
-            System.out.println("Solved successfully!!!");
-        } else {
-            System.out.println("This Sudoku is not solvable :(");
-        }
-        printSudoku(sudoku);
-
-    }
-
-    private static void printSudoku(int[][] sudoku) {
-        for (int row = 0; row < GridSize; row++) {
-            for (int column = 0; column < GridSize; column++) {
-                System.out.print(sudoku[row][column]);
-            }
-            System.out.println();
-        }
+        return solveSudoku(sudoku);
+        
 
     }
 
