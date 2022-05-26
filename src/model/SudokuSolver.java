@@ -3,7 +3,7 @@ package model;
 // this still has a few bugs need to fix it
 public class SudokuSolver {
     // size of grid
-    private static final int GridSize = 9;
+    private final int GridSize = 9;
     private int[][] sudoku;
     
     public SudokuSolver () {
@@ -18,7 +18,7 @@ public class SudokuSolver {
         return this.sudoku;
     }
 
-    public static boolean solveResult() {
+    public boolean solveResult() {
 
         // this will be our starting sudoku grd
         int[][] sudoku = {
@@ -33,7 +33,7 @@ public class SudokuSolver {
                 { 0, 0, 7, 0, 4, 0, 2, 0, 3 }
         };
 
-        return solveSudoku(sudoku);
+        return (boolean) solveSudoku(sudoku)[0];
         
 
     }
@@ -44,7 +44,7 @@ public class SudokuSolver {
     // to do this we need 3 halper methodes check row column and subgrid
 
     // to see if number laready exists in row
-    private static boolean isNumberInRow(int[][] sudoku, int number, int row) {
+    private boolean isNumberInRow(int[][] sudoku, int number, int row) {
         // boolean allows to return true if
         // number already exists in row and
         // false
@@ -66,7 +66,7 @@ public class SudokuSolver {
     }
 
     // to see if number laready exists in column similar thig as in row
-    private static boolean isNumberInColumn(int[][] sudoku, int number, int column) {
+    private boolean isNumberInColumn(int[][] sudoku, int number, int column) {
         for (int i = 0; i < GridSize; i++) {
             if (sudoku[i][column] == number) {
                 return true;
@@ -76,7 +76,7 @@ public class SudokuSolver {
     }
 
     // to see if number laready exists in subGrid
-    private static boolean isNumberInSubGrid(int[][] sudoku, int number, int row, int column) {
+    private boolean isNumberInSubGrid(int[][] sudoku, int number, int row, int column) {
         int localRow = row - row % 3;
         int localColumn = column - column % 3;
 
@@ -92,13 +92,13 @@ public class SudokuSolver {
         return false;
     }
 
-    private static boolean isValidPlacement(int[][] sudoku, int number, int row, int column) {
+    private boolean isValidPlacement(int[][] sudoku, int number, int row, int column) {
         return !isNumberInRow(sudoku, number, row) &&
                 !isNumberInColumn(sudoku, number, column) &&
                 !isNumberInSubGrid(sudoku, number, row, column);
     }
 
-    private static boolean solveSudoku(int[][] sudoku) {
+    public Object[] solveSudoku(int[][] sudoku) {
         for (int row = 0; row < GridSize; row++) {
             for (int column = 0; column < GridSize; column++) {
                 if (sudoku[row][column] == 0) {
@@ -106,18 +106,19 @@ public class SudokuSolver {
                         if (isValidPlacement(sudoku, numberToTry, row, column)) {
                             sudoku[row][column] = numberToTry;
 
-                            if (solveSudoku(sudoku)) { // recursion
-                                return true;
+                            if ((boolean) solveSudoku(sudoku)[0]) { // recursion
+                                return new Object[]{true, sudoku};
                             } else {
                                 sudoku[row][column] = 0;
                             }
                         }
                     }
-                    return false; // sudoku not solvable
+                    return new Object[]{false, sudoku};
+                     // sudoku not solvable
                 }
             }
         }
-        return true;
+        return new Object[]{true, sudoku};
     }
 
 }
