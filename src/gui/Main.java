@@ -13,6 +13,8 @@ public class Main {
      */
     public static void main(String[] args) {
         //
+        RenderGrid renderGrid = new RenderGrid();
+        renderGrid.run();
     }
 
 }
