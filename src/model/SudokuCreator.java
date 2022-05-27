@@ -2,9 +2,9 @@ package model;
 
 import java.util.Arrays;
 
-public class SudokuCreater {
+public class SudokuCreator {
 
-    // crea sudoku mettici dentro cosa randoica
+    // creat sudoku mettici dentro cosa randoica
     // chiama su sudoku il metodo solveSudoku --> sudoku.solveSudoku
     private int[][] sudoku = {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -17,7 +17,20 @@ public class SudokuCreater {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
     };
+    private String message;
+    
+    public SudokuCreator() {
+        this.message = "";
+    }
+    
+    public String getMessage() {
+        return this.message;
+    }
 
+    public int[][] getSudoku() {
+        return this.sudoku;
+    }
+    
     public void makeSudoku() {
         int a = 0;
         int b = 0;
@@ -28,14 +41,11 @@ public class SudokuCreater {
             b = (int) (Math.random() * 9);
             c = (int) (Math.random() * 9);
         } while (a == b || b == c || a == c);
-        System.out.println(a + " " + b + " " + c);
+        this.message = a + " " + b + " " + c;
 
         sudoku[0][0] = a;
         sudoku[0][1] = b;
         sudoku[0][2] = c;
-        System.out.println(Arrays.deepToString(sudoku));
-
-        System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(sudoku)[1]));
 
     }
 
