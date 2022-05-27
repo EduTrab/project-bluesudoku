@@ -27,8 +27,9 @@ import javax.swing.JPanel;
  */
 
 public class RenderGrid {
-    final static boolean RIGHT_TO_LEFT = false;
+    final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
+
     /**
      * this activates the GUI.
      */
@@ -72,8 +73,10 @@ public class RenderGrid {
         frame.setVisible(true);
 
     }
+
     /**
      * this is the first interface of the user.
+     * 
      * @param pane the interface
      */
     public void setupMainPane(Container pane) {
@@ -142,8 +145,10 @@ public class RenderGrid {
         pane.add(listPane);
 
     }
+
     /**
      * how the GUI layout is set up.
+     * 
      * @param pane the interface
      */
     public void setupPane(Container pane) {

@@ -26,28 +26,36 @@ public class SudokuCreator {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
     };
     private String message;
+
     /**
      * SudokuCreator.
      */
+
     public SudokuCreator() {
         this.message = "";
     }
+
     /**
      * get the messeg.
+     * 
      * @return the messeg
      */
     public String getMessage() {
         return this.message;
     }
+
     /**
      * this gets the sudoku.
+     * 
      * @return the sudoku
      */
     public int[][] getSudoku() {
         return this.sudoku;
     }
+
     /**
-     * this creats the random sudoku that will be then solved to creat and check playabol sudokus.
+     * this creats the random sudoku that will be then solved to creat and check
+     * playabol sudokus.
      */
     public void makeSudoku() {
         int aaa = 0;
@@ -58,7 +66,8 @@ public class SudokuCreator {
             aaa = (int) (Math.random() * 9);
             bbb = (int) (Math.random() * 9);
             ccc = (int) (Math.random() * 9);
-        } while (aaa == bbb || bbb == ccc || aaa == ccc);
+        } 
+        while (aaa == bbb || bbb == ccc || aaa == ccc);
         this.message = aaa + " " + bbb + " " + ccc;
 
         sudoku[0][0] = aaa;

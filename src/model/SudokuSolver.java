@@ -152,9 +152,9 @@ public class SudokuSolver {
      * @return if the number is valid
      */
     private boolean isValidPlacement(int[][] sudoku, int number, int row, int column) {
-        return !isNumberInRow(sudoku, number, row) &&
-                !isNumberInColumn(sudoku, number, column) &&
-                !isNumberInSubGrid(sudoku, number, row, column);
+        return !isNumberInRow(sudoku, number, row)
+                && !isNumberInColumn(sudoku, number, column)
+                && !isNumberInSubGrid(sudoku, number, row, column);
     }
 
     /**

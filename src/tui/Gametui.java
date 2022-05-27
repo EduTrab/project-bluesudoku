@@ -167,6 +167,7 @@ public class Gametui {
         }
         System.out.println("━━━━━━━━━━━━━━━━━━━");
     }
+
     /**
      * this checks if a sudoku is solvebol or not.
      */
@@ -184,6 +185,7 @@ public class Gametui {
             System.out.println();
         }
     }
+
     /**
      * TODO.
      */
