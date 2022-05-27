@@ -17,6 +17,14 @@ import java.awt.FlowLayout;
 import java.awt.event.*;
 import java.awt.ComponentOrientation;
 
+/**
+ * RenderGrid.
+ * 
+ * @author hech@usi.ch
+ * @author trabae@usi.ch
+ * @version 27.05.2022
+ */
+
 public class RenderGrid {
     final static boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
@@ -51,7 +59,7 @@ public class RenderGrid {
         frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
         frame.setMinimumSize(new Dimension(1000, 1000));
         frame.setPreferredSize(new Dimension(1000, 1000));
-        // frame.setLayout(null); 
+        // frame.setLayout(null);
 
         // Set up the content pane.
         setupMainPane(frame.getContentPane());

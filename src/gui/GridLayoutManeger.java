@@ -11,6 +11,14 @@ import javax.swing.border.Border;
 
 import java.awt.GridLayout;
 
+/**
+ * GridLayoutManeger.
+ * 
+ * @author hech@usi.ch
+ * @author trabae@usi.ch
+ * @version 27.05.2022
+ */
+
 public class GridLayoutManeger {
 
     public JPanel createGrid() {

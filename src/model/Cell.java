@@ -5,6 +5,7 @@ package model;
  * coordinate, a y coordinate and a value. All this three fields are integer
  * numbers from 1 to 9 (inclusive) ).
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.09
  */

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 /**
  * The main class of the sudoku game, which the player directly interact with.
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.12
  */

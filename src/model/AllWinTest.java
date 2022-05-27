@@ -6,6 +6,7 @@ import org.junit.Test;
 /**
  * The test class AllWinTest.
  *
+ * @author trab@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.12
  */

@@ -4,6 +4,7 @@ package model;
  * sudokusolver
  *
  * @author trabae@usi.ch
+ * @author trabae@usi.ch
  * @version 27.05.2022
  */
 

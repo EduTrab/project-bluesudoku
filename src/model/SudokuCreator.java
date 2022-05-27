@@ -2,6 +2,14 @@ package model;
 
 import java.util.Arrays;
 
+/**
+ * sudokusolver.
+ * 
+ * @author hech@usi.ch
+ * @author trabae@usi.ch
+ * @version 27.05.2022
+ */
+
 public class SudokuCreator {
 
     // creat sudoku mettici dentro cosa randoica
@@ -18,11 +26,11 @@ public class SudokuCreator {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
     };
     private String message;
-    
+
     public SudokuCreator() {
         this.message = "";
     }
-    
+
     public String getMessage() {
         return this.message;
     }
@@ -30,7 +38,7 @@ public class SudokuCreator {
     public int[][] getSudoku() {
         return this.sudoku;
     }
-    
+
     public void makeSudoku() {
         int a = 0;
         int b = 0;

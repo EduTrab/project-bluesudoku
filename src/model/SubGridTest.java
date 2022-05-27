@@ -5,6 +5,7 @@ import org.junit.Test;
 /**
  * The test class SubGridTest.
  * 
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.09
  */

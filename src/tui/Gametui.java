@@ -13,6 +13,7 @@ import java.util.Scanner;
  * Write a description of class gametui here.
  *
  * @author trabae@usi.ch
+ * @author trabae@usi.ch
  * @version 10/05.2022
  */
 public class Gametui {
@@ -181,11 +182,11 @@ public class Gametui {
             System.out.println();
         }
     }
-    
+
     public void createRandomSudoku() {
         this.creator.makeSudoku();
         System.out.println(this.creator.getMessage());
         System.out.println(Arrays.deepToString(this.creator.getSudoku()));
-        System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(this.creator.getSudoku())[1]));  
+        System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(this.creator.getSudoku())[1]));
     }
 }

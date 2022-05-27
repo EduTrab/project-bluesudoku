@@ -3,6 +3,7 @@ package model;
 /**
  * This class defines the conditions to win the game.
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.09
  */

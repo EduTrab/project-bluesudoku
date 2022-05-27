@@ -5,6 +5,7 @@ package model;
  * elements.
  * For example row1 contains cell1,1, cell1,2, cell1,3, ..., cell1,9
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.09
  */

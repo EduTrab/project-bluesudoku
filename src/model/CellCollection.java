@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * A cellCollection is an array consists of 9 cell objects as its
  * elements.
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.09
  */

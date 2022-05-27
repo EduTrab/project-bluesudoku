@@ -10,6 +10,7 @@ import java.util.Scanner;
  * A SudokuReader can read the content of an external .txt file
  * and constrcut a sudoku with integers in it.
  *
+ * @author trabae@usi.ch
  * @author hech@usi.ch
  * @version 2022.05.12
  */
