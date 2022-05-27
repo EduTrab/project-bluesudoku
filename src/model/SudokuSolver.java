@@ -1,7 +1,7 @@
 package model;
 
 /**
- * sudokusolver
+ * sudokusolver.
  *
  * @author trabae@usi.ch
  * @author trabae@usi.ch

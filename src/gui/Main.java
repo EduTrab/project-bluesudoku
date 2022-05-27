@@ -3,7 +3,7 @@ package gui;
 /**
  * grfical user interface.
  * 
- * @author hech.usi.ch
+ * @author hech@usi.ch
  * @author trabae@usi.ch
  * @version 2022.05.06
  */

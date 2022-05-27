@@ -1,15 +1,13 @@
 package gui;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
-import java.awt.Color;
-import java.awt.Font;
 import javax.swing.border.Border;
-
-import java.awt.GridLayout;
 
 /**
  * GridLayoutManeger.
@@ -21,6 +19,10 @@ import java.awt.GridLayout;
 
 public class GridLayoutManeger {
 
+    /**
+     * TODO.
+     * @return MainCenter 
+     */
     public JPanel createGrid() {
         // TODO add param to createGride once it is automated(greats grids input)
         JPanel mainCenter = new JPanel(new GridLayout(9, 9));
@@ -38,7 +40,7 @@ public class GridLayoutManeger {
         }; // TODO automat sudoku insertion
 
         // initialys JLabel
-        JLabel jLabel = new JLabel();
+        JLabel jlabel = new JLabel();
         Border border = BorderFactory.createLineBorder(Color.BLACK, 2);
         Border border1 = BorderFactory.createLineBorder(Color.BLACK, 2);
 
@@ -47,14 +49,14 @@ public class GridLayoutManeger {
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (sudoku[i][j] == 0) {
-                    JTextField jTextField = new JTextField("", JTextField.CENTER);
-                    jTextField.setBorder(j % 3 == 0 ? border1 : border);
-                    mainCenter.add(jTextField);
+                    JTextField jtextFieldField = new JTextField("", JTextField.CENTER);
+                    jtextFieldField.setBorder(j % 3 == 0 ? border1 : border);
+                    mainCenter.add(jtextFieldField);
                 } else {
-                    jLabel = new JLabel(Integer.toString(sudoku[i][j]), JLabel.CENTER);
-                    jLabel.setFont(new Font("Verdana", Font.PLAIN, 25));
-                    jLabel.setBorder(j % 3 == 0 ? border1 : border);
-                    mainCenter.add(jLabel);
+                    jlabel = new JLabel(Integer.toString(sudoku[i][j]), JLabel.CENTER);
+                    jlabel.setFont(new Font("Verdana", Font.PLAIN, 25));
+                    jlabel.setBorder(j % 3 == 0 ? border1 : border);
+                    mainCenter.add(jlabel);
                 }
 
             }
