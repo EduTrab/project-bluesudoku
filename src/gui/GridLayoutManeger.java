@@ -1,10 +1,13 @@
 package gui;
 
+import javax.swing.BorderFactory;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.Font;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.border.Border;
 
 import java.awt.GridLayout;
 
@@ -24,24 +27,32 @@ public class GridLayoutManeger {
                 { 0, 0, 9, 7, 0, 0, 0, 0, 5 },
                 { 0, 0, 0, 2, 0, 0, 0, 0, 0 },
                 { 0, 0, 7, 0, 4, 0, 2, 0, 3 }
-        }; //TODO automat sudoku insertion
+        }; // TODO automat sudoku insertion
 
         // initialys JLabel
         JLabel jLabel = new JLabel();
+        Border border = BorderFactory.createLineBorder(Color.BLACK, 2);
+        Border border1 = BorderFactory.createLineBorder(Color.BLACK, 2);
+
+        
         // != 0 --> JLabel
         // = 0 --> JTextField
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 if (sudoku[i][j] == 0) {
-                    mainCenter.add(new JTextField("", JTextField.CENTER));
+                    JTextField jTextField = new JTextField("", JTextField.CENTER);
+                    jTextField.setBorder(j % 3 == 0 ? border1 : border);
+                    mainCenter.add(jTextField);
                 } else {
-                    jLabel = new JLabel(Integer.toString(sudoku[i][j]),JLabel.CENTER);
+                    jLabel = new JLabel(Integer.toString(sudoku[i][j]), JLabel.CENTER);
                     jLabel.setFont(new Font("Verdana", Font.PLAIN, 25));
+                    jLabel.setBorder(j % 3 == 0 ? border1 : border);
                     mainCenter.add(jLabel);
                 }
 
             }
         }
+
         return mainCenter;
 
     }
