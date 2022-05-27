@@ -51,6 +51,7 @@ public class RenderGrid {
         frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
         frame.setMinimumSize(new Dimension(1000, 1000));
         frame.setPreferredSize(new Dimension(1000, 1000));
+        // frame.setLayout(null); 
 
         // Set up the content pane.
         setupMainPane(frame.getContentPane());

@@ -10,7 +10,7 @@ package model;
 // this still has a few bugs need to fix it
 public class SudokuSolver {
     // size of grid
-    private final int GridSize = 9;
+    private static final int GridSize = 9;// GRID_SIZE
     private int[][] sudoku;
 
     /**
