@@ -3,9 +3,9 @@ package model;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
 /**
  * The test class SingleUnitWinTest.
+ * 
  * @author hech@usi.ch
  * @version 2022.05.12
  */

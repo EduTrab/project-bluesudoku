@@ -18,7 +18,6 @@ public class SudokuCreater {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
     };
 
-
     public void makeSudoku() {
         int a = 0;
         int b = 0;
@@ -28,8 +27,7 @@ public class SudokuCreater {
             a = (int) (Math.random() * 9);
             b = (int) (Math.random() * 9);
             c = (int) (Math.random() * 9);
-        }
-        while (a == b || b == c || a == c);
+        } while (a == b || b == c || a == c);
         System.out.println(a + " " + b + " " + c);
 
         sudoku[0][0] = a;
@@ -38,7 +36,7 @@ public class SudokuCreater {
         System.out.println(Arrays.deepToString(sudoku));
 
         System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(sudoku)[1]));
-        
+
     }
 
 }

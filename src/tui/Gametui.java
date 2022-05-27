@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class Gametui {
     private Game game;
     private SudokuSolver solver;
-    
+
     /**
      * this creats the tui.
      * 
@@ -24,10 +24,10 @@ public class Gametui {
      */
     public void gametuimain(String filePath) {
         int option;
-        
+
         this.game = new Game();
         game.initialize(filePath);
-        
+
         this.solver = new SudokuSolver();
 
         while (true) {
@@ -68,7 +68,6 @@ public class Gametui {
         int row = -99;
         int value = -99;
         Scanner in = new Scanner(System.in);
-
 
         askForNumbers();
         try {
@@ -163,14 +162,14 @@ public class Gametui {
         }
         System.out.println("━━━━━━━━━━━━━━━━━━━");
     }
-    
+
     public void aiSolution() {
         if (this.solver.solveResult()) {
             System.out.println("Solved successfully!!!");
         } else {
             System.out.println("This Sudoku is not solvable :(");
         }
-        
+
         for (int row = 0; row < this.solver.getGridSize(); row++) {
             for (int column = 0; column < this.solver.getGridSize(); column++) {
                 System.out.print(this.solver.getSudoku()[row][column]);

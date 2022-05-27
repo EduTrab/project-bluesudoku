@@ -1,7 +1,5 @@
 package model;
 
-
-
 /**
  * A column is an array consists of 9 cell objects in the same column as its
  * elements.

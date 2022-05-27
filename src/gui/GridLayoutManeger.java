@@ -34,7 +34,6 @@ public class GridLayoutManeger {
         Border border = BorderFactory.createLineBorder(Color.BLACK, 2);
         Border border1 = BorderFactory.createLineBorder(Color.BLACK, 2);
 
-        
         // != 0 --> JLabel
         // = 0 --> JTextField
         for (int i = 0; i < 9; i++) {

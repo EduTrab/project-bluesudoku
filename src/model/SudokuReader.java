@@ -15,7 +15,6 @@ import java.util.Scanner;
  */
 
 public class SudokuReader {
-   
 
     /**
      * An example of a method - replace this comment with your own.

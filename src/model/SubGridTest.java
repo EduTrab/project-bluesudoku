@@ -1,11 +1,10 @@
 package model;
 
-
 import org.junit.Test;
-
 
 /**
  * The test class SubGridTest.
+ * 
  * @author hech@usi.ch
  * @version 2022.05.09
  */

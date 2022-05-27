@@ -2,14 +2,12 @@
 package model;
 
 import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
  * The test class CellTest.
  *
- * @author hech@usi.ch 
+ * @author hech@usi.ch
  * @version 2022.05.09
  */
 public class CellTest {

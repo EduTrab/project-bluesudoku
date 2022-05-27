@@ -1,13 +1,11 @@
 package model;
 
-
-
 /**
  * A SubGrid is an array consists of 9 cell objects in the same 9x9 subgrid as
  * its elements.
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3
-
+ * 
  * @author hech@usi.ch
  * @version 2022.05.09
  */

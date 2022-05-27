@@ -1,6 +1,5 @@
 package model;
 
-
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
@@ -32,7 +31,7 @@ public class Game {
     public Grid getGrid() {
         return this.grid;
     }
-    
+
     /**
      * An accessor method to get the win statu of current game.
      * 

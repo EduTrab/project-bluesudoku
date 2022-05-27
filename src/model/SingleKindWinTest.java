@@ -3,7 +3,6 @@ package model;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
 /**
  * The test class SingleKindWinTest.
  *
@@ -16,8 +15,6 @@ public class SingleKindWinTest {
      */
     public SingleKindWinTest() {
     }
-
-    
 
     @Test
     public void testTestAllRows() {

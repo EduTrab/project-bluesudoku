@@ -1,7 +1,5 @@
 package model;
 
-
-
 /**
  * This class defines the conditions to win the game.
  *
