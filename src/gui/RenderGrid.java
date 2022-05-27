@@ -1,21 +1,22 @@
 package gui;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.ComponentOrientation;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-// import javax.print.attribute.standard.JobHoldUntil;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
+// import javax.print.attribute.standard.JobHoldUntil;
 // import java.awt.GridLayout;
-import java.awt.event.*;
-import java.awt.ComponentOrientation;
 
 /**
  * RenderGrid.
@@ -26,9 +27,12 @@ import java.awt.ComponentOrientation;
  */
 
 public class RenderGrid {
-    final static boolean RIGHT_TO_LEFT = false;
+    final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
 
+    /**
+     * this activates the GUI.
+     */
     public void run() { // activates the gui
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
@@ -70,6 +74,11 @@ public class RenderGrid {
 
     }
 
+    /**
+     * this is the first interface of the user.
+     * 
+     * @param pane the interface
+     */
     public void setupMainPane(Container pane) {
         JPanel listPane = new JPanel();
         listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
@@ -107,7 +116,7 @@ public class RenderGrid {
 
         // Listener
         easy.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 gameGUI();
@@ -116,7 +125,7 @@ public class RenderGrid {
         });
 
         medium.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 gameGUI();
@@ -125,7 +134,7 @@ public class RenderGrid {
         });
 
         hard.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 gameGUI();
@@ -137,6 +146,11 @@ public class RenderGrid {
 
     }
 
+    /**
+     * how the GUI layout is set up.
+     * 
+     * @param pane the interface
+     */
     public void setupPane(Container pane) {
 
         // pane.add(new JLabel("test"));
@@ -167,13 +181,13 @@ public class RenderGrid {
 
         // Listeners
         check.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(ActionEvent aaa) {
                 System.out.println("check");
             }
         });
 
         menue.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent a) {
+            public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 mainGUI();

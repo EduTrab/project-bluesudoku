@@ -2,11 +2,11 @@ package tui;
 
 import model.Cell;
 import model.Game;
-import model.SudokuSolver;
 import model.SudokuCreator;
+import model.SudokuSolver;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -168,6 +168,9 @@ public class Gametui {
         System.out.println("━━━━━━━━━━━━━━━━━━━");
     }
 
+    /**
+     * this checks if a sudoku is solvebol or not.
+     */
     public void aiSolution() {
         if (this.solver.solveResult()) {
             System.out.println("Solved successfully!!!");
@@ -183,6 +186,9 @@ public class Gametui {
         }
     }
 
+    /**
+     * TODO.
+     */
     public void createRandomSudoku() {
         this.creator.makeSudoku();
         System.out.println(this.creator.getMessage());
