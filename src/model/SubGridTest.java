@@ -19,6 +19,7 @@ public class SubGridTest {
     public void testConstructor() {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
-        model.SubGrid subGrid1 = new model.SubGrid(game1.getGrid(), 3);
+        model.CellCollection subGrid1 = new model.SubGrid(game1.getGrid(), 3);
+        subGrid1.initializeCollection();
     }
 }

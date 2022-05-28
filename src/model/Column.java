@@ -7,22 +7,31 @@ package model;
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.28
  */
 public class Column extends CellCollection {
+    
+    private int column;
+    private Grid grid;
+    
     /**
      * Constructor for objects of class Column.
      * 
      * @param theGrid .
      * @param column  .
      */
-    public Column(Grid theGrid, int column) {
-        super(theGrid, column);
-        for (int i = 0; i < 9; i++) {
-            int current = (column - 1) + i * 9;
-            Cell objectCell = theGrid.getCells().get(current);
-            this.getCells().set(i, objectCell);
-        }
+    public Column(Grid theGrid, int columnNumber) {
+        super();
+        this.grid = theGrid;
+        this.column = columnNumber;
     }
 
+    @Override
+    public void initializeCollection() {
+        for (int i = 0; i < 9; i++) {
+            int current = (this.column - 1) + i * 9;
+            Cell objectCell = this.grid.getCells().get(current);
+            this.getCells().add(objectCell);
+        }
+    }
 }

@@ -19,9 +19,12 @@ public class CellCollection {
      * @param theGrid .
      * @param number  .
      */
-    public CellCollection(Grid theGrid, int number) {
+    public CellCollection() {
         cells = new ArrayList<Cell>();
-        for (int i = 0; i < 10; i++) {
+    }
+    
+    public void initializeCollection() {
+        for (int i = 0; i < 9; i++) {
             cells.add(new Cell(0, 0, 0));
         }
     }
@@ -43,19 +46,9 @@ public class CellCollection {
      */
     public boolean testSum() {
         int sum = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             sum = sum + this.getCells().get(i).getValue();
         }
         return sum == 45;
-    }
-
-    /**
-     * Fill the cellCollection with cells of values whose sum is 45. In order to
-     * test.
-     */
-    public void fillTrueSum() {
-        for (int i = 0; i < 10; i++) {
-            this.getCells().set(i, new Cell(0, 0, i));
-        }
     }
 }

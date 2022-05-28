@@ -8,26 +8,36 @@ package model;
  * 
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.28
  */
 public class SubGrid extends CellCollection {
+    private Grid grid;
+    private int subGrid;
+    
     /**
      * Constructor for objects of class subGrid.
      * 
      * @param theGrid .
      * @param subGrid .
      */
-    public SubGrid(Grid theGrid, int subGrid) {
-        super(theGrid, subGrid);
+    public SubGrid(Grid theGrid, int subGridNumber) {
+        super();
+        this.grid = theGrid;
+        this.subGrid = subGridNumber;
         int left = (subGrid - 1) % 3;
         int down = (subGrid - 1) / 3;
+    }
+
+    @Override
+    public void initializeCollection() {
+        int left = (this.subGrid - 1) % 3;
+        int down = (this.subGrid - 1) / 3;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 int current = (i * 9 + j) + (left * 3) + (down * 27);
-                Cell objectCell = theGrid.getCells().get(current);
-                this.getCells().set(i * 3 + j, objectCell);
+                Cell objectCell = grid.getCells().get(current);
+                this.getCells().add(objectCell);
             }
         }
     }
-
 }

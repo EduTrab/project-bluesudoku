@@ -34,32 +34,8 @@ public class SingleUnitWin {
      * @return ifwin True if there is no same elements in the row, otherwise return
      *         false
      */
-    public boolean testRow(Row row) {
-        ifwin = row.testSum();
-        return this.ifwin;
-    }
-
-    /**
-     * Return true if there is no same elements in the column, otherwise return
-     * false.
-     * 
-     * @param column the column needs to be tested
-     * @return this.ifwin
-     */
-    public boolean testColumn(Column column) {
-        this.ifwin = column.testSum();
-        return this.ifwin;
-    }
-
-    /**
-     * Return true if there is no same elements in the subgrid, otherwise return
-     * false.
-     * 
-     * @param subgrid the subgrid needs to be tested
-     * @return ifwin
-     */
-    public boolean testSubGrid(SubGrid subgrid) {
-        this.ifwin = subgrid.testSum();
+    public boolean testSingleUnit(CellCollection cellColletion) {
+        ifwin = cellColletion.testSum();
         return this.ifwin;
     }
 

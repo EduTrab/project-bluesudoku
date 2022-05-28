@@ -6,21 +6,32 @@ package model;
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.28
  */
 public class Row extends CellCollection {
+    
+    private int row;
+    private Grid grid;
+    
     /**
      * Constructor for objects of class Row with param theGrid and row.
      * 
      * @param theGrid .
      * @param row     .
      */
-    public Row(Grid theGrid, int row) {
-        super(theGrid, row);
+    
+    public Row(Grid theGrid, int rowNumber) {
+        super();
+        this.grid = theGrid;
+        this.row = rowNumber;
+    }
+    
+    @Override
+    public void initializeCollection() {
         for (int i = 0; i < 9; i++) {
-            int current = i + (row - 1) * 9;
-            Cell objectCell = theGrid.getCells().get(current);
-            this.getCells().set(i, objectCell);
+          int current = i + (this.row - 1) * 9;
+          Cell objectCell = this.grid.getCells().get(current);
+          this.getCells().add(objectCell);
         }
     }
 }

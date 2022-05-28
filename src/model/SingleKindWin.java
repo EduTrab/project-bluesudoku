@@ -37,8 +37,9 @@ public class SingleKindWin {
     public boolean testAllRows(Grid grid) {
         this.ifwin = true;
         for (int i = 1; i < 10; i++) {
-            Row currentRow = new Row(grid, i);
-            this.ifwin = this.ifwin && this.singleUnitWin.testRow(currentRow);
+            CellCollection currentRow = new Row(grid, i);
+            currentRow.initializeCollection();
+            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentRow);
         }
         return this.ifwin;
     }
@@ -52,8 +53,9 @@ public class SingleKindWin {
     public boolean testAllColumns(Grid grid) {
         this.ifwin = true;
         for (int i = 1; i < 10; i++) {
-            Column currentColumn = new Column(grid, i);
-            this.ifwin = this.ifwin && this.singleUnitWin.testColumn(currentColumn);
+            CellCollection currentColumn = new Column(grid, i);
+            currentColumn.initializeCollection();
+            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentColumn);
         }
         return this.ifwin;
     }
@@ -67,8 +69,9 @@ public class SingleKindWin {
     public boolean testAllSubGrids(Grid grid) {
         this.ifwin = true;
         for (int i = 1; i < 10; i++) {
-            SubGrid currentSubGrid = new SubGrid(grid, i);
-            this.ifwin = this.ifwin && this.singleUnitWin.testSubGrid(currentSubGrid);
+            CellCollection currentSubGrid = new SubGrid(grid, i);
+            currentSubGrid.initializeCollection();
+            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentSubGrid);
         }
         return this.ifwin;
     }

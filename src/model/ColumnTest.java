@@ -20,6 +20,7 @@ public class ColumnTest {
     public void testConstructor() {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
-        model.Column column1 = new model.Column(game1.getGrid(), 4);
+        model.CellCollection column1 = new model.Column(game1.getGrid(), 4);
+        column1.initializeCollection();
     }
 }
