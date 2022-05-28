@@ -1,5 +1,6 @@
 package model;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 /**
@@ -46,4 +47,23 @@ public class GameTest {
         game2.checkWin();
         game1.getWin();
     }
+
+    @Test
+    public void testInvalidSudokuFile()
+    {
+        model.Game game1 = new model.Game();
+        game1.initialize("123");
+    }
+    
+
+    @Test
+    public void testAISolution()
+    {
+        model.Game game1 = new model.Game();
+        game1.initialize("sudokuFiles/easy1.txt");
+        game1.getSolver();
+        assertEquals(true, game1.AISolution());
+    }
 }
+
+

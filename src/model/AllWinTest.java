@@ -32,14 +32,20 @@ public class AllWinTest {
         model.Game game2 = new model.Game();
         model.Game game3 = new model.Game();
         model.Game game4 = new model.Game();
+        model.Game game5 = new model.Game();
+        model.Game game6 = new model.Game();
         model.AllWin allWin1 = new model.AllWin();
         game1.initialize("sudokuFiles/easy1.txt");
         game2.initialize("sudokuFiles/sampleSolution1.txt");
         game3.initialize("sudokuFiles/onlySubgrid.txt");
         game4.initialize("sudokuFiles/onlyColumn.txt");
+        game5.initialize("sudokuFiles/onlyRow.txt");
+        game6.initialize("sudokuFiles/emptySudoku.txt");
         allWin1.testAll(game1.getGrid());
         allWin1.testAll(game2.getGrid());
         allWin1.testAll(game3.getGrid());
         allWin1.testAll(game4.getGrid());
+        allWin1.testAll(game5.getGrid());
+        allWin1.testAll(game6.getGrid());
     }
 }
