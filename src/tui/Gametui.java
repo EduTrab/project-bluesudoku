@@ -2,7 +2,6 @@ package tui;
 
 import model.Cell;
 import model.Game;
-import model.SudokuCreator;
 import model.SudokuSolver;
 
 import java.util.ArrayList;
@@ -18,7 +17,6 @@ import java.util.Scanner;
  */
 public class Gametui {
     private Game game;
-    private SudokuCreator creator;
 
     /**
      * this creats the tui.
@@ -31,7 +29,6 @@ public class Gametui {
         this.game = new Game();
         game.initialize(filePath);
 
-        this.creator = new SudokuCreator();
 
         while (true) {
             Scanner in = new Scanner(System.in);
@@ -184,13 +181,4 @@ public class Gametui {
         }
     }
 
-    /**
-     * TODO.
-     */
-    public void createRandomSudoku() {
-        this.creator.makeSudoku();
-        System.out.println(this.creator.getMessage());
-        System.out.println(Arrays.deepToString(this.creator.getSudoku()));
-        System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(this.creator.getSudoku())[1]));
-    }
 }
