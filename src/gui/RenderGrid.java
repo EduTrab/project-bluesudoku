@@ -45,8 +45,8 @@ public class RenderGrid {
         // Create and set up the window.
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
-        frame.setMinimumSize(new Dimension(1000, 1000));
-        frame.setPreferredSize(new Dimension(1000, 1000));
+        frame.setMinimumSize(new Dimension(750, 750));
+        frame.setPreferredSize(new Dimension(750, 750));
 
         // Set up the content pane.
         setupPane(frame.getContentPane());
@@ -61,8 +61,8 @@ public class RenderGrid {
         // Create and set up the window.
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
-        frame.setMinimumSize(new Dimension(1000, 1000));
-        frame.setPreferredSize(new Dimension(1000, 1000));
+        frame.setMinimumSize(new Dimension(750, 750));
+        frame.setPreferredSize(new Dimension(750, 750));
         // frame.setLayout(null);
 
         // Set up the content pane.
