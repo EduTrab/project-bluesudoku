@@ -14,6 +14,7 @@ public class Game {
     private Grid grid;
     private AllWin win;
     private SudokuReader reader;
+    private SudokuSolver solver;
 
     /**
      * Constructor for objects of class Game.
@@ -22,6 +23,7 @@ public class Game {
         this.grid = new Grid();
         this.win = new AllWin();
         this.reader = new SudokuReader();
+        this.solver = new SudokuSolver();
     }
 
     /**
@@ -31,6 +33,10 @@ public class Game {
      */
     public Grid getGrid() {
         return this.grid;
+    }
+    
+    public SudokuSolver getSolver() {
+        return this.solver;
     }
 
     /**
@@ -85,6 +91,11 @@ public class Game {
     public void emptyCell(int xcoordinate, int ycoordinate) {
         this.changeCellValue(xcoordinate, ycoordinate, 0);
         // this.printGrid();
+    }
+    
+    public boolean AISolution() {
+        boolean result = this.solver.solveResult(this.grid);
+        return result;
     }
 
     /**
