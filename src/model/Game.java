@@ -2,6 +2,7 @@ package model;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * The main class of the sudoku game, which the player directly interact with.
@@ -67,6 +68,7 @@ public class Game {
         } catch (FileNotFoundException exception) {
             System.out.println("Exception throw :" + exception);
         }
+        this.solver.initialize(this.getGrid());
     }
 
     /**
@@ -93,8 +95,14 @@ public class Game {
         // this.printGrid();
     }
     
-    public boolean AISolution() {
-        boolean result = this.solver.solveResult(this.grid);
+    public String AIResult() {
+        String result = "";
+        int[][] sudoku = solver.getSudoku();
+        if((boolean)solver.solveSudoku(sudoku)[0]) {
+            result = "Solved successfully!!!";
+        } else {
+            result = "This Sudoku is not solvable :(";
+        }
         return result;
     }
 

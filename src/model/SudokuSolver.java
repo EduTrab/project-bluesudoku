@@ -22,6 +22,13 @@ public class SudokuSolver {
     public SudokuSolver() {
 
     }
+    
+    public void initialize(Grid grid) {
+        sudoku = new int[9][9];
+        for(int i = 0; i < 8; i++) {
+            Arrays.fill(this.sudoku,this.createRowArray(grid, i));
+        }
+    }
 
     /**
      * .
@@ -40,23 +47,18 @@ public class SudokuSolver {
     public int[][] getSudoku() {
         return this.sudoku;
     }
-
-    /**
-     * .
-     * 
-     * @return return if the sudoku is solvebol or not
-     */
-    public boolean solveResult(Grid grid) {
-
-        // this will be our starting sudoku grd
-        int[][] sudoku = new int[9][9];
-        for(int i = 0; i < 8; i++){
-            Arrays.fill(sudoku,this.createRowArray(grid, i));
+    
+    private static void printSudoku(int[][] sudoku) {
+        for (int row = 0; row < GridSize; row++) {
+            for (int column = 0; column < GridSize; column++) {
+                System.out.print(sudoku[row][column]);
+            }
+            System.out.println();
         }
 
-        return (boolean) solveSudoku(sudoku)[0];
-
     }
+    
+    
 
     // need some halper methods check if the number we are inputting already existes
     // in that row colum or subGrid

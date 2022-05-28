@@ -22,7 +22,7 @@ public class Main {
      */
     public static void main(String[] args) {
         Gametui gametui = new Gametui();
-        gametui.gametuimain(args[0]);
+        gametui.chooseDifficulty();
     }
 
 }

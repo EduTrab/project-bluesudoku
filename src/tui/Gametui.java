@@ -2,6 +2,10 @@ package tui;
 
 import model.Cell;
 import model.Game;
+import model.EasyGame;
+import model.MediumGame;
+import model.HardGame;
+import model.DIYGame;
 import model.SudokuSolver;
 
 import java.util.ArrayList;
@@ -23,18 +27,13 @@ public class Gametui {
      * 
      * @param filePath .
      */
-    public void gametuimain(String filePath) {
+    public void chooseDifficulty() {
         int option;
-
-        this.game = new Game();
-        game.initialize(filePath);
-
 
         while (true) {
             Scanner in = new Scanner(System.in);
-            this.printGrid();
             System.out.println(
-                    "to play the game insert 1 and press enter\nto exit the game insert 2 and press enter\nto check your solution insert 3 and press enter");
+                    "to play the easy level sudoku insert 1 and press enter\nto play the medium level sudoku insert 2 and press enter\nto play the hard level sudoku insert 3 and press enter\nto make a DIY sudoku insert 4 and press enter\nto exit the game insert 5 and press enter");
 
             try {
                 option = Integer.parseInt(in.next());
@@ -43,19 +42,23 @@ public class Gametui {
             }
 
             if (option == 1) {
-                play(game);
-
+                this.game = new EasyGame();
+                ((EasyGame)game).initialize();
+                sudokuGrid();
             } else if (option == 2) {
-                break;
+                this.game = new MediumGame();
+                ((MediumGame)game).initialize();
+                sudokuGrid();
             } else if (option == 3) {
-                game.checkWin();
-                if (this.game.getWin().isIfwin() == true) {
-                    System.out.println("You win!");
-                } else {
-                    System.out.println("Whoops...Try it again.");
-                }
-                pausa(in);
-
+                this.game = new HardGame();
+                ((HardGame)game).initialize();
+                sudokuGrid();
+            } else if (option == 4) {
+                this.game = new DIYGame();
+                ((DIYGame)game).initialize();
+                sudokuGrid();
+            } else if (option == 5) {
+                break;
             } else {
                 pausa(in);
             }
@@ -63,6 +66,46 @@ public class Gametui {
         System.out.println("Good bye");
     }
 
+    private void sudokuGrid() {
+        int option;
+        while(true) {
+            Scanner in = new Scanner(System.in);
+            this.printGrid();
+            System.out.println(
+                    "to fill the cell insert 1 and press enter\nto check your answer insert 2 and press enter\nto let the AI try to solve the sudoku insert 3 and press enter\nto exit the game insert 4 and press enter");
+            try {
+                option = Integer.parseInt(in.next());
+            } catch (Exception exception) {
+                continue;
+            }
+            
+            if (option == 1) {
+                play(game);
+            } else if (option == 2) {
+                game.checkWin();
+                if (this.game.getWin().isIfwin() == true) {
+                    System.out.println("You win!");
+                } else {
+                    System.out.println("Whoops...Try it again.");
+                }
+                pausa(in);
+            } else if (option == 3) {
+                System.out.println(game.AIResult());
+                for (int row = 0; row < game.getSolver().getGridSize(); row++) {
+                     for (int column = 0; column < game.getSolver().getGridSize(); column++) {
+                         System.out.print(game.getSolver().getSudoku()[row][column]);
+                     }
+                     System.out.println();
+                }
+            } else if (option == 4) {
+                break;
+            } else {
+                pausa(in);
+            }
+        }
+        System.out.println("Good bye");
+    }
+    
     private void play(Game game) {
         int column = -99;
         int row = -99;
@@ -163,22 +206,7 @@ public class Gametui {
         System.out.println("━━━━━━━━━━━━━━━━━━━");
     }
 
-    /**
-     * this checks if a sudoku is solvebol or not.
-     */
-    public void AISolution() {
-        if (this.game.AISolution()) {
-            System.out.println("Solved successfully!!!");
-        } else {
-            System.out.println("This Sudoku is not solvable :(");
-        }
-
-        for (int row = 0; row < this.game.getSolver().getGridSize(); row++) {
-            for (int column = 0; column < this.game.getSolver().getGridSize(); column++) {
-                System.out.print(this.game.getSolver().getSudoku()[row][column]);
-            }
-            System.out.println();
-        }
-    }
+    
+    
 
 }
