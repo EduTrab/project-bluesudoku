@@ -1,16 +1,11 @@
 package tui;
 
-import model.Cell;
 import model.Game;
 import model.EasyGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
 import model.HardGame;
 import model.DIYGame;
-import model.SudokuSolver;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
