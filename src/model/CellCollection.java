@@ -3,26 +3,31 @@ package model;
 import java.util.ArrayList;
 
 /**
- * A cellCollection is an array consists of 9 cell objects as its
+ * CellColletion is the superclass of Row, Column and SubGrid.
+ * 
+ * A CellCollection is an ArrayList consists of 9 cell objects as its
  * elements.
+ * 
+ * CellCollection class has 1 field. cells is an ArrayList of Cell that
+ * holds all elements of the CellCollection.
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.29
  */
 public class CellCollection {
     private ArrayList<Cell> cells;
 
     /**
      * Constructor for objects of class Column.
-     * 
-     * @param theGrid .
-     * @param number  .
      */
     public CellCollection() {
         cells = new ArrayList<Cell>();
     }
     
+    /**
+     * Initialize the CellCollection by adding 9 empty Cells as its elements.
+     */
     public void initializeCollection() {
         for (int i = 0; i < 9; i++) {
             cells.add(new Cell(0, 0, 0));
@@ -32,7 +37,7 @@ public class CellCollection {
     /**
      * An accessor method which returns the list of cells in this collection.
      * 
-     * @return cells The list of cells in this collection
+     * @return cells The list of cells in this collection.
      */
     public ArrayList<Cell> getCells() {
         return this.cells;
@@ -42,7 +47,7 @@ public class CellCollection {
      * Test if the sum of the values of all cells in this collection equals to 45.
      * 
      * @return True if the sum of the values of all cells in this collection equals
-     *         to 45, other wise false
+     *         to 45, other wise false.
      */
     public boolean testSum() {
         int sum = 0;

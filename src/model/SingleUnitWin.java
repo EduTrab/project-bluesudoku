@@ -5,7 +5,7 @@ package model;
  * 
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.04.28
+ * @version 2022.05.29
  */
 public class SingleUnitWin {
     private boolean ifwin;
@@ -28,7 +28,7 @@ public class SingleUnitWin {
     }
 
     /**
-     * Return true if there is no same elements in the row, otherwise return false.
+     * Return true if there is no same elements in the CellCollection, otherwise return false.
      * 
      * @param row The row needs to be tested
      * @return ifwin True if there is no same elements in the row, otherwise return

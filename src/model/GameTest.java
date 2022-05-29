@@ -57,12 +57,12 @@ public class GameTest {
     
 
     @Test
-    public void testAISolution()
+    public void testAIResult()
     {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
         game1.getSolver();
-        assertEquals(true, game1.AISolution());
+        assertEquals("Solved successfully!!!", game1.AIResult());
     }
 }
 

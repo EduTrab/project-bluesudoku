@@ -7,7 +7,7 @@ import org.junit.Test;
  * 
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.29
  */
 public class SubGridTest {
     @Test

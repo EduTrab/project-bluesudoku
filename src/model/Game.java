@@ -5,11 +5,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
+ * Game is the superclass of EasyGame, MediumGame, HardGame, DIYGame
+ * 
  * The main class of the sudoku game, which the player directly interact with.
+ * 
+ * Game class has 4 fields. grid is the sudoku Grid of this game. win is
+ * the win condition checker of this game. reader is the SudokuReader to
+ * reader external sudoku files. solver is used to generator a computer
+ * player solution.
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.12
+ * @version 2022.05.29
  */
 public class Game {
     private Grid grid;
@@ -56,15 +63,14 @@ public class Game {
      * @param pathFile .
      */
     public void initialize(String pathFile) {
-        ArrayList<Cell> cells = this.grid.getCells();
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 // int current = i * 9 + j;
-                cells.add(new Cell(i, j));
+                this.grid.getCells().add(new Cell(i, j));
             }
         }
         try {
-            reader.readSudokuFile(cells, pathFile);
+            reader.readSudokuFile(this.grid.getCells(), pathFile);
         } catch (FileNotFoundException exception) {
             System.out.println("Exception throw :" + exception);
         }
@@ -98,7 +104,7 @@ public class Game {
     public String AIResult() {
         String result = "";
         int[][] sudoku = solver.getSudoku();
-        if((boolean)solver.solveSudoku(sudoku)[0]) {
+        if((boolean)solver.solveSudoku(sudoku)) {
             result = "Solved successfully!!!";
         } else {
             result = "This Sudoku is not solvable :(";

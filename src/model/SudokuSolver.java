@@ -25,8 +25,8 @@ public class SudokuSolver {
     
     public void initialize(Grid grid) {
         sudoku = new int[9][9];
-        for(int i = 0; i < 8; i++) {
-            Arrays.fill(this.sudoku,this.createRowArray(grid, i));
+        for(int i = 0; i < 9; i++) {
+            createRowArray(grid, i);
         }
     }
 
@@ -48,18 +48,6 @@ public class SudokuSolver {
         return this.sudoku;
     }
     
-    private static void printSudoku(int[][] sudoku) {
-        for (int row = 0; row < GridSize; row++) {
-            for (int column = 0; column < GridSize; column++) {
-                System.out.print(sudoku[row][column]);
-            }
-            System.out.println();
-        }
-
-    }
-    
-    
-
     // need some halper methods check if the number we are inputting already existes
     // in that row colum or subGrid
     // if it dose we can not place that number there --> return false
@@ -160,35 +148,32 @@ public class SudokuSolver {
      * @param sudoku the sudoku
      * @return solved sudoku
      */
-    public Object[] solveSudoku(int[][] sudoku) {
-        for (int row = 0; row < GridSize; row++) {
+    public boolean solveSudoku(int[][] sudoku) {
+         for (int row = 0; row < GridSize; row++) {
             for (int column = 0; column < GridSize; column++) {
                 if (sudoku[row][column] == 0) {
                     for (int numberToTry = 1; numberToTry <= GridSize; numberToTry++) {
                         if (isValidPlacement(sudoku, numberToTry, row, column)) {
                             sudoku[row][column] = numberToTry;
 
-                            if ((boolean) solveSudoku(sudoku)[0]) { // recursion
-                                return new Object[] { true, sudoku };
+                            if (solveSudoku(sudoku)) { // recursion
+                                return true;
                             } else {
                                 sudoku[row][column] = 0;
                             }
                         }
                     }
-                    return new Object[] { false, sudoku };
-                    // sudoku not solvable
+                    return false; // sudoku not solvable
                 }
             }
         }
-        return new Object[] { true, sudoku };
+        return true;
     }
-
-    public int[] createRowArray(Grid grid, int rowNumber) {
-        int[] rowArray = new int[9];
-        for (int i = 0; i < 8; i++) {
+    
+    public void createRowArray(Grid grid, int rowNumber) {
+        for (int i = 0; i < 9; i++) {
             int value = grid.getCells().get(i + rowNumber * 9).getValue();
-            Arrays.fill(rowArray, value);
+            sudoku[rowNumber][i] = value;
         }
-        return rowArray;
     }
 }

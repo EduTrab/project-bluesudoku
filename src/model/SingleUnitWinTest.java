@@ -8,7 +8,7 @@ import org.junit.Test;
  * 
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.12
+ * @version 2022.05.29
  */
 public class SingleUnitWinTest {
     /**

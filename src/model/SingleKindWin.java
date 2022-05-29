@@ -5,7 +5,7 @@ package model;
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.29
  */
 public class SingleKindWin {
     private boolean ifwin;
@@ -21,14 +21,6 @@ public class SingleKindWin {
     }
 
     /**
-     * Successor method to get ifwin.
-     * 
-     * @return ifwin
-     */
-    /**
-     * public boolean getIfwin() {
-     * return this.ifwin;
-     * }
      * Return true if all rows met the win conditional, otherwise return false.
      * 
      * @param grid The current grid

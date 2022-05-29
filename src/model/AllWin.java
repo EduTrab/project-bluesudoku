@@ -20,7 +20,7 @@ public class AllWin {
     }
 
     /**
-     * Successor method to is ifwin.
+     * Successor method to get ifwin.
      * 
      * @return ifwin
      */
