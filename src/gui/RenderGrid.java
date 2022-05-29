@@ -21,7 +21,11 @@ import javax.swing.JTextField;
 
 import model.AllWin;
 import model.Cell;
+import model.EasyGame;
+import model.Game;
 import model.Grid;
+import model.HardGame;
+import model.MediumGame;
 import model.SudokuSolver;
 
 // import javax.print.attribute.standard.JobHoldUntil;
@@ -38,7 +42,7 @@ import model.SudokuSolver;
 public class RenderGrid {
     final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
-
+    private Game game;
     /**
      * this activates the GUI.
      */
@@ -128,6 +132,8 @@ public class RenderGrid {
             public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
+                game = new EasyGame();
+                ((EasyGame)game).initialize();
                 gameGUI();
                 return;
             }
@@ -137,6 +143,8 @@ public class RenderGrid {
             public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
+                game = new MediumGame();
+                ((MediumGame)game).initialize();
                 gameGUI();
                 return;
             }
@@ -146,6 +154,8 @@ public class RenderGrid {
             public void actionPerformed(ActionEvent aaa) {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
+                game = new HardGame();
+                ((HardGame)game).initialize();
                 gameGUI();
                 return;
             }
@@ -184,7 +194,7 @@ public class RenderGrid {
         mainSouth.add(menue);
 
         // Center
-        final JPanel centerLayoutPanel = new GridLayoutManeger().createGrid();
+        final JPanel centerLayoutPanel = new GridLayoutManeger().createGrid(game.getGrid());
         // new GridLayout(9,9); // have to spacify amount of rows and colums
         main.add(centerLayoutPanel, BorderLayout.CENTER);
 

@@ -21,7 +21,8 @@ public class EasyGame extends Game
     {
         super();
         Random randomGenerator = new Random();
-        easySudokuNumber = randomGenerator.nextInt(9) + 1;
+        //easySudokuNumber = randomGenerator.nextInt(9) + 1;
+        easySudokuNumber = 1;
     }
 
     public void initialize()
