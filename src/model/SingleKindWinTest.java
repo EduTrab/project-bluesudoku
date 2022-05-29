@@ -22,7 +22,7 @@ public class SingleKindWinTest {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
         model.SingleKindWin singleKi1 = new model.SingleKindWin();
-        assertEquals(false, singleKi1.testAllRows(game1.getGrid()));
+        assertEquals(false, singleKi1.testSingleKind(game1.getGrid(), "Row"));
     }
 
     @Test
@@ -30,7 +30,7 @@ public class SingleKindWinTest {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
         model.SingleKindWin singleKi1 = new model.SingleKindWin();
-        assertEquals(false, singleKi1.testAllColumns(game1.getGrid()));
+        assertEquals(false, singleKi1.testSingleKind(game1.getGrid(), "Column"));
     }
 
     @Test
@@ -38,6 +38,6 @@ public class SingleKindWinTest {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
         model.SingleKindWin singleKi1 = new model.SingleKindWin();
-        assertEquals(false, singleKi1.testAllSubGrids(game1.getGrid()));
+        assertEquals(false, singleKi1.testSingleKind(game1.getGrid(), "SubGrid"));
     }
 }

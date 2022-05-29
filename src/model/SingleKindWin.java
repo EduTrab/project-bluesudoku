@@ -10,6 +10,7 @@ package model;
 public class SingleKindWin {
     private boolean ifwin;
     private SingleUnitWin singleUnitWin;
+    private CellCollection current;
 
     /**
      * Constructor for objects of class Win.
@@ -21,49 +22,27 @@ public class SingleKindWin {
     }
 
     /**
-     * Return true if all rows met the win conditional, otherwise return false.
+     * Return true if all CellCollections of this kind met the win conditional, otherwise return false.
      * 
      * @param grid The current grid
      * @return True if all rows met the win conditional, otherwise return false
      */
-    public boolean testAllRows(Grid grid) {
+    public boolean testSingleKind(Grid grid, String kind) {
         this.ifwin = true;
         for (int i = 1; i < 10; i++) {
-            CellCollection currentRow = new Row(grid, i);
-            currentRow.initializeCollection();
-            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentRow);
-        }
-        return this.ifwin;
-    }
-
-    /**
-     * Return true if all columns met the win conditional, otherwise return false.
-     * 
-     * @param grid The current grid
-     * @return True if all columns met the win conditional, otherwise return false
-     */
-    public boolean testAllColumns(Grid grid) {
-        this.ifwin = true;
-        for (int i = 1; i < 10; i++) {
-            CellCollection currentColumn = new Column(grid, i);
-            currentColumn.initializeCollection();
-            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentColumn);
-        }
-        return this.ifwin;
-    }
-
-    /**
-     * Return true if all subgrids met the win conditional, otherwise return false.
-     * 
-     * @param grid The current grid
-     * @return True if all subgrids met the win conditional, otherwise return false
-     */
-    public boolean testAllSubGrids(Grid grid) {
-        this.ifwin = true;
-        for (int i = 1; i < 10; i++) {
-            CellCollection currentSubGrid = new SubGrid(grid, i);
-            currentSubGrid.initializeCollection();
-            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(currentSubGrid);
+            switch(kind){
+                case "Column":
+                    current = new Column(grid, i);
+                    break;
+                case "Row":
+                    current = new Row(grid, i);
+                    break;
+                case "SubGrid":
+                    current = new SubGrid(grid, i);
+                    break;
+            }
+            current.initializeCollection();
+            this.ifwin = this.ifwin && this.singleUnitWin.testSingleUnit(current);
         }
         return this.ifwin;
     }

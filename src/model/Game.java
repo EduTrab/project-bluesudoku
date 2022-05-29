@@ -72,7 +72,6 @@ public class Game {
         try {
             reader.readSudokuFile(this.grid.getCells(), pathFile);
         } catch (FileNotFoundException exception) {
-            System.out.println("Exception throw :" + exception);
         }
         this.solver.initialize(this.getGrid());
     }

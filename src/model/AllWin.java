@@ -41,8 +41,8 @@ public class AllWin {
      * @param grid The current grid.
      */
     public void testAll(Grid grid) {
-        this.ifwin = this.singleKindWin.testAllRows(grid)
-                && this.singleKindWin.testAllColumns(grid)
-                && this.singleKindWin.testAllSubGrids(grid);
+        this.ifwin = this.singleKindWin.testSingleKind(grid, "Row")
+                && this.singleKindWin.testSingleKind(grid, "Column")
+                && this.singleKindWin.testSingleKind(grid, "SubGrid");
     }
 }

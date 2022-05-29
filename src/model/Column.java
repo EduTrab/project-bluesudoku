@@ -15,10 +15,6 @@ package model;
  * @version 2022.05.29
  */
 public class Column extends CellCollection {
-    
-    private int column;
-    private Grid grid;
-    
     /**
      * Constructor for objects of class Column.
      * 
@@ -26,9 +22,7 @@ public class Column extends CellCollection {
      * @param rowNumber The number of this Column.
      */
     public Column(Grid theGrid, int columnNumber) {
-        super();
-        this.grid = theGrid;
-        this.column = columnNumber;
+        super(theGrid, columnNumber);
     }
 
     /**
@@ -40,8 +34,8 @@ public class Column extends CellCollection {
     @Override
     public void initializeCollection() {
         for (int i = 0; i < 9; i++) {
-            int current = (this.column - 1) + i * 9;
-            Cell objectCell = this.grid.getCells().get(current);
+            int current = (this.getNumber() - 1) + i * 9;
+            Cell objectCell = getGrid().getCells().get(current);
             this.getCells().add(objectCell);
         }
     }

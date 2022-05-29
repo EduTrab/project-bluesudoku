@@ -17,8 +17,6 @@ package model;
  * @version 2022.05.29
  */
 public class SubGrid extends CellCollection {
-    private Grid grid;
-    private int subGrid;
     private int left;
     private int down;
     
@@ -29,11 +27,9 @@ public class SubGrid extends CellCollection {
      * @param subGridNumber The number of this SubGrid.
      */
     public SubGrid(Grid theGrid, int subGridNumber) {
-        super();
-        this.grid = theGrid;
-        this.subGrid = subGridNumber;
-        int left = (subGrid - 1) % 3;
-        int down = (subGrid - 1) / 3;
+        super(theGrid,subGridNumber);
+        int left = (this.getNumber() - 1) % 3;
+        int down = (this.getNumber() - 1) / 3;
     }
 
     /**
@@ -47,7 +43,7 @@ public class SubGrid extends CellCollection {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 int current = (i * 9 + j) + (left * 3) + (down * 27);
-                Cell objectCell = grid.getCells().get(current);
+                Cell objectCell = getGrid().getCells().get(current);
                 this.getCells().add(objectCell);
             }
         }

@@ -17,12 +17,24 @@ import java.util.ArrayList;
  */
 public class CellCollection {
     private ArrayList<Cell> cells;
+    private Grid grid;
+    private int number;
 
     /**
      * Constructor for objects of class Column.
      */
-    public CellCollection() {
+    public CellCollection(Grid theGrid, int theNumber) {
         cells = new ArrayList<Cell>();
+        grid = theGrid;
+        number = theNumber;
+    }
+    
+    public Grid getGrid() {
+        return grid;
+    }
+    
+    public int getNumber() {
+        return number;
     }
     
     /**
