@@ -8,8 +8,7 @@ package model;
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3.
  * 
- * SubGrid class has 4 fields. grid is the Grid in which 
- * this SubGrid is. subgrid holds the number of this SubGrid. 
+ * SubGrid class has 2 fields. 
  * left and down are used to locate the elements of this SubGrid.
  * 
  * @author trabae@usi.ch
@@ -21,7 +20,7 @@ public class SubGrid extends CellCollection {
     private int down;
     
     /**
-     * Constructor for objects of class subGrid.
+     * Constructor of instances of class subGrid.
      * 
      * @param theGrid The grid in which this SubGrid is.
      * @param subGridNumber The number of this SubGrid.

@@ -4,16 +4,14 @@ import java.util.Random;
 
 
 /**
- * Write a description of class mediumGame here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * MediumGame class is a childclass of Game class, which holds a method
+ * to initalize itself with a medium sudoku file
+ * 
+ * @author hech@usi.ch
+ * @version 2022.05.29
  */
 public class MediumGame extends Game
 {
-    // instance variables - replace the example below with your own
-    private int mediumSudokuNumber;
-
     /**
      * Constructor for objects of class mediumGame
      */
@@ -22,6 +20,9 @@ public class MediumGame extends Game
         super();
     }
 
+    /**
+     * Initialize the MediumGame by randomly choosing a medium sudoku file.
+     */
     public void initialize()
     {
         super.randomInitialize("medium");

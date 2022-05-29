@@ -12,13 +12,12 @@ package model;
  * @version 2022.05.29
  */
 public class Cell {
-    // instance variables - replace the example below with your own.
     private int xvalue;
     private int yvalue;
     private int value;
 
     /**
-     * Constructor for objects of class Cell (unfilled ones).
+     * Constructor of instances of class Cell (unfilled ones).
      * 
      * @param xcoordinate The x coordinate of this Cell.
      * @param ycoordinate The y coordinate of this Cell.
@@ -30,7 +29,7 @@ public class Cell {
     }
 
     /**
-     * Constructor for objects of class Cell.
+     * Constructor of instances of class Cell.
      * 
      * @param xcoordinate The x coordinate of this Cell.
      * @param ycoordinate The y coordinate of this Cell.

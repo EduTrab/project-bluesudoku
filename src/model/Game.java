@@ -38,12 +38,17 @@ public class Game {
     /**
      * An accessor method to get the grid of current game.
      * 
-     * @return grid
+     * @return The sudoku grid of this game
      */
     public Grid getGrid() {
         return this.grid;
     }
     
+    /**
+     * An accessor method to get the SudokuSolver of the current game.
+     * 
+     * @return The SudokuSolver of the current game.
+     */
     public SudokuSolver getSolver() {
         return this.solver;
     }
@@ -58,10 +63,10 @@ public class Game {
     }
 
     /**
-     * A tempoary method to generate an empty grid the fill some cells to generate
-     * a determined Sudoku.
+     * Reader an external sudoku file and create a sudoku grid according
+     * to it.
      * 
-     * @param pathFile .
+     * @param pathFile The path of the sudoku file.
      */
     public void initialize(String pathFile) {
         for (int i = 0; i < 9; i++) {
@@ -77,6 +82,12 @@ public class Game {
         this.solver.initialize(this.getGrid());
     }
     
+    /**
+     * Randomly choose a sudoku file of the given difficulty. Use it
+     * to initialize the game.
+     * 
+     * @param difficulty "easy" "medium" "hard" "empty"
+     */
     public void randomInitialize(String difficulty) {
         Random randomGenerator = new Random();
         int sudokuNumber = randomGenerator.nextInt(9) + 1;
@@ -105,17 +116,17 @@ public class Game {
      */
     public void emptyCell(int xcoordinate, int ycoordinate) {
         this.changeCellValue(xcoordinate, ycoordinate, 0);
-        // this.printGrid();
     }
     
+    /**
+     * Ask the SudokuSolver of this game check if this sudoku solvable
+     */
     public String AIResult() {
         String result = "";
         int[][] sudoku = solver.getSudoku();
         if((boolean)solver.solveSudoku(sudoku)) {
             result = "Solved successfully!!!";
-        } else {
-            result = "This Sudoku is not solvable :(";
-        }
+        } 
         return result;
     }
 

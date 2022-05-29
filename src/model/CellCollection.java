@@ -8,8 +8,9 @@ import java.util.ArrayList;
  * A CellCollection is an ArrayList consists of 9 cell objects as its
  * elements.
  * 
- * CellCollection class has 1 field. cells is an ArrayList of Cell that
- * holds all elements of the CellCollection.
+ * CellCollection class has 3 field. cells is an ArrayList of Cell that
+ * holds all elements of the CellCollection. grid is the Grid this CellColletion
+ * belongs to. number is the number of this CellCollection (from 1 to 9, inclusive)
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
@@ -21,7 +22,7 @@ public class CellCollection {
     private int number;
 
     /**
-     * Constructor for objects of class Column.
+     * Constructor of instances of class CellCollection.
      */
     public CellCollection(Grid theGrid, int theNumber) {
         cells = new ArrayList<Cell>();

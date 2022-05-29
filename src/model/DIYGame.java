@@ -4,16 +4,14 @@ import java.util.Random;
 
 
 /**
- * Write a description of class DIYGame here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * DIYGame class is a childclass of Game class, which holds a method
+ * to initalize itself with a empty sudoku file
+ * 
+ * @author hech@usi.ch
+ * @version 2022.05.29
  */
 public class DIYGame extends Game
 {
-    // instance variables - replace the example below with your own
-    private int hardSudokuNumber;
-
     /**
      * Constructor for objects of class DIYGame
      */
@@ -22,6 +20,10 @@ public class DIYGame extends Game
         super();
     }
 
+    /**
+     * Initialize the DIYGame by  choosing a empty sudoku file. So the users
+     * can create their own sudokus.
+     */
     public void initialize()
     {
         super.randomInitialize("empty");

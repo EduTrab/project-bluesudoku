@@ -4,16 +4,14 @@ import java.util.Random;
 
 
 /**
- * Write a description of class hardGame here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * HardGame class is a childclass of Game class, which holds a method
+ * to initalize itself with a hard sudoku file
+ * 
+ * @author hech@usi.ch
+ * @version 2022.05.29
  */
 public class HardGame extends Game
 {
-    // instance variables - replace the example below with your own
-    private int hardSudokuNumber;
-
     /**
      * Constructor for objects of class hardGame
      */
@@ -22,6 +20,9 @@ public class HardGame extends Game
         super();
     }
 
+    /**
+     * Initialize the HardGame by randomly choosing a hard sudoku file.
+     */
     public void initialize()
     {
         super.randomInitialize("hard");

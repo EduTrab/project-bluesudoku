@@ -6,8 +6,6 @@ package model;
  * A row is an array consists of 9 cell objects in the same row as its elements.
  * For example row1 contains cell1,1, cell2,1, cell3,1, ..., cell9,1.
  *
- * Row class has 2 fields. grid is the Grid in which 
- * this Row is. row holds the number of this Row. 
  * 
  * @author trabae@usi.ch
  * @author hech@usi.ch
@@ -15,7 +13,7 @@ package model;
  */
 public class Row extends CellCollection {
     /**
-     * Constructor for objects of class Row with param theGrid and row.
+     * Constructor for instances of class Row with param theGrid and row.
      * 
      * @param theGrid The grid in which this Row is.
      * @param rowNumber The number of this Row.
