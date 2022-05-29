@@ -8,12 +8,21 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+import model.AllWin;
+import model.Cell;
+import model.Grid;
+import model.SudokuSolver;
 
 // import javax.print.attribute.standard.JobHoldUntil;
 // import java.awt.GridLayout;
@@ -175,7 +184,7 @@ public class RenderGrid {
         mainSouth.add(menue);
 
         // Center
-        JPanel centerLayoutPanel = new GridLayoutManeger().createGrid();
+        final JPanel centerLayoutPanel = new GridLayoutManeger().createGrid();
         // new GridLayout(9,9); // have to spacify amount of rows and colums
         main.add(centerLayoutPanel, BorderLayout.CENTER);
 
@@ -183,6 +192,31 @@ public class RenderGrid {
         check.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
                 System.out.println("check");
+
+                int[][] sudoku = getRealTimeSuoduku(centerLayoutPanel);
+                /* DEBUG
+                for (int i = 0; i < 9; i++) {
+                    for (int j = 0; j < 9; j++) {
+                        System.out.print(sudoku[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+                */
+                // check if the grid is correct
+
+                Grid grid = new Grid();
+                for (int i = 0; i < 9; i++) {
+                    for (int j = 0; j < 9; j++) {
+                        Cell cell =  new Cell(i, j , sudoku[i][j]);
+                        grid.addCell(cell);
+                    }
+                }
+                AllWin allWin = new AllWin();
+                allWin.testAll(grid);
+                boolean res = allWin.isIfwin();
+
+                System.out.println(res + " has won");
+
             }
         });
 
@@ -196,6 +230,39 @@ public class RenderGrid {
         });
 
         pane.add(main);
+    }
+
+    private int[][] getRealTimeSuoduku(JPanel centerLayoutPanel) {
+
+        int[][] tempSudoku = new int[9][9];
+        int pos = -1;
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                pos++;// allows us to reach every element in array 2D
+
+                int var = 0;
+                if (centerLayoutPanel.getComponent(pos) instanceof JTextField) {
+                    JTextField textField = (JTextField) centerLayoutPanel.getComponent(pos);
+                    //System.out.println(textField.getText() + " JTextField");
+                    // try catch converts iknistial string to an int
+                    try {
+                        var = Integer.parseInt(textField.getText());
+                    } catch (NumberFormatException e) {
+                        var = 0;
+                    }
+                } else {
+                    JLabel jLabel = (JLabel) centerLayoutPanel.getComponent(pos);
+                    //System.out.println(jLabel.getText() + " JLabel");
+                    try { // This try catch might be unnecessary
+                        var = Integer.parseInt(jLabel.getText());
+                    } catch (NumberFormatException e) {
+                        var = 0;
+                    }
+                }
+                tempSudoku[i][j] = var;
+            }
+        }
+        return tempSudoku;
     }
 
 }
