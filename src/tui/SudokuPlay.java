@@ -4,7 +4,7 @@ import model.*;
 
 
 /**
- * Write a description of class SudokuPlay here.
+ * Display the change value interface.
  *
  * @author hech@usi.ch
  * @version 2022.05.29
