@@ -46,7 +46,7 @@ public class RenderGrid {
     final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
     private Game game;
-    private boolean res;
+
     /**
      * this activates the GUI.
      */
@@ -61,23 +61,22 @@ public class RenderGrid {
     private void gameGUI() {
         // Create and set up the window.
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
         frame.setMinimumSize(new Dimension(750, 750));
         frame.setPreferredSize(new Dimension(750, 750));
+        
 
         // Set up the content pane.
         setupPane(frame.getContentPane());
 
         // Display the window.
-        frame.pack();
         frame.setVisible(true);
+        frame.pack();
 
     }
 
     private void mainGUI() {
         // Create and set up the window.
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setBackground(new Color(123, 50, 250)); // rgb color this will change color of backgroud
         frame.setMinimumSize(new Dimension(750, 750));
         frame.setPreferredSize(new Dimension(750, 750));
         // frame.setLayout(null);
@@ -86,8 +85,8 @@ public class RenderGrid {
         setupMainPane(frame.getContentPane());
 
         // Display the window.
-        frame.pack();
         frame.setVisible(true);
+        frame.pack();
 
     }
 
@@ -102,22 +101,17 @@ public class RenderGrid {
         JPanel listPane = new JPanel();
         listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
 
-        listPane.setMinimumSize(new Dimension(50, 25));
-        listPane.setPreferredSize(new Dimension(50, 25));
 
-        
 
         // first button
         JLabel title = new JLabel("BlueSudoku");
         title.setFont(new Font("Verdana", Font.PLAIN, 25));
-        title.setAlignmentX(350);
         listPane.add(title);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         // 2d button
         JLabel level = new JLabel("Level");
         level.setFont(new Font("Verdana", Font.PLAIN, 20));
-        level.setAlignmentX(350);
         listPane.add(level);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
@@ -143,6 +137,8 @@ public class RenderGrid {
         // Listener
         easy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
+                System.out.println(frame.getHeight());
+                System.out.println(frame.getWidth());
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 game = new EasyGame();
