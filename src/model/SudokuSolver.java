@@ -143,27 +143,29 @@ public class SudokuSolver {
      * @param sudoku The work sudoku
      * @return True if the sudoku is solvable. Otherwise return false.
      */
-    public boolean solveSudoku(int[][] sudoku) {
-         for (int row = 0; row < GridSize; row++) {
+    public Object[] solveSudoku(int[][] sudoku) {
+        for (int row = 0; row < GridSize; row++) {
             for (int column = 0; column < GridSize; column++) {
                 if (sudoku[row][column] == 0) {
                     for (int numberToTry = 1; numberToTry <= GridSize; numberToTry++) {
                         if (isValidPlacement(sudoku, numberToTry, row, column)) {
                             sudoku[row][column] = numberToTry;
 
-                            if (solveSudoku(sudoku)) { // recursion
-                                return true;
+                            if ((boolean) solveSudoku(sudoku)[0]) { // recursion
+                                return new Object[]{true, sudoku};
                             } else {
                                 sudoku[row][column] = 0;
                             }
                         }
                     }
-                    return false; // sudoku not solvable
+                    return new Object[]{false, sudoku};
+                     // sudoku not solvable
                 }
             }
         }
-        return true;
+        return new Object[]{true, sudoku};
     }
+    
     
     /**
      * Convert a single row of the work sudoku to an array of integer/

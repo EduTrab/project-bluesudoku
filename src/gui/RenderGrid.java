@@ -28,6 +28,7 @@ import model.Game;
 import model.Grid;
 import model.HardGame;
 import model.MediumGame;
+import model.SolvedSudokuGenerator;
 import model.SudokuSolver;
 
 // import javax.print.attribute.standard.JobHoldUntil;
@@ -130,6 +131,12 @@ public class RenderGrid {
         JButton hard = new JButton("HARD");
         listPane.add(hard);
 
+        // 6th button
+        JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
+        listPane.add(solvedSudkuGenerator);
+
+
+
         if (RIGHT_TO_LEFT) {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
@@ -165,6 +172,18 @@ public class RenderGrid {
                 frame.getContentPane().removeAll();
                 game = new HardGame();
                 ((HardGame)game).initialize();
+                gameGUI();
+                return;
+            }
+        });
+
+        solvedSudkuGenerator.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent aaa) {
+                System.out.println("menue");
+                frame.getContentPane().removeAll();
+                game = new HardGame();
+                ((HardGame)game).initialize();
+                game.setGrid(new SolvedSudokuGenerator().makeSudoku());
                 gameGUI();
                 return;
             }

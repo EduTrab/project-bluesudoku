@@ -4,6 +4,7 @@ import model.Cell;
 import model.Game;
 import model.EasyGame;
 import model.MediumGame;
+import model.SolvedSudokuGenerator;
 import model.HardGame;
 import model.DIYGame;
 import model.SudokuSolver;
@@ -44,7 +45,7 @@ public class Gametui {
         while (true) {
             Scanner in = new Scanner(System.in);
             System.out.println(
-                    "to play the easy level sudoku insert 1 and press enter\nto play the medium level sudoku insert 2 and press enter\nto play the hard level sudoku insert 3 and press enter\nto make a DIY sudoku insert 4 and press enter\nto exit the game insert 5 and press enter");
+                    "to play the easy level sudoku insert 1 and press enter\nto play the medium level sudoku insert 2 and press enter\nto play the hard level sudoku insert 3 and press enter\nto make a DIY sudoku insert 4 and press enter\nto start the solved sudoku generator insert 5 and press enter\nto exit the game insert 6 and press enter");
 
             try {
                 option = Integer.parseInt(in.next());
@@ -69,6 +70,11 @@ public class Gametui {
                 ((DIYGame)game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 5) {
+                this.game = new DIYGame();
+                ((DIYGame)game).initialize();
+                game.setGrid(new SolvedSudokuGenerator().makeSudoku());
+                grid.sudokuGrid(this);
+            } else if (option == 6) {
                 break;
             } else {
                 pausaGenerator.pausa(in);

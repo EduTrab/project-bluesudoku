@@ -43,6 +43,10 @@ public class Game {
     public Grid getGrid() {
         return this.grid;
     }
+
+    public void setGrid(Grid grid){
+        this.grid = grid;
+    }
     
     /**
      * An accessor method to get the SudokuSolver of the current game.
@@ -124,7 +128,7 @@ public class Game {
     public String AIResult() {
         String result = "";
         int[][] sudoku = solver.getSudoku();
-        if((boolean)solver.solveSudoku(sudoku)) {
+        if((boolean)solver.solveSudoku(sudoku)[0]) {
             result = "Solved successfully!!!";
         } 
         return result;
