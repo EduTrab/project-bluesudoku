@@ -4,26 +4,23 @@ import java.util.Random;
 
 
 /**
- * Write a description of class easyGame here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * EasyGame class is a childclass of Game class, which holds a method
+ * to initalize itself with a easy sudoku file
+ * 
+ * @author hech@usi.ch
+ * @version 2022.05.29
  */
 public class EasyGame extends Game
 {
-    // instance variables - replace the example below with your own
-    private int easySudokuNumber;
 
-    /**
-     * Constructor for objects of class easyGame
-     */
     public EasyGame()
     {
         super();
-        Random randomGenerator = new Random();
-        easySudokuNumber = randomGenerator.nextInt(9) + 1;
     }
 
+    /**
+     * Initialize the EasyGame by randomly choosing a easy sudoku file.
+     */
     public void initialize()
     {
         super.randomInitialize("easy");

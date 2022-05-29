@@ -3,26 +3,34 @@ package model;
 import java.util.Arrays;
 
 /**
- * sudokusolver.
+ * A SudokuSolver can be considered as a computer player. It can try to
+ * solve a given sudoku game by using exhausion.
  *
+ * SudokuSolver class has 2 fields. GridSize is the size of the work sudoku
+ * grid. sudoku is the sudoku needs to be solved.
+ *
+ * @author hech@usi.ch
  * @author trabae@usi.ch
- * @author trabae@usi.ch
- * @version 27.05.2022
+ * @version 2022.05.29
  */
 
-// this still has a few bugs need to fix it
 public class SudokuSolver {
-    // size of grid
     private static final int GridSize = 9;// GRID_SIZE
     private int[][] sudoku;
 
     /**
-     * .
+     * Constructor of instance of class SudokuSolver.
      */
     public SudokuSolver() {
 
     }
     
+    /**
+     * Initialize the SudokuSolver by create an array of int
+     * according to the grid of the work sudoku.
+     * 
+     * @param grid The grid of the work sudoku.
+     */
     public void initialize(Grid grid) {
         sudoku = new int[9][9];
         for(int i = 0; i < 9; i++) {
@@ -31,7 +39,7 @@ public class SudokuSolver {
     }
 
     /**
-     * .
+     * Accessor method to get the GridSize.
      * 
      * @return the GridSize
      */
@@ -40,7 +48,7 @@ public class SudokuSolver {
     }
 
     /**
-     * .
+     * Accessor method to get the sudoku.
      * 
      * @return the sudoku
      */
@@ -48,30 +56,16 @@ public class SudokuSolver {
         return this.sudoku;
     }
     
-    // need some halper methods check if the number we are inputting already existes
-    // in that row colum or subGrid
-    // if it dose we can not place that number there --> return false
-    // to do this we need 3 halper methodes check row column and subgrid
-
-    // to see if number laready exists in row
     /**
-     * .
+     * The check if the number which will be inserted is already exist in
+     * this row.
      * 
-     * @param sudoku the sudoku
-     * @param number the number we want to insert
-     * @param row    the row we want to check
-     * @return false if dont find the number we are checking then return false
+     * @param sudoku the sudoku.
+     * @param number the number we want to insert.
+     * @param row    the row we want to check.
+     * @return false if dont find the number we are checking then return false.
      */
     private boolean isNumberInRow(int[][] sudoku, int number, int row) {
-        // boolean allows to return true if
-        // number already exists in row and
-        // false
-        // if it dose not
-        // params are the 1) sudoku (2
-        // dimensional array) 2) int for number
-        // we
-        // want to check is in the row 3) int
-        // for the row number we where in
         for (int i = 0; i < GridSize; i++) {
             if (sudoku[row][i] == number) {
                 // if sudoku and the row that was pased in at the current colum i that its
@@ -83,9 +77,9 @@ public class SudokuSolver {
         return false; // if dont find the number we are checking then return false
     }
 
-    // to see if number laready exists in column similar thig as in row
     /**
-     * .
+     * The check if the number which will be inserted is already exist in
+     * this column.
      * 
      * @param sudoku the sudoku
      * @param number the number we want to insert
@@ -101,9 +95,9 @@ public class SudokuSolver {
         return false;
     }
 
-    // to see if number laready exists in subGrid
     /**
-     * .
+     * The check if the number which will be inserted is already exist in
+     * this subgrid.
      * 
      * @param sudoku the sudoku
      * @param number the nummber we want to insert
@@ -128,12 +122,12 @@ public class SudokuSolver {
     }
 
     /**
-     * .
+     * Check if the number will be inserted is valid for the object cell.
      * 
      * @param sudoku sudoku
      * @param number the number we want to insert
      * @param row    the row we want to check
-     * @param column the columnwe want to check
+     * @param column the column we want to check
      * @return if the number is valid
      */
     private boolean isValidPlacement(int[][] sudoku, int number, int row, int column) {
@@ -143,10 +137,11 @@ public class SudokuSolver {
     }
 
     /**
-     * .
+     * Try to solve the Sudoku by using exhaution. (try all possible numbers
+     * one by one)
      * 
-     * @param sudoku the sudoku
-     * @return solved sudoku
+     * @param sudoku The work sudoku
+     * @return True if the sudoku is solvable. Otherwise return false.
      */
     public boolean solveSudoku(int[][] sudoku) {
          for (int row = 0; row < GridSize; row++) {
@@ -170,6 +165,12 @@ public class SudokuSolver {
         return true;
     }
     
+    /**
+     * Convert a single row of the work sudoku to an array of integer/
+     * 
+     * @param grid The grid of the work sudoku
+     * @param rowNumber The number of the object row
+     */
     public void createRowArray(Grid grid, int rowNumber) {
         for (int i = 0; i < 9; i++) {
             int value = grid.getCells().get(i + rowNumber * 9).getValue();

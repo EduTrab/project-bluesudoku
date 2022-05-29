@@ -7,8 +7,6 @@ package model;
  * elements.
  * For example row1 contains cell1,1, cell1,2, cell1,3, ..., cell1,9.
  * 
- * Column class has 2 fields. grid is the Grid in which
- * this Column is. column holds the number of this Column. 
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
@@ -16,7 +14,7 @@ package model;
  */
 public class Column extends CellCollection {
     /**
-     * Constructor for objects of class Column.
+     * Constructor of instances of class Column.
      * 
      * @param theGrid The grid in which this Column is.
      * @param rowNumber The number of this Column.

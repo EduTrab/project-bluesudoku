@@ -9,7 +9,7 @@ import java.util.ArrayList;
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
- * @version 2022.05.09
+ * @version 2022.05.29
  */
 public class Grid {
     private ArrayList<Cell> cells;

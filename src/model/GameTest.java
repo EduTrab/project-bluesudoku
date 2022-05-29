@@ -64,6 +64,14 @@ public class GameTest {
         game1.getSolver();
         assertEquals("Solved successfully!!!", game1.AIResult());
     }
+
+    @Test
+    public void testRandomInitialize()
+    {
+        model.Game game1 = new model.Game();
+        game1.randomInitialize("easy");
+    }
 }
+
 
 
