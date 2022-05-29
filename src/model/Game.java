@@ -3,6 +3,7 @@ package model;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * Game is the superclass of EasyGame, MediumGame, HardGame, DIYGame
@@ -74,6 +75,13 @@ public class Game {
         } catch (FileNotFoundException exception) {
         }
         this.solver.initialize(this.getGrid());
+    }
+    
+    public void randomInitialize(String difficulty) {
+        Random randomGenerator = new Random();
+        int sudokuNumber = randomGenerator.nextInt(9) + 1;
+        String filePath = "sudokuFiles/" + difficulty + sudokuNumber + ".txt";
+        initialize(filePath);
     }
 
     /**

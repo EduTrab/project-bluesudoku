@@ -20,13 +20,10 @@ public class HardGame extends Game
     public HardGame()
     {
         super();
-        Random randomGenerator = new Random();
-        hardSudokuNumber = randomGenerator.nextInt(9) + 1;
     }
 
     public void initialize()
     {
-        String filePath = "sudokuFiles/hard" + hardSudokuNumber + ".txt";
-        super.initialize(filePath);
+        super.randomInitialize("hard");
     }
 }

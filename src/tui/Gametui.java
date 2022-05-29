@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  * @author trabae@usi.ch
  * @author trabae@usi.ch
- * @version 10/05.2022
+ * @version 2020.05.29
  */
 public class Gametui {
     private Game game;

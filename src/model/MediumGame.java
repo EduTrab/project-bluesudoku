@@ -20,13 +20,10 @@ public class MediumGame extends Game
     public MediumGame()
     {
         super();
-        Random randomGenerator = new Random();
-        mediumSudokuNumber = randomGenerator.nextInt(9) + 1;
     }
 
     public void initialize()
     {
-        String filePath = "sudokuFiles/medium" + mediumSudokuNumber + ".txt";
-        super.initialize(filePath);
+        super.randomInitialize("medium");
     }
 }

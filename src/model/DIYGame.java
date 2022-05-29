@@ -20,13 +20,10 @@ public class DIYGame extends Game
     public DIYGame()
     {
         super();
-        Random randomGenerator = new Random();
-        hardSudokuNumber = randomGenerator.nextInt(9) + 1;
     }
 
     public void initialize()
     {
-        String filePath = "sudokuFiles/emptySudoku.txt";
-        super.initialize(filePath);
+        super.randomInitialize("empty");
     }
 }
