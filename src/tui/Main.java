@@ -5,13 +5,14 @@ package tui;
  * 
  * @author hech@usi.ch
  * @author trabae@usi.ch
+ * @version 2022.05.29
  */
 
 public class Main {
     private Gametui gametui;
 
     /**
-     * this is the main funktion of the tui.
+     * this is the main function of the tui.
      * 
      * @param args is the main arguments of the tui
      */

@@ -13,10 +13,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * Write a description of class gametui here.
+ * The difficulty selection interface.
  *
- * @author trabae@usi.ch
- * @author trabae@usi.ch
+ * @author hech@usi.ch
  * @version 2020.05.29
  */
 public class Gametui {

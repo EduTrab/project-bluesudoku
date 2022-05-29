@@ -6,8 +6,8 @@ import model.*;
 /**
  * Write a description of class SudokuPlay here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author hech@usi.ch
+ * @version 2022.05.29
  */
 public class SudokuPlay
 {
@@ -20,6 +20,12 @@ public class SudokuPlay
  
     }
 
+    /**
+     * Display the fill number interface, which allows the users
+     * change the value of a cell.
+     * 
+     * @param game The working sudoku game.
+     */
     public void play(Game game) {
         int column = -99;
         int row = -99;
@@ -57,6 +63,10 @@ public class SudokuPlay
 
     }
 
+    /**
+     * Display an instruction asks the users enter the number they want
+     * to insert into the cell.
+     */
     private int askNum() {
         Scanner in = new Scanner(System.in);
 
@@ -68,7 +78,8 @@ public class SudokuPlay
     }
 
     /**
-     * this method gives instructions to the user.
+     * Give instructions to the user that explains how to choose a cell
+     * and change its value.
      */
     public void askForNumbers() {
         System.out.println(

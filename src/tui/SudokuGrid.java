@@ -4,7 +4,8 @@ import model.*;
 
 
 /**
- * Write a description of class SudokuGrid here.
+ * Display the current sudoku game and allow the users
+ * do servals operations.
  *
  * @author hech@usi.ch
  * @version 2022.05.29
@@ -19,6 +20,9 @@ public class SudokuGrid
     {
     }
 
+    /**
+     * Display the current sudoku grid and give instructions.
+     */
     public void sudokuGrid(Gametui tui) {
         int option;
         SudokuPausa pausaGenerator = new SudokuPausa();
