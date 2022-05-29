@@ -6,6 +6,7 @@ import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -39,10 +41,12 @@ import model.SudokuSolver;
  * @version 27.05.2022
  */
 
+
 public class RenderGrid {
     final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
     private Game game;
+    private boolean res;
     /**
      * this activates the GUI.
      */
@@ -87,6 +91,8 @@ public class RenderGrid {
 
     }
 
+
+
     /**
      * this is the first interface of the user.
      * 
@@ -99,18 +105,25 @@ public class RenderGrid {
         listPane.setMinimumSize(new Dimension(50, 25));
         listPane.setPreferredSize(new Dimension(50, 25));
 
+        
+
         // first button
         JLabel title = new JLabel("BlueSudoku");
+        title.setFont(new Font("Verdana", Font.PLAIN, 25));
+        title.setAlignmentX(350);
         listPane.add(title);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         // 2d button
         JLabel level = new JLabel("Level");
+        level.setFont(new Font("Verdana", Font.PLAIN, 20));
+        level.setAlignmentX(350);
         listPane.add(level);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         // 3d button
         JButton easy = new JButton("EASY");
+        listPane.setFont(new Font("Verdana", Font.PLAIN, 20));
         listPane.add(easy);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
@@ -170,6 +183,7 @@ public class RenderGrid {
      * 
      * @param pane the interface
      */
+    
     public void setupPane(Container pane) {
 
         // pane.add(new JLabel("test"));
@@ -198,6 +212,14 @@ public class RenderGrid {
         // new GridLayout(9,9); // have to spacify amount of rows and colums
         main.add(centerLayoutPanel, BorderLayout.CENTER);
 
+        /* first atempot
+        // West
+        res = true;
+        JLabel result = new JLabel(res + " play again", JLabel.CENTER);
+        main.add(result, BorderLayout.WEST);
+        result.setFont(new Font("Verdana", Font.PLAIN, 25));
+        */
+
         // Listeners
         check.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
@@ -210,8 +232,7 @@ public class RenderGrid {
                         System.out.print(sudoku[i][j] + " ");
                     }
                     System.out.println();
-                }
-                */
+                }*/
                 // check if the grid is correct
 
                 Grid grid = new Grid();
@@ -225,7 +246,9 @@ public class RenderGrid {
                 allWin.testAll(grid);
                 boolean res = allWin.isIfwin();
 
-                System.out.println(res + " has won");
+                System.out.println(res + " play again");
+
+                JOptionPane.showMessageDialog(frame, res + " play again");
 
             }
         });
@@ -241,6 +264,8 @@ public class RenderGrid {
 
         pane.add(main);
     }
+
+
 
     private int[][] getRealTimeSuoduku(JPanel centerLayoutPanel) {
 
