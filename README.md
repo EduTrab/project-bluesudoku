@@ -13,6 +13,14 @@ The goal of the puzzle is to fill the rest of the grid, using all the numbers 1â
 
 * Igor Moreno Santos
 
+## Functionality
+
+* The sudoku game can be played with a TUI or a GUI.
+* The user can choose the difficulty level from "Easy", "Medium" and "Hard". The system will randomly select a game of corresponding difficulty from more than 30 sudoku files. The higher the difficulty, the fewer numbers are given.
+* After the difficulty is choose and the sudoku game is generated, the user can fill empty cells with numbers from 1 to 9 (inclusive) to try to solve this sudoku game. Once he/she finishes, he/she can click the "check" button to check if his/her answer is correct.
+* The user want to stop the current game and go back to the difficulty selection at any time by clicking "menu" button.
+* (Only available with TUI) More exciting, the user can also create his/her own sudoku puzzle and ask a AI player to try to solve it. 
+
 ## Project Structure
 
 This project is both a Maven project and a BlueJ project.
