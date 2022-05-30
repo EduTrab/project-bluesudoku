@@ -39,6 +39,11 @@ The goal of the puzzle is to fill the rest of the grid, using all the numbers 1â
 ![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_aiSulution.png)
 
 ## Screenshots of GUI
+* Main menu
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/gui_menu.png)
+
+* Sudoku puzzle
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/gui_game.png)
 
 ## Screenshots of class diagrams
 * Packge
