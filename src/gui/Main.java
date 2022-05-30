@@ -13,10 +13,16 @@ public class Main {
      * 
      * @param args the main arg of main
      */
-    public void main(String[] args) {
-        //
+    public static void main(String[] args) {
         RenderGrid renderGrid = new RenderGrid();
         renderGrid.run();
     }
 
+    /**
+     * Run the GUI.
+     */
+    public void run() {
+        RenderGrid renderGrid = new RenderGrid();
+        renderGrid.run();
+    }
 }
