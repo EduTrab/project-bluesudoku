@@ -14,27 +14,17 @@ import java.util.Arrays;
  */
 
 public class SolvedSudokuGenerator {
+    private int[][] sudoku;
 
-    /**
-     * on this sudoku 3 differen random numbers are generated
-     * on that sudoku the solveSUdoku method is called to generate a solved sudoku.
-     */
-    private int[][] sudoku = {
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
-    };
-
-    /**
-     * puts the random numbers in sudoku and then solves the sudoku.
-     * @return the solved sudoku
-     */
+    public SolvedSudokuGenerator() {
+        sudoku = new int[9][9];
+        for(int i = 0; i < 9; i++) {
+            for(int t = 0; t < 9; t++) {
+                sudoku[i][t] = 0;
+            }
+        }
+    }
+    
     public Grid makeSudoku() {
         int aaa = 0;
         int bbb = 0;
