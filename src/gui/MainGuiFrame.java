@@ -32,9 +32,7 @@ import javax.swing.JPanel;
 
 public class MainGuiFrame extends JFrame {
     private static final boolean RIGHT_TO_LEFT = false;
-
-    private Game game;
-    GameGuiFrame gameGuiFrame;
+    private GameGuiFrame gameGuiFrame;
 
     /**
      * creats and set up the window
@@ -100,45 +98,10 @@ public class MainGuiFrame extends JFrame {
         JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
         listPane.add(solvedSudkuGenerator);
 
-        /*
-         * if (RIGHT_TO_LEFT) {
-         * pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-         * }
-         * 
-         * final MainGuiFrame refToMain = this;
-         * 
-         * JButton[] buttons = {easy, medium, hard, solvedSudkuGenerator};
-         * final Game[] games = {new EasyGame(), new MediumGame(), new HardGame(), new
-         * HardGame()};
-         * ArrayList<java.awt.event.ActionListener> listeners = new ArrayList<>();
-         * for (int i = 0; i < games.length; i++) {
-         * final Game g = games[i];
-         * final int index = i;
-         * listeners.add(new ActionListener() {
-         * public void actionPerformed(ActionEvent aaa) {
-         * getContentPane().removeAll();
-         * g.initialize();
-         * if (index == games.length - 1) {
-         * g.setGrid(new SolvedSudokuGenerator().makeSudoku());
-         * }
-         * initGuiFrame(game);
-         * 
-         * return;
-         * }
-         * });
-         * }
-         * 
-         * for (int i = 0; i < buttons.length; i++) {
-         * buttons[i].addActionListener(listeners.get(i));
-         * }
-         */
-
         // Listener
         if (RIGHT_TO_LEFT) {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
-
-        final MainGuiFrame refToMain = this;
 
         easy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
@@ -180,6 +143,7 @@ public class MainGuiFrame extends JFrame {
      */
     public void action(ActionEvent aaa, String difficulty) {
         getContentPane().removeAll();
+        Game game;
         switch (difficulty) {
             case "Easy":
                 game = new EasyGame();
@@ -204,6 +168,5 @@ public class MainGuiFrame extends JFrame {
                 break;
         }
         initGuiFrame(game);
-        return;
     }
 }
