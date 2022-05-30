@@ -19,7 +19,7 @@ public class Main {
      * 
      * @param args is the main arguments of the tui
      */
-    public static void main(String[] args) {
+    public void main(String[] args) {
         Gametui gametui = new Gametui();
         gametui.chooseDifficulty();
     }
