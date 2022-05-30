@@ -32,9 +32,7 @@ import javax.swing.JPanel;
 
 public class MainGuiFrame extends JFrame {
     private static final boolean RIGHT_TO_LEFT = false;
-
-    private Game game;
-    GameGuiFrame gameGuiFrame;
+    private GameGuiFrame gameGuiFrame;
 
     /**
      * creats and set up the window
@@ -100,14 +98,10 @@ public class MainGuiFrame extends JFrame {
         JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
         listPane.add(solvedSudkuGenerator);
 
-        
-
         // Listener
         if (RIGHT_TO_LEFT) {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
-
-        final MainGuiFrame refToMain = this;
 
         easy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
@@ -149,6 +143,7 @@ public class MainGuiFrame extends JFrame {
      */
     public void action(ActionEvent aaa, String difficulty) {
         getContentPane().removeAll();
+        Game game;
         switch (difficulty) {
             case "Easy":
                 game = new EasyGame();
@@ -173,6 +168,5 @@ public class MainGuiFrame extends JFrame {
                 break;
         }
         initGuiFrame(game);
-        return;
     }
 }
