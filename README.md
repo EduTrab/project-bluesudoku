@@ -105,7 +105,7 @@ This generates the compiled classes in the directory `target/classes`.
 To run this application, with the TUI, from the command line:
 
 ```bach
-java -cp target/classes tui.Main ARG ARG ARG
+java -cp target/classes tui.Main
 ```
 
 java -cp target/classes tui.Main  (No arguement)
@@ -115,7 +115,7 @@ java -cp target/classes tui.Main  (No arguement)
 To run this application, with the GUI, from the command line:
 
 ```bach
-java -cp target/classes gui.Main ARG ARG ARG
+java -cp target/classes gui.Main
 ```
 
 java -cp target/classes gui.Main  (No arguement)
