@@ -6,8 +6,8 @@ import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
 
-import java.awt.ComponentOrientation;
 import java.awt.Component;
+import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
