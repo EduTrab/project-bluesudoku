@@ -42,8 +42,9 @@ public class GameGuiFrame extends JFrame {
         // Create and set up the window.
         this.setTitle("BlueSudoku");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setMinimumSize(new Dimension(750, 750));
-        this.setPreferredSize(new Dimension(750, 750));
+        this.setMinimumSize(new Dimension(1000, 1000));
+        this.setPreferredSize(new Dimension(1000, 1000));
+        
 
         // Set up the content pane.
         setupPane(this.getContentPane());
@@ -135,10 +136,13 @@ public class GameGuiFrame extends JFrame {
         menue.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
                 getContentPane().removeAll();
+                setVisible(false);
+                mainGuiFrame.setVisible(true);
                 mainGuiFrame.mainGUI();
                 return;
             }
         });
+
 
         pane.add(main);
     }
