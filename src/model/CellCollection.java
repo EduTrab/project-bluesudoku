@@ -5,10 +5,10 @@ import java.util.ArrayList;
 /**
  * CellColletion is the superclass of Row, Column and SubGrid.
  * 
- * A CellCollection is an ArrayList consists of 9 cell objects as its
+ * <p>A CellCollection is an ArrayList consists of 9 cell objects as its
  * elements.
  * 
- * CellCollection class has 3 field. cells is an ArrayList of Cell that
+ * <p>CellCollection class has 3 field. cells is an ArrayList of Cell that
  * holds all elements of the CellCollection. grid is the Grid this CellColletion
  * belongs to. number is the number of this CellCollection (from 1 to 9,
  * inclusive)
@@ -24,6 +24,9 @@ public class CellCollection {
 
     /**
      * Constructor of instances of class CellCollection.
+     * 
+     * @param theGrid   TODO
+     * @param theNumber TODO
      */
     public CellCollection(Grid theGrid, int theNumber) {
         cells = new ArrayList<Cell>();
@@ -31,10 +34,20 @@ public class CellCollection {
         number = theNumber;
     }
 
+    /**
+     * TODO.
+     * 
+     * @return TODO
+     */
     public Grid getGrid() {
         return grid;
     }
 
+    /**
+     * TODO.
+     * 
+     * @return TODO
+     */
     public int getNumber() {
         return number;
     }

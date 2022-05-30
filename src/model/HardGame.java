@@ -2,7 +2,7 @@ package model;
 
 /**
  * HardGame class is a childclass of Game class, which holds a method
- * to initalize itself with a hard sudoku file
+ * to initalize itself with a hard sudoku file.
  * 
  * @author hech@usi.ch
  * @version 2022.05.29

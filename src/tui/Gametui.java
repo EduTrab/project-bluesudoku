@@ -20,6 +20,8 @@ public class Gametui {
 
     /**
      * Accessor method to get the Game of this Gametui.
+     * 
+     * @return TODO
      */
     public Game getGame() {
         return this.game;

@@ -3,12 +3,12 @@ package model;
 /**
  * SubGrid is a childclass of CellCollection.
  * 
- * A SubGrid is an array consists of 9 cell objects in the same 9x9 subgrid as
+ * <p>A SubGrid is an array consists of 9 cell objects in the same 9x9 subgrid as
  * its elements.
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3.
  * 
- * SubGrid class has 2 fields.
+ * <p>SubGrid class has 2 fields.
  * left and down are used to locate the elements of this SubGrid.
  * 
  * @author trabae@usi.ch
@@ -35,7 +35,7 @@ public class SubGrid extends CellCollection {
      * Intialize the SubGrid by adding corresponding cells of the Grid
      * to which this SubGrid belongs as its elements.
      * 
-     * This method overrides the method with the same name of CellCollection class.
+     * <p>This method overrides the method with the same name of CellCollection class.
      */
     @Override
     public void initializeCollection() {

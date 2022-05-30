@@ -3,7 +3,7 @@ package model;
 /**
  * A cell is the basic unit of a Sudoku grids.
  * 
- * Cell class has three fields, xvalue holds the x coordinate,
+ * <p>Cell class has three fields, xvalue holds the x coordinate,
  * yvalue holds the y coordinate and value hold the value of this cell.
  * All this three fields are integer numbers from 1 to 9 (inclusive) ).
  *

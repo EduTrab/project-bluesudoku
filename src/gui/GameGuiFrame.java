@@ -2,22 +2,15 @@ package gui;
 
 import model.AllWin;
 import model.Cell;
-import model.EasyGame;
 import model.Game;
-import model.HardGame;
-import model.MediumGame;
-import model.SolvedSudokuGenerator;
+import model.Grid;
 
 import java.awt.BorderLayout;
-import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,26 +18,41 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import model.Grid;
-import model.*;
-
+/**
+ * GameGuiFrame showcasts the gui pane where you can play the game.
+ * 
+ * <p>GameGuiFrame class has 1 field. the game is the main game 
+ *
+ * @author trabae@usi.ch
+ * @author hech@usi.ch
+ * @version 2022.05.29
+ */
 public class GameGuiFrame extends JFrame {
     private final Game game;
     MainGuiFrame mainGuiFrame;
 
+    /**
+     * initializes the gamegui.
+     * 
+     * @param game is the game on wich you will play
+     * @param frame to creat the link between the game-main frame
+     */
     public GameGuiFrame(Game game, MainGuiFrame frame) {
         this.mainGuiFrame = frame;
         this.game = game;
     }
 
-
+    /**
+     *  creats and set up the window
+     *  Set up the content pane.
+     * Display the window.
+     */
     public void gameGUI() {
         // Create and set up the window.
         this.setTitle("BlueSudoku");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setMinimumSize(new Dimension(1000, 1000));
         this.setPreferredSize(new Dimension(1000, 1000));
-        
 
         // Set up the content pane.
         setupPane(this.getContentPane());
@@ -127,7 +135,6 @@ public class GameGuiFrame extends JFrame {
                 allWin.testAll(grid);
                 boolean res = allWin.isIfwin();
 
-
                 JOptionPane.showMessageDialog(thisPane, res + " play again");
 
             }
@@ -143,9 +150,9 @@ public class GameGuiFrame extends JFrame {
             }
         });
 
-
         pane.add(main);
     }
+
     private int[][] getRealTimeSuoduku(JPanel centerLayoutPanel) {
 
         int[][] tempSudoku = new int[9][9];
@@ -178,5 +185,5 @@ public class GameGuiFrame extends JFrame {
         }
         return tempSudoku;
     }
-    
+
 }

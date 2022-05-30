@@ -6,9 +6,9 @@ import java.util.Random;
 /**
  * Game is the superclass of EasyGame, MediumGame, HardGame, DIYGame
  * 
- * The main class of the sudoku game, which the player directly interact with.
+ * <p>The main class of the sudoku game, which the player directly interact with.
  * 
- * Game class has 4 fields. grid is the sudoku Grid of this game. win is
+ * <p>Game class has 4 fields. grid is the sudoku Grid of this game. win is
  * the win condition checker of this game. reader is the SudokuReader to
  * reader external sudoku files. solver is used to generator a computer
  * player solution.
@@ -42,9 +42,11 @@ public class Game {
         return this.grid;
     }
 
+   
     /**
      * Set the grid the current game.
-     * @grid The new grid.
+     * 
+     * @param grid The new grid.
      */
     public void setGrid(Grid grid) {
         this.grid = grid;
@@ -68,7 +70,12 @@ public class Game {
         return this.win;
     }
 
-    public void initialize() {};
+    /**
+     * this is needed for the GUI.
+     */
+    public void initialize() {
+        //
+    }
 
     /**
      * Reader an external sudoku file and create a sudoku grid according
@@ -128,7 +135,12 @@ public class Game {
     }
 
     /**
-     * Ask the SudokuSolver of this game check if this sudoku solvable
+     * Ask the SudokuSolver of this game check if this sudoku solvable.
+     */
+    /**
+     * Ask the SudokuSolver of this game check if this sudoku solvable.
+     * 
+     * @return the result
      */
     public String aiResult() {
         String result = "";

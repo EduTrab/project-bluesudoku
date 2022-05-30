@@ -27,11 +27,14 @@ public class SingleUnitWin {
         return this.ifwin;
     }
 
+   
     /**
-     * Return true if there is no same elements in the CellCollection, otherwise
-     * return false.
+     * TODO 
      * 
-     * @param row The row needs to be tested
+     * <p>Return true if there is no same elements in the CellCollection, otherwise
+     * return false.
+     *  
+     * @param cellColletion The row needs to be tested
      * @return ifwin True if there is no same elements in the row, otherwise return
      *         false
      */

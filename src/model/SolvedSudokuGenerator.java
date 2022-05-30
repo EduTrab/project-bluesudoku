@@ -2,10 +2,23 @@ package model;
 
 import java.util.Arrays;
 
+/**
+ * A SolvedSudokuGenerator creats solved sudokus by taking 3 random values in
+ * the first 3 positions and then solving that sudoku.
+ *
+ * <p>SudokuSolver class has 1 field. sudoku is the sudoku needs to be solved.
+ *
+ * @author hech@usi.ch
+ * @author trabae@usi.ch
+ * @version 2022.05.29
+ */
+
 public class SolvedSudokuGenerator {
 
-    // crea sudoku mettici dentro cosa randoica
-    // chiama su sudoku il metodo solveSudoku --> sudoku.solveSudoku
+    /**
+     * on this sudoku 3 differen random numbers are generated
+     * on that sudoku the solveSUdoku method is called to generate a solved sudoku.
+     */
     private int[][] sudoku = {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -18,6 +31,10 @@ public class SolvedSudokuGenerator {
             { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
     };
 
+    /**
+     * puts the random numbers in sudoku and then solves the sudoku.
+     * @return the solved sudoku
+     */
     public Grid makeSudoku() {
         int aaa = 0;
         int bbb = 0;
@@ -27,8 +44,10 @@ public class SolvedSudokuGenerator {
             aaa = (int) (Math.random() * 9);
             bbb = (int) (Math.random() * 9);
             ccc = (int) (Math.random() * 9);
-        } while (aaa == bbb || bbb == ccc || aaa == ccc);
-        // this would show what a b adn c where randomly generated System.out.println(a + " " + b + " " + c);
+        } 
+        while (aaa == bbb || bbb == ccc || aaa == ccc);
+        // this would show what a b adn c where randomly generated System.out.println(a
+        // + " " + b + " " + c);
 
         sudoku[0][0] = aaa;
         sudoku[0][1] = bbb;

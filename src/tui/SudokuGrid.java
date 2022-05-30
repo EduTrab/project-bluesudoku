@@ -15,6 +15,8 @@ import java.util.Scanner;
 public class SudokuGrid {
     /**
      * Display the current sudoku grid and give instructions.
+     * 
+     * @param tui TODO
      */
     public void sudokuGrid(Gametui tui) {
         int option;
@@ -56,9 +58,9 @@ public class SudokuGrid {
     }
     
     /**
-     * Render the AI Solution of a sudoku game
+     * Render the AI Solution of a sudoku game.
      * 
-     * @game The sudoku game solved by the solver.
+     * @param game The sudoku game solved by the solver.
      */
     private void aiResultRender(Game game) {
         for (int row = 0; row < game.getSolver().getGridSize(); row++) {

@@ -3,7 +3,7 @@ package model;
 
 /**
  * EasyGame class is a childclass of Game class, which holds a method
- * to initalize itself with a easy sudoku file
+ * to initalize itself with a easy sudoku file.
  * 
  * @author hech@usi.ch
  * @version 2022.05.29

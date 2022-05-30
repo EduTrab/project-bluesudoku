@@ -1,33 +1,33 @@
 package gui;
 
-import model.AllWin;
-import model.Cell;
 import model.EasyGame;
 import model.Game;
 import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
 
-import java.awt.BorderLayout;
 import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import model.Grid;
-import model.*;
+/**
+ * MainGuiFrame showcasts the gui pane where you can choos what game you want to play.
+ * 
+ * <p>GameGuiFrame class has 1 field. the game is the main game 
+ *
+ * @author trabae@usi.ch
+ * @author hech@usi.ch
+ * @version 2022.05.29
+ */
 
 public class MainGuiFrame extends JFrame {
     private static final boolean RIGHT_TO_LEFT = false;
@@ -35,6 +35,11 @@ public class MainGuiFrame extends JFrame {
     private Game game;
     GameGuiFrame gameGuiFrame;
 
+    /**
+     * creats and set up the window
+     *  Set up the content pane.
+     * Display the window.
+     */
     public void mainGUI() {
         // Create and set up the window.
         this.setTitle("BlueSudoku");

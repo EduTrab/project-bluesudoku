@@ -2,8 +2,8 @@ package model;
 
 
 /**
- * DIYGame class is a childclass of Game class, which holds a method
- * to initalize itself with a empty sudoku file
+ * DiyGame class is a childclass of Game class, which holds a method
+ * to initalize itself with a empty sudoku file.
  * 
  * @author hech@usi.ch
  * @version 2022.05.29

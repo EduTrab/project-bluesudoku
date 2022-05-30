@@ -1,11 +1,10 @@
 package model;
 
-
 /**
  * A SudokuSolver can be considered as a computer player. It can try to
  * solve a given sudoku game by using exhausion.
  *
- * SudokuSolver class has 2 fields. GRID_SIZE is the size of the work sudoku
+ * <p>SudokuSolver class has 2 fields. GRID_SIZE is the size of the work sudoku
  * grid. sudoku is the sudoku needs to be solved.
  *
  * @author hech@usi.ch
@@ -159,7 +158,7 @@ public class SudokuSolver {
     }
 
     /**
-     * Convert a single row of the work sudoku to an array of integer/
+     * Convert a single row of the work sudoku to an array of integer.
      * 
      * @param grid      The grid of the work sudoku
      * @param rowNumber The number of the object row

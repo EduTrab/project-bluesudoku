@@ -1,31 +1,7 @@
 package gui;
 
-import model.AllWin;
-import model.Cell;
-import model.EasyGame;
-import model.Game;
-import model.HardGame;
-import model.MediumGame;
-import model.SolvedSudokuGenerator;
 
-import java.awt.BorderLayout;
-import java.awt.ComponentOrientation;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 
-import model.Grid;
 
 // import javax.print.attribute.standard.JobHoldUntil;
 // import java.awt.GridLayout;
