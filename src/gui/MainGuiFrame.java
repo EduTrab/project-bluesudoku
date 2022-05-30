@@ -131,7 +131,7 @@ public class MainGuiFrame extends JFrame {
     }
 
     private void initGuiFrame(Game game) {
-        GameGuiFrame gameGuiFrame= new GameGuiFrame(game, this);
+        GameGuiFrame gameGuiFrame = new GameGuiFrame(game, this);
         gameGuiFrame.gameGUI();
     }
 
