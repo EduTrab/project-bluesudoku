@@ -1,8 +1,5 @@
 package gui;
 
-
-
-
 // import javax.print.attribute.standard.JobHoldUntil;
 // import java.awt.GridLayout;
 
@@ -15,10 +12,8 @@ package gui;
  */
 
 public class RenderGrid {
-    // private static final boolean RIGHT_TO_LEFT = false;
-    
-    private MainGuiFrame mainGuiFrame = new MainGuiFrame();
 
+    private MainGuiFrame mainGuiFrame = new MainGuiFrame();
 
     /**
      * this activates the GUI.
@@ -30,7 +25,5 @@ public class RenderGrid {
             }
         });
     }
-
-    
 
 }
