@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Random;
 
 /**
  * MediumGame class is a childclass of Game class, which holds a method

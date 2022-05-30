@@ -31,6 +31,7 @@ public class SingleKindWinTest {
         game1.initialize("sudokuFiles/easy1.txt");
         model.SingleKindWin singleKi1 = new model.SingleKindWin();
         assertEquals(false, singleKi1.testSingleKind(game1.getGrid(), "Column"));
+        assertEquals(false, singleKi1.testSingleKind(game1.getGrid(), "123"));
     }
 
     @Test

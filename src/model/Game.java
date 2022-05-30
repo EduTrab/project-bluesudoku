@@ -1,8 +1,6 @@
 package model;
 
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -44,6 +42,10 @@ public class Game {
         return this.grid;
     }
 
+    /**
+     * Set the grid the current game.
+     * @grid The new grid.
+     */
     public void setGrid(Grid grid) {
         this.grid = grid;
     }
