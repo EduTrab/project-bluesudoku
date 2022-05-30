@@ -17,7 +17,6 @@ import java.util.Scanner;
  */
 public class Gametui {
     private Game game;
-    private SudokuPrinter printer;
     private SudokuPausa pausaGenerator;
     private SudokuGrid grid;
 
@@ -32,11 +31,11 @@ public class Gametui {
      * Display the difficulty selection interface.
      * 
      */
-    public void chooseDifficulty() {
+    public void chooseDifficulty() { 
         int option;
-        this.pausaGenerator = new SudokuPausa();
-        this.grid = new SudokuGrid();
-        this.printer = new SudokuPrinter();
+        SudokuPausa pausaGenerator = new SudokuPausa();
+        SudokuGrid grid = new SudokuGrid();
+        SudokuPrinter printer = new SudokuPrinter();
 
         while (true) {
             Scanner in = new Scanner(System.in);
@@ -45,7 +44,7 @@ public class Gametui {
 
             try {
                 option = Integer.parseInt(in.next());
-            } catch (Exception exception) {
+            } catch (final NumberFormatException exception) {
                 continue;
             }
 

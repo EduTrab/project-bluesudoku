@@ -13,13 +13,6 @@ import java.util.Scanner;
  * @version 2022.05.29
  */
 public class SudokuGrid {
-
-    /**
-     * Constructor for objects of class SudokuGrid
-     */
-    public SudokuGrid() {
-    }
-
     /**
      * Display the current sudoku grid and give instructions.
      */
@@ -36,7 +29,7 @@ public class SudokuGrid {
                     "to fill the cell insert 1 and press enter\nto check your answer insert 2 and press enter\nto let the AI try to solve the sudoku insert 3 and press enter\nto exit the game insert 4 and press enter");
             try {
                 option = Integer.parseInt(in.next());
-            } catch (Exception exception) {
+            } catch (final NumberFormatException exception) {
                 continue;
             }
 
@@ -44,7 +37,7 @@ public class SudokuGrid {
                 play.play(game);
             } else if (option == 2) {
                 game.checkWin();
-                if (game.getWin().isIfwin() == true) {
+                if (game.getWin().isIfwin()) {
                     System.out.println("You win!");
                 } else {
                     System.out.println("Whoops...Try it again.");
@@ -52,12 +45,7 @@ public class SudokuGrid {
                 pausaGenerator.pausa(in);
             } else if (option == 3) {
                 System.out.println(game.aiResult());
-                for (int row = 0; row < game.getSolver().getGridSize(); row++) {
-                    for (int column = 0; column < game.getSolver().getGridSize(); column++) {
-                        System.out.print(game.getSolver().getSudoku()[row][column]);
-                    }
-                    System.out.println();
-                }
+                aiResultRender(game);
             } else if (option == 4) {
                 break;
             } else {
@@ -65,5 +53,19 @@ public class SudokuGrid {
             }
         }
         System.out.println("Good bye");
+    }
+    
+    /**
+     * Render the AI Solution of a sudoku game
+     * 
+     * @game The sudoku game solved by the solver.
+     */
+    private void aiResultRender(Game game) {
+        for (int row = 0; row < game.getSolver().getGridSize(); row++) {
+            for (int column = 0; column < game.getSolver().getGridSize(); column++) {
+                System.out.print(game.getSolver().getSudoku()[row][column]);
+            }
+            System.out.println();
+        }
     }
 }

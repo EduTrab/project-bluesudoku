@@ -11,13 +11,6 @@ import java.util.Random;
  */
 public class DiyGame extends Game {
     /**
-     * Constructor for objects of class DIYGame
-     */
-    public DiyGame() {
-        super();
-    }
-
-    /**
      * Initialize the DIYGame by choosing a empty sudoku file. So the users
      * can create their own sudokus.
      */

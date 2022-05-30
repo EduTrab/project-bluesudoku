@@ -17,12 +17,6 @@ import java.util.ArrayList;
  */
 public class SudokuPrinter {
     /**
-     * Constructor for objects of class sudokuPrint
-     */
-    public SudokuPrinter() {
-    }
-
-    /**
      * Print a single row of the grid.
      * 
      * @param start The number of the start cell of this row.

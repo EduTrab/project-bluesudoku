@@ -18,13 +18,6 @@ public class SudokuSolver {
     private int[][] sudoku;
 
     /**
-     * Constructor of instance of class SudokuSolver.
-     */
-    public SudokuSolver() {
-
-    }
-
-    /**
      * Initialize the SudokuSolver by create an array of int
      * according to the grid of the work sudoku.
      * 

@@ -73,6 +73,7 @@ public class Game {
      * @param pathFile The path of the sudoku file.
      */
     public void initialize(String pathFile) {
+        String path = pathFile;
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
                 // int current = i * 9 + j;
@@ -80,8 +81,9 @@ public class Game {
             }
         }
         try {
-            reader.readSudokuFile(this.grid.getCells(), pathFile);
+            reader.readSudokuFile(this.grid.getCells(), path);
         } catch (FileNotFoundException exception) {
+            path = "File Not Found.";
         }
         this.solver.initialize(this.getGrid());
     }

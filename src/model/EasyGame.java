@@ -10,11 +10,6 @@ import java.util.Random;
  * @version 2022.05.29
  */
 public class EasyGame extends Game {
-
-    public EasyGame() {
-        super();
-    }
-
     /**
      * Initialize the EasyGame by randomly choosing a easy sudoku file.
      */

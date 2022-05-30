@@ -9,8 +9,6 @@ package tui;
  */
 
 public class Main {
-    private Gametui gametui;
-
     /**
      * this is the main function of the tui.
      * 

@@ -11,13 +11,6 @@ import java.util.Random;
  */
 public class HardGame extends Game {
     /**
-     * Constructor for objects of class hardGame
-     */
-    public HardGame() {
-        super();
-    }
-
-    /**
      * Initialize the HardGame by randomly choosing a hard sudoku file.
      */
     public void initialize() {

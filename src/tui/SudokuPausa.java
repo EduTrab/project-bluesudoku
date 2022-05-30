@@ -10,12 +10,6 @@ import java.util.Scanner;
  */
 public class SudokuPausa {
     /**
-     * Constructor for objects of class sudokuPausa
-     */
-    public SudokuPausa() {
-    }
-
-    /**
      * this method halps with the experianc of the player as it creats a break in
      * the game.
      * 

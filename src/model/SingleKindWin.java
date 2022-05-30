@@ -10,8 +10,7 @@ package model;
 public class SingleKindWin {
     private boolean ifwin;
     private SingleUnitWin singleUnitWin;
-    private CellCollection current;
-
+    
     /**
      * Constructor for objects of class Win.
      */
@@ -30,6 +29,7 @@ public class SingleKindWin {
      */
     public boolean testSingleKind(Grid grid, String kind) {
         this.ifwin = true;
+        CellCollection current;
         for (int i = 1; i < 10; i++) {
             switch (kind) {
                 case "Column":
@@ -40,6 +40,9 @@ public class SingleKindWin {
                     break;
                 case "SubGrid":
                     current = new SubGrid(grid, i);
+                    break;
+                default :
+                    current = new Column(grid, i);
                     break;
             }
             current.initializeCollection();

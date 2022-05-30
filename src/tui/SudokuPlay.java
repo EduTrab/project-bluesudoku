@@ -12,14 +12,6 @@ import java.util.Scanner;
  * @version 2022.05.29
  */
 public class SudokuPlay {
-
-    /**
-     * Constructor for objects of class SudokuPlay
-     */
-    public SudokuPlay() {
-
-    }
-
     /**
      * Display the fill number interface, which allows the users
      * change the value of a cell.
@@ -37,7 +29,7 @@ public class SudokuPlay {
             column = Integer.parseInt(in.next());
             row = Integer.parseInt(in.next());
             value = Integer.parseInt(in.next());
-        } catch (Exception exception) {
+        } catch (NumberFormatException exception) {
             System.out.println("Wrong input type");
             play(game);
         }

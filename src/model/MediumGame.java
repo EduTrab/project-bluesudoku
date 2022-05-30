@@ -11,13 +11,6 @@ import java.util.Random;
  */
 public class MediumGame extends Game {
     /**
-     * Constructor for objects of class mediumGame
-     */
-    public MediumGame() {
-        super();
-    }
-
-    /**
      * Initialize the MediumGame by randomly choosing a medium sudoku file.
      */
     public void initialize() {

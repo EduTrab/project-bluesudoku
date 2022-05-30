@@ -27,8 +27,8 @@ public class SubGrid extends CellCollection {
      */
     public SubGrid(Grid theGrid, int subGridNumber) {
         super(theGrid, subGridNumber);
-        int left = (this.getNumber() - 1) % 3;
-        int down = (this.getNumber() - 1) / 3;
+        left = (this.getNumber() - 1) % 3;
+        down = (this.getNumber() - 1) / 3;
     }
 
     /**
