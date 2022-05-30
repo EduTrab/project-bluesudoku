@@ -29,7 +29,7 @@ import javax.swing.JTextField;
  */
 public class GameGuiFrame extends JFrame {
     private final Game game;
-    MainGuiFrame mainGuiFrame;
+    private final MainGuiFrame mainGuiFrame;
 
     /**
      * initializes the gamegui.
@@ -38,6 +38,7 @@ public class GameGuiFrame extends JFrame {
      * @param frame to creat the link between the game-main frame
      */
     public GameGuiFrame(Game game, MainGuiFrame frame) {
+        super();
         this.mainGuiFrame = frame;
         this.game = game;
     }
@@ -141,7 +142,6 @@ public class GameGuiFrame extends JFrame {
                 setVisible(false);
                 mainGuiFrame.setVisible(true);
                 mainGuiFrame.mainGUI();
-                return;
             }
         });
 
