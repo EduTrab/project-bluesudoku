@@ -71,8 +71,15 @@ public class GridLayoutManeger {
 
     }
     
-    public void setFontAndBorder(JLabel jtext, int x, Border border1, Border border2) {
+    /**
+     *  this creats the style of the JLabels.
+     * @param jtext the inputet text to style
+     * @param xxx a param
+     * @param border1 type 1 of border
+     * @param border2 typer to of border
+     */
+    public void setFontAndBorder(JLabel jtext, int xxx, Border border1, Border border2) {
         jtext.setFont(new Font("Verdana", Font.PLAIN, 25));
-        jtext.setBorder(x % 3 == 0 ? border2 : border1);
+        jtext.setBorder(xxx % 3 == 0 ? border2 : border1);
     }
 }

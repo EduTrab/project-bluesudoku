@@ -16,15 +16,23 @@ import java.util.Arrays;
 public class SolvedSudokuGenerator {
     private int[][] sudoku;
 
+    /**
+     * generates the empty sudoku.
+     */
     public SolvedSudokuGenerator() {
         sudoku = new int[9][9];
-        for(int i = 0; i < 9; i++) {
-            for(int t = 0; t < 9; t++) {
+        for (int i = 0; i < 9; i++) {
+            for (int t = 0; t < 9; t++) {
                 sudoku[i][t] = 0;
             }
         }
     }
     
+    /**
+     * this assins the 3 random numbers to the empty grid and then calles sudokuSolver on that grid
+     * to generate a solved solution.
+     * @return the solved sudoku
+     */
     public Grid makeSudoku() {
         int aaa = 0;
         int bbb = 0;

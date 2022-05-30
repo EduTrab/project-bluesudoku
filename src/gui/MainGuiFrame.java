@@ -20,9 +20,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * MainGuiFrame showcasts the gui pane where you can choos what game you want to play.
+ * MainGuiFrame showcasts the gui pane where you can choos what game you want to
+ * play.
  * 
- * <p>GameGuiFrame class has 1 field. the game is the main game 
+ * <p>GameGuiFrame class has 1 field. the game is the main game
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
@@ -37,7 +38,7 @@ public class MainGuiFrame extends JFrame {
 
     /**
      * creats and set up the window
-     *  Set up the content pane.
+     * Set up the content pane.
      * Display the window.
      */
     public void mainGUI() {
@@ -99,36 +100,38 @@ public class MainGuiFrame extends JFrame {
         JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
         listPane.add(solvedSudkuGenerator);
 
-
-        /*if (RIGHT_TO_LEFT) {
-            pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
-        }
-
-        final MainGuiFrame refToMain = this;
-        
-        JButton[] buttons = {easy, medium, hard, solvedSudkuGenerator};
-        final Game[] games = {new EasyGame(), new MediumGame(), new HardGame(), new HardGame()};
-        ArrayList<java.awt.event.ActionListener> listeners = new ArrayList<>();
-        for (int i = 0; i < games.length; i++) {
-            final Game g = games[i];
-            final int index = i;
-            listeners.add(new ActionListener() {
-                public void actionPerformed(ActionEvent aaa) {
-                    getContentPane().removeAll();
-                    g.initialize();
-                    if (index == games.length - 1) {
-                        g.setGrid(new SolvedSudokuGenerator().makeSudoku());
-                    }
-                    initGuiFrame(game);
-                    
-                    return;
-                }
-            });
-        }
-
-        for (int i = 0; i < buttons.length; i++) {
-            buttons[i].addActionListener(listeners.get(i));
-        }*/
+        /*
+         * if (RIGHT_TO_LEFT) {
+         * pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+         * }
+         * 
+         * final MainGuiFrame refToMain = this;
+         * 
+         * JButton[] buttons = {easy, medium, hard, solvedSudkuGenerator};
+         * final Game[] games = {new EasyGame(), new MediumGame(), new HardGame(), new
+         * HardGame()};
+         * ArrayList<java.awt.event.ActionListener> listeners = new ArrayList<>();
+         * for (int i = 0; i < games.length; i++) {
+         * final Game g = games[i];
+         * final int index = i;
+         * listeners.add(new ActionListener() {
+         * public void actionPerformed(ActionEvent aaa) {
+         * getContentPane().removeAll();
+         * g.initialize();
+         * if (index == games.length - 1) {
+         * g.setGrid(new SolvedSudokuGenerator().makeSudoku());
+         * }
+         * initGuiFrame(game);
+         * 
+         * return;
+         * }
+         * });
+         * }
+         * 
+         * for (int i = 0; i < buttons.length; i++) {
+         * buttons[i].addActionListener(listeners.get(i));
+         * }
+         */
 
         // Listener
         if (RIGHT_TO_LEFT) {
@@ -157,7 +160,8 @@ public class MainGuiFrame extends JFrame {
 
         solvedSudkuGenerator.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
-                action(aaa, "Solved");            }
+                action(aaa, "Solved");
+            }
         });
 
         pane.add(listPane);
@@ -168,10 +172,15 @@ public class MainGuiFrame extends JFrame {
         gameGuiFrame = new GameGuiFrame(game, this);
         gameGuiFrame.gameGUI();
     }
-    
+
+    /**
+     *  initializes the correct gome mode.
+     * @param aaa is an actionEvent
+     * @param difficulty the mode of game that you want to play
+     */
     public void action(ActionEvent aaa, String difficulty) {
         getContentPane().removeAll();
-        switch(difficulty) {
+        switch (difficulty) {
             case "Easy":
                 game = new EasyGame();
                 ((EasyGame) game).initialize();
