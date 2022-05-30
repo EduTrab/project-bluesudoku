@@ -134,44 +134,25 @@ public class MainGuiFrame extends JFrame {
 
         easy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
-                getContentPane().removeAll();
-                game = new EasyGame();
-                ((EasyGame) game).initialize();
-                initGuiFrame(game);
-
-                return;
+                action(aaa, "Easy");
             }
         });
 
         medium.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
-                getContentPane().removeAll();
-                game = new MediumGame();
-                ((MediumGame) game).initialize();
-                initGuiFrame(game);
-                return;
+                action(aaa, "Medium");
             }
         });
 
         hard.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
-                getContentPane().removeAll();
-                game = new HardGame();
-                ((HardGame) game).initialize();
-                initGuiFrame(game);
-                return;
+                action(aaa, "Hard");
             }
         });
 
         solvedSudkuGenerator.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
-                getContentPane().removeAll();
-                game = new HardGame();
-                ((HardGame) game).initialize();
-                game.setGrid(new SolvedSudokuGenerator().makeSudoku());
-                initGuiFrame(game);
-                return;
-            }
+                action(aaa, "Solved");            }
         });
 
         pane.add(listPane);
@@ -181,5 +162,34 @@ public class MainGuiFrame extends JFrame {
     private void initGuiFrame(Game game) {
         gameGuiFrame = new GameGuiFrame(game, this);
         gameGuiFrame.gameGUI();
+    }
+    
+    public void action(ActionEvent aaa, String difficulty) {
+        getContentPane().removeAll();
+        switch(difficulty) {
+            case "Easy":
+                game = new EasyGame();
+                ((EasyGame) game).initialize();
+                break;
+            case "Medium":
+                game = new MediumGame();
+                ((MediumGame) game).initialize();
+                break;
+            case "Hard":
+                game = new HardGame();
+                ((HardGame) game).initialize();
+                break;
+            case "Solved":
+                game = new HardGame();
+                ((HardGame) game).initialize();
+                game.setGrid(new SolvedSudokuGenerator().makeSudoku());
+                break;
+            default:
+                game = new EasyGame();
+                ((EasyGame) game).initialize();
+                break;
+        }
+        initGuiFrame(game);
+        return;
     }
 }
