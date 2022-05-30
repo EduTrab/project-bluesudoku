@@ -89,7 +89,7 @@ public class GameGuiFrame extends JFrame {
 
         JButton check = new JButton("Check");
         mainSouth.add(check);
-        JButton menue = new JButton("Menue");
+        JButton menue = new JButton("Menu");
         mainSouth.add(menue);
 
         // Center
@@ -97,14 +97,7 @@ public class GameGuiFrame extends JFrame {
         // new GridLayout(9,9); // have to spacify amount of rows and colums
         main.add(centerLayoutPanel, BorderLayout.CENTER);
 
-        /*
-         * first atempot
-         * // West
-         * res = true;
-         * JLabel result = new JLabel(res + " play again", JLabel.CENTER);
-         * main.add(result, BorderLayout.WEST);
-         * result.setFont(new Font("Verdana", Font.PLAIN, 25));
-         */
+        
 
         // Listeners
 
@@ -113,16 +106,7 @@ public class GameGuiFrame extends JFrame {
             public void actionPerformed(ActionEvent aaa) {
 
                 int[][] sudoku = getRealTimeSuoduku(centerLayoutPanel);
-                /*
-                 * DEBUG
-                 * for (int i = 0; i < 9; i++) {
-                 * for (int j = 0; j < 9; j++) {
-                 * System.out.print(sudoku[i][j] + " ");
-                 * }
-                 * System.out.println();
-                 * }
-                 */
-                // check if the grid is correct
+                
 
                 Grid grid = new Grid();
                 grid.initializeGrid(sudoku);

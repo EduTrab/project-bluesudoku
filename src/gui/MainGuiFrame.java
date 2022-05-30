@@ -7,9 +7,11 @@ import model.MediumGame;
 import model.SolvedSudokuGenerator;
 
 import java.awt.ComponentOrientation;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Box;
@@ -61,11 +63,14 @@ public class MainGuiFrame extends JFrame {
      * @param pane the interface
      */
     public void setupMainPane(Container pane) {
+        pane.setLayout(new GridBagLayout());
+
         JPanel listPane = new JPanel();
         listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
 
         // first button
         JLabel title = new JLabel("BlueSudoku");
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
         title.setFont(new Font("Verdana", Font.PLAIN, 25));
         listPane.add(title);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
@@ -73,28 +78,33 @@ public class MainGuiFrame extends JFrame {
         // 2d button
         JLabel level = new JLabel("Level");
         level.setFont(new Font("Verdana", Font.PLAIN, 20));
+        level.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(level);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         // 3d button
         JButton easy = new JButton("EASY");
         listPane.setFont(new Font("Verdana", Font.PLAIN, 20));
+        easy.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(easy);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
         //
 
         // 4th button
         JButton medium = new JButton("MEDIUM");
+        medium.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(medium);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
         //
 
         // 5t button
         JButton hard = new JButton("HARD");
+        hard.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(hard);
 
         // 6th button
-        JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
+        JButton solvedSudkuGenerator = new JButton("SOLVED SUDOKU GENERATO");
+        solvedSudkuGenerator.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(solvedSudkuGenerator);
 
         // Listener
