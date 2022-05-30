@@ -20,8 +20,8 @@ import java.util.Random;
 public class Game {
     private Grid grid;
     private AllWin win;
-    private SudokuReader reader;
-    private SudokuSolver solver;
+    private final SudokuReader reader;
+    private final SudokuSolver solver;
 
     /**
      * Constructor for objects of class Game.
@@ -113,7 +113,6 @@ public class Game {
 
     public void changeCellValue(int xcoordinate, int ycoordinate, int value) {
         this.grid.getCells().get((ycoordinate - 1) * 9 + (xcoordinate - 1)).changeValue(value);
-        // this.printGrid();
     }
 
     /**
@@ -139,7 +138,7 @@ public class Game {
     }
 
     /**
-     * Print "You win!" if all test conditions are met, otherwise print
+     * Show "You win!" if all test conditions are met, otherwise print
      * "Whoops...Try it again."
      */
 

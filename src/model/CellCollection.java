@@ -18,9 +18,9 @@ import java.util.ArrayList;
  * @version 2022.05.29
  */
 public class CellCollection {
-    private ArrayList<Cell> cells;
-    private Grid grid;
-    private int number;
+    private final ArrayList<Cell> cells;
+    private final Grid grid;
+    private final int number;
 
     /**
      * Constructor of instances of class CellCollection.

@@ -9,7 +9,7 @@ package model;
  */
 public class AllWin {
     private boolean ifwin;
-    private SingleKindWin singleKindWin;
+    private final SingleKindWin singleKindWin;
 
     /**
      * Constructor for objects of class Win.

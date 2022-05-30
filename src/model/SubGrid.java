@@ -16,8 +16,8 @@ package model;
  * @version 2022.05.29
  */
 public class SubGrid extends CellCollection {
-    private int left;
-    private int down;
+    private final int left;
+    private final int down;
 
     /**
      * Constructor of instances of class subGrid.

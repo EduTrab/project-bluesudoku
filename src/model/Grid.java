@@ -12,14 +12,7 @@ import java.util.ArrayList;
  * @version 2022.05.29
  */
 public class Grid {
-    private ArrayList<Cell> cells;
-
-    /**
-     * Constructor for objects of class Grid.
-     */
-    public Grid() {
-        this.cells = new ArrayList<Cell>();
-    }
+    private final ArrayList<Cell> cells = new ArrayList<Cell>();
 
     /**
      * Add a cell into the current grid.

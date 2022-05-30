@@ -12,8 +12,8 @@ package model;
  * @version 2022.05.29
  */
 public class Cell {
-    private int xvalue;
-    private int yvalue;
+    private final int xvalue;
+    private final int yvalue;
     private int value;
 
     /**
