@@ -32,7 +32,6 @@ import javax.swing.JPanel;
 
 public class MainGuiFrame extends JFrame {
     private static final boolean RIGHT_TO_LEFT = false;
-    private GameGuiFrame gameGuiFrame;
 
     /**
      * creats and set up the window
@@ -132,7 +131,7 @@ public class MainGuiFrame extends JFrame {
     }
 
     private void initGuiFrame(Game game) {
-        gameGuiFrame = new GameGuiFrame(game, this);
+        GameGuiFrame gameGuiFrame= new GameGuiFrame(game, this);
         gameGuiFrame.gameGUI();
     }
 
