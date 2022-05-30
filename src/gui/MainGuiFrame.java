@@ -6,16 +6,19 @@ import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.ComponentOrientation;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -47,7 +50,14 @@ public class MainGuiFrame extends JFrame {
         this.setMinimumSize(new Dimension(750, 750));
         this.setPreferredSize(new Dimension(750, 750));
         // frame.setLayout(null);
-
+        this.setContentPane(new JPanel() {
+            @Override
+            protected void paintComponent(Graphics graphics) {
+                super.paintComponent(graphics);
+                graphics.drawImage(new ImageIcon("src/gui/assets/background.jpg").getImage(),
+                0,0,getWidth(),getHeight(),null);
+            }
+        });
         // Set up the content pane.
         setupMainPane(this.getContentPane());
 
@@ -66,14 +76,15 @@ public class MainGuiFrame extends JFrame {
         pane.setLayout(new GridBagLayout());
 
         JPanel listPane = new JPanel();
+        listPane.setOpaque(false);
         listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
 
         // first button
         JLabel title = new JLabel("BlueSudoku");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        title.setFont(new Font("Verdana", Font.PLAIN, 25));
+        title.setFont(new Font("Verdana", Font.BOLD, 32));
         listPane.add(title);
-        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        listPane.add(Box.createRigidArea(new Dimension(0, 15)));
 
         // 2d button
         JLabel level = new JLabel("Level");
@@ -101,6 +112,7 @@ public class MainGuiFrame extends JFrame {
         JButton hard = new JButton("HARD");
         hard.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(hard);
+        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
 
         // 6th button
         JButton solvedSudkuGenerator = new JButton("SOLVED SUDOKU GENERATO");
