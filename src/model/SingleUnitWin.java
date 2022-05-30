@@ -29,7 +29,7 @@ public class SingleUnitWin {
 
    
     /**
-     * TODO 
+     * To test is a single unit meet the win condition.
      * 
      * <p>Return true if there is no same elements in the CellCollection, otherwise
      * return false.

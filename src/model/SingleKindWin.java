@@ -22,11 +22,11 @@ public class SingleKindWin {
 
    
     /**
-     *  Return true if all CellCollections of this kind met the win conditional,
+     * Return true if all CellCollections of this kind met the win conditional,
      * otherwise return false.
      * 
      * @param grid The current grid
-     * @param kind TODO
+     * @param kind The kind the the grid(row, column or subgrid)
      * @return True if all rows met the win conditional, otherwise return false
      */
     public boolean testSingleKind(Grid grid, String kind) {

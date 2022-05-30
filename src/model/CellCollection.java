@@ -25,8 +25,8 @@ public class CellCollection {
     /**
      * Constructor of instances of class CellCollection.
      * 
-     * @param theGrid   TODO
-     * @param theNumber TODO
+     * @param theGrid   The Grid of the current CellCollection.
+     * @param theNumber The number of the current Cellcolletion.
      */
     public CellCollection(Grid theGrid, int theNumber) {
         cells = new ArrayList<Cell>();
@@ -35,18 +35,18 @@ public class CellCollection {
     }
 
     /**
-     * TODO.
+     * An acessor method to get the Grid.
      * 
-     * @return TODO
+     * @return The grid of the current CellCollection.
      */
     public Grid getGrid() {
         return grid;
     }
 
     /**
-     * TODO.
+     * An accessor method to get the number.
      * 
-     * @return TODO
+     * @return The number of the current CellCollection.
      */
     public int getNumber() {
         return number;

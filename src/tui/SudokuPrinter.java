@@ -27,7 +27,7 @@ public class SudokuPrinter {
      * 
      * @param start The number of the start cell of this row.
      * @param end The number of the end cell of this row.
-     * @param cell TODO
+     * @param cell The ArrayList of Cell which needs to be printed.
      */
     public void printRow(int start, int end, ArrayList<Cell> cell) {
         ArrayList<Cell> cells = cell;
@@ -45,7 +45,7 @@ public class SudokuPrinter {
     /**
      * Print the current grid.
      * 
-     * @param cell TODO
+     * @param cell The ArrayList of Cell which needs to be printed.
      */
     public void printGrid(ArrayList<Cell> cell) {
         System.out.println("━━━━━━━━━━━━━━━━━━━");

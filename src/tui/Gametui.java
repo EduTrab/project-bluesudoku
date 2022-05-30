@@ -21,7 +21,7 @@ public class Gametui {
     /**
      * Accessor method to get the Game of this Gametui.
      * 
-     * @return TODO
+     * @return The current game.
      */
     public Game getGame() {
         return this.game;

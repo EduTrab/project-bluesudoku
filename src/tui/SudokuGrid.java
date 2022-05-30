@@ -16,7 +16,7 @@ public class SudokuGrid {
     /**
      * Display the current sudoku grid and give instructions.
      * 
-     * @param tui TODO
+     * @param tui The game tui used in this grid.
      */
     public void sudokuGrid(Gametui tui) {
         int option;
