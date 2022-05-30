@@ -78,4 +78,14 @@ public class GameTest {
         model.Game game1 = new model.Game();
         game1.randomInitialize("easy");
     }
+
+    @Test
+    public void testSetGrid()
+    {
+        model.Game game1 = new model.Game();
+        model.Grid grid1 = new model.Grid();
+        game1.initialize();
+        game1.setGrid(grid1);
+    }
 }
+
