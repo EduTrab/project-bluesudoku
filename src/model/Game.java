@@ -68,6 +68,8 @@ public class Game {
         return this.win;
     }
 
+    public void initialize() {};
+
     /**
      * Reader an external sudoku file and create a sudoku grid according
      * to it.

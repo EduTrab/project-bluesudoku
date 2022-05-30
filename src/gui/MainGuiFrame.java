@@ -16,6 +16,7 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -28,14 +29,12 @@ import javax.swing.JTextField;
 import model.Grid;
 import model.*;
 
-public class MainGuiFrame extends JFrame{
+public class MainGuiFrame extends JFrame {
     private static final boolean RIGHT_TO_LEFT = false;
 
     private Game game;
     GameGuiFrame gameGuiFrame;
 
-   
-    
     public void mainGUI() {
         // Create and set up the window.
         this.setTitle("BlueSudoku");
@@ -79,11 +78,13 @@ public class MainGuiFrame extends JFrame{
         listPane.setFont(new Font("Verdana", Font.PLAIN, 20));
         listPane.add(easy);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        //
 
         // 4th button
         JButton medium = new JButton("MEDIUM");
         listPane.add(medium);
         listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        //
 
         // 5t button
         JButton hard = new JButton("HARD");
@@ -93,13 +94,44 @@ public class MainGuiFrame extends JFrame{
         JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
         listPane.add(solvedSudkuGenerator);
 
+
+        /*if (RIGHT_TO_LEFT) {
+            pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+        }
+
+        final MainGuiFrame refToMain = this;
+        
+        JButton[] buttons = {easy, medium, hard, solvedSudkuGenerator};
+        final Game[] games = {new EasyGame(), new MediumGame(), new HardGame(), new HardGame()};
+        ArrayList<java.awt.event.ActionListener> listeners = new ArrayList<>();
+        for (int i = 0; i < games.length; i++) {
+            final Game g = games[i];
+            final int index = i;
+            listeners.add(new ActionListener() {
+                public void actionPerformed(ActionEvent aaa) {
+                    getContentPane().removeAll();
+                    g.initialize();
+                    if (index == games.length - 1) {
+                        g.setGrid(new SolvedSudokuGenerator().makeSudoku());
+                    }
+                    initGuiFrame(game);
+                    
+                    return;
+                }
+            });
+        }
+
+        for (int i = 0; i < buttons.length; i++) {
+            buttons[i].addActionListener(listeners.get(i));
+        }*/
+
+        // Listener
         if (RIGHT_TO_LEFT) {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
 
         final MainGuiFrame refToMain = this;
 
-        // Listener
         easy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent aaa) {
                 getContentPane().removeAll();
@@ -107,7 +139,6 @@ public class MainGuiFrame extends JFrame{
                 ((EasyGame) game).initialize();
                 initGuiFrame(game);
 
- 
                 return;
             }
         });
