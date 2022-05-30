@@ -33,10 +33,25 @@ The goal of the puzzle is to fill the rest of the grid, using all the numbers 1â
 ![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_checkAnswer.png)
 
 * DIYSudoku puzzle
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/tree/main/screenShots)
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_DIYSudoku.png)
 
 * AI Solution
 ![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_aiSulution.png)
+
+## Screenshots of GUI
+
+## Screenshots of class diagrams
+* Packge
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_package.png)
+
+* Model
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_model.png)
+
+* TUI
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_tui.png)
+
+* GUI
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_gui.png)
 
 ## Project Structure
 
