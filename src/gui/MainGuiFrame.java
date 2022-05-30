@@ -105,8 +105,9 @@ public class MainGuiFrame extends JFrame{
                 getContentPane().removeAll();
                 game = new EasyGame();
                 ((EasyGame) game).initialize();
-                gameGuiFrame = new GameGuiFrame(game, refToMain);
-                gameGuiFrame.gameGUI();
+                initGuiFrame(game);
+
+ 
                 return;
             }
         });
@@ -116,8 +117,7 @@ public class MainGuiFrame extends JFrame{
                 getContentPane().removeAll();
                 game = new MediumGame();
                 ((MediumGame) game).initialize();
-                gameGuiFrame = new GameGuiFrame(game, refToMain);
-                gameGuiFrame.gameGUI();
+                initGuiFrame(game);
                 return;
             }
         });
@@ -127,8 +127,7 @@ public class MainGuiFrame extends JFrame{
                 getContentPane().removeAll();
                 game = new HardGame();
                 ((HardGame) game).initialize();
-                gameGuiFrame = new GameGuiFrame(game, refToMain);
-                gameGuiFrame.gameGUI();
+                initGuiFrame(game);
                 return;
             }
         });
@@ -139,13 +138,17 @@ public class MainGuiFrame extends JFrame{
                 game = new HardGame();
                 ((HardGame) game).initialize();
                 game.setGrid(new SolvedSudokuGenerator().makeSudoku());
-                gameGuiFrame = new GameGuiFrame(game, refToMain);
-                gameGuiFrame.gameGUI();
+                initGuiFrame(game);
                 return;
             }
         });
 
         pane.add(listPane);
 
+    }
+
+    private void initGuiFrame(Game game) {
+        gameGuiFrame = new GameGuiFrame(game, this);
+        gameGuiFrame.gameGUI();
     }
 }
