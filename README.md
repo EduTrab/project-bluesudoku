@@ -26,7 +26,17 @@ The goal of the puzzle is to fill the rest of the grid, using all the numbers 1â
 * GUI: target/classes gui.Main
 
 ## Screenshots of TUI
+* Fill the cells
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_fill.png)
 
+* Check the answer
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_checkAnswer.png)
+
+* DIYSudoku puzzle
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/tree/main/screenShots)
+
+* AI Solution
+![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_aiSulution.png)
 
 ## Project Structure
 
