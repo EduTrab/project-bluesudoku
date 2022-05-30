@@ -54,8 +54,8 @@ public class GridLayoutManeger {
 
         // initialys JLabel
         JLabel jlabel = new JLabel();
-        Border border = BorderFactory.createLineBorder(Color.BLACK, 2);
         Border border1 = BorderFactory.createLineBorder(Color.BLACK, 2);
+        Border border2 = BorderFactory.createLineBorder(Color.BLACK, 2);
 
         // != 0 --> JLabel
         // = 0 --> JTextField
@@ -65,12 +65,11 @@ public class GridLayoutManeger {
                     JTextField jtextFieldField = new JTextField("");
                     jtextFieldField.setHorizontalAlignment(JTextField.CENTER);
                     jtextFieldField.setFont(new Font("Verdana", Font.PLAIN, 25));
-                    jtextFieldField.setBorder(j % 3 == 0 ? border1 : border);
+                    jtextFieldField.setBorder(j % 3 == 0 ? border2 : border1);
                     mainCenter.add(jtextFieldField);
                 } else {
                     jlabel = new JLabel(Integer.toString(sudoku[i][j]), JLabel.CENTER);
-                    jlabel.setFont(new Font("Verdana", Font.PLAIN, 25));
-                    jlabel.setBorder(j % 3 == 0 ? border1 : border);
+                    setFontAndBorder(jlabel, j, border2, border1);
                     mainCenter.add(jlabel);
                 }
 
@@ -79,5 +78,10 @@ public class GridLayoutManeger {
 
         return mainCenter;
 
+    }
+    
+    public void setFontAndBorder(JLabel jtext, int x, Border border1, Border border2) {
+        jtext.setFont(new Font("Verdana", Font.PLAIN, 25));
+        jtext.setBorder(x % 3 == 0 ? border2 : border1);
     }
 }
