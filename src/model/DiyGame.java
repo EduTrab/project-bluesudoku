@@ -1,6 +1,5 @@
 package model;
 
-import java.util.Random;
 
 /**
  * DIYGame class is a childclass of Game class, which holds a method

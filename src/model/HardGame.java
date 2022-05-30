@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Random;
-
 /**
  * HardGame class is a childclass of Game class, which holds a method
  * to initalize itself with a hard sudoku file

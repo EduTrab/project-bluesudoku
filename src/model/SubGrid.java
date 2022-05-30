@@ -41,7 +41,7 @@ public class SubGrid extends CellCollection {
     public void initializeCollection() {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                int current = (i * 9 + j) + (left * 3) + (down * 27);
+                int current = i * 9 + j + left * 3 + down * 27;
                 Cell objectCell = getGrid().getCells().get(current);
                 this.getCells().add(objectCell);
             }

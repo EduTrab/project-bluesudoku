@@ -23,7 +23,7 @@ public class SingleUnitWin {
      * @return ifwin
      */
 
-    public boolean getIfwin() {
+    public boolean isIfwin() {
         return this.ifwin;
     }
 

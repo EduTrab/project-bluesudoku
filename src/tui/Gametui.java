@@ -17,8 +17,6 @@ import java.util.Scanner;
  */
 public class Gametui {
     private Game game;
-    private SudokuPausa pausaGenerator;
-    private SudokuGrid grid;
 
     /**
      * Accessor method to get the Game of this Gametui.
@@ -32,11 +30,10 @@ public class Gametui {
      * 
      */
     public void chooseDifficulty() { 
-        int option;
+        int option = 1;
         SudokuPausa pausaGenerator = new SudokuPausa();
         SudokuGrid grid = new SudokuGrid();
-        SudokuPrinter printer = new SudokuPrinter();
-
+        
         while (true) {
             Scanner in = new Scanner(System.in);
             System.out.println(
@@ -45,7 +42,7 @@ public class Gametui {
             try {
                 option = Integer.parseInt(in.next());
             } catch (final NumberFormatException exception) {
-                continue;
+                option = 1;
             }
 
             if (option == 1) {
