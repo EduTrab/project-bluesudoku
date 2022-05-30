@@ -55,7 +55,7 @@ public class MainGuiFrame extends JFrame {
             protected void paintComponent(Graphics graphics) {
                 super.paintComponent(graphics);
                 graphics.drawImage(new ImageIcon("src/gui/assets/background.jpg").getImage(),
-                0,0,getWidth(),getHeight(),null);
+                    0,0,getWidth(),getHeight(),null);
             }
         });
         // Set up the content pane.
