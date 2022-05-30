@@ -6,7 +6,6 @@ import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
 
-import java.awt.Color;
 import java.awt.Component;
 import java.awt.ComponentOrientation;
 import java.awt.Container;
