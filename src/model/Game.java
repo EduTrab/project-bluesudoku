@@ -136,9 +136,6 @@ public class Game {
 
     /**
      * Ask the SudokuSolver of this game check if this sudoku solvable.
-     */
-    /**
-     * Ask the SudokuSolver of this game check if this sudoku solvable.
      * 
      * @return the result
      */
