@@ -17,7 +17,7 @@ package gui;
 public class RenderGrid {
     // private static final boolean RIGHT_TO_LEFT = false;
     
-    MainGuiFrame mainGuiFrame = new MainGuiFrame();
+    private MainGuiFrame mainGuiFrame = new MainGuiFrame();
 
 
     /**

@@ -1,7 +1,6 @@
 package gui;
 
 import model.AllWin;
-import model.Cell;
 import model.Game;
 import model.Grid;
 
