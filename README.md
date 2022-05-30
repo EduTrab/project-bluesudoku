@@ -100,11 +100,37 @@ mvn compile
 To run the application from outside BlueJ, first build it with Maven.
 This generates the compiled classes in the directory `target/classes`.
 
+## Running the TUI
+
+To run this application, with the TUI, from the command line:
+
+```bach
+java -cp target/classes tui.Main ARG ARG ARG
+```
+
+java -cp target/classes tui.Main  (No arguement)
+
+## Running the GUI
+
+To run this application, with the GUI, from the command line:
+
+```bach
+java -cp target/classes gui.Main ARG ARG ARG
+```
+
+java -cp target/classes gui.Main  (No arguement)
 
 ### How run the JUnit tests with Maven
 
 ```bash
 mvn test
+```
+
+### How to run Checkstyle with Maven
+
+```bash
+mvn compile
+mvn checkstyle:check
 ```
 
 ### How to run Checkstyle with Maven
