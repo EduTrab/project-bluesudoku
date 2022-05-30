@@ -44,7 +44,9 @@ public class SudokuSolver {
      * @return the sudoku
      */
     public int[][] getSudoku() {
-        return this.sudoku;
+        int[][] returnSudoku;
+        returnSudoku = this.sudoku;
+        return returnSudoku;
     }
 
     /**
