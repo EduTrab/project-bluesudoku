@@ -28,14 +28,16 @@ public class SolvedSudokuGenerator {
             b = (int) (Math.random() * 9);
             c = (int) (Math.random() * 9);
         } while (a == b || b == c || a == c);
-        System.out.println(a + " " + b + " " + c);
+        // this would show what a b adn c where randomly generated System.out.println(a + " " + b + " " + c);
 
         sudoku[0][0] = a;
         sudoku[0][1] = b;
         sudoku[0][2] = c;
-        System.out.println(Arrays.deepToString(sudoku));
+        // this would show the sudoku the random sudoku generator would have to solve:
+        // --> System.out.println(Arrays.deepToString(sudoku));
 
-        System.out.println(Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(sudoku)[1]));
+        // a system out print would show the solved sudoku:
+        Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(sudoku)[1]);
 
         Grid grid = new Grid();
         for (int i = 0; i < 9; i++) {

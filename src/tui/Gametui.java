@@ -1,11 +1,12 @@
 package tui;
 
-import model.Game;
+import model.DIYGame;
 import model.EasyGame;
+import model.Game;
+import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
-import model.HardGame;
-import model.DIYGame;
+
 import java.util.Scanner;
 
 /**

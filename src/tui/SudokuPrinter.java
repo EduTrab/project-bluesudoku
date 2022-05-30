@@ -1,7 +1,13 @@
 package tui;
 
+import model.Cell;
+
 import java.util.ArrayList;
-import model.*;
+
+
+
+
+
 
 /**
  * The printer of the gui.

@@ -1,7 +1,9 @@
 package tui;
 
+import model.Game;
+
 import java.util.Scanner;
-import model.*;
+
 
 /**
  * Display the current sudoku game and allow the users
