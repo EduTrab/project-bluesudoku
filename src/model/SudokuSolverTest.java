@@ -18,8 +18,18 @@ public class SudokuSolverTest {
 
     @Test
     public void testGetGridSize() {
+        
+    }
+
+    @Test
+    public void testSolver()
+    {
         model.SudokuSolver sudokuSo1 = new model.SudokuSolver();
-        assertEquals(9, sudokuSo1.getGridSize());
-        assertEquals(null, sudokuSo1.getSudoku());
+        model.Game game1 = new model.Game();
+        model.EasyGame easyGame1 = new model.EasyGame();
+        easyGame1.initialize();
+        sudokuSo1.initialize(easyGame1.getGrid());
+        sudokuSo1.getSudoku();
     }
 }
+
