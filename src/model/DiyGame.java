@@ -9,11 +9,11 @@ import java.util.Random;
  * @author hech@usi.ch
  * @version 2022.05.29
  */
-public class DIYGame extends Game {
+public class DiyGame extends Game {
     /**
      * Constructor for objects of class DIYGame
      */
-    public DIYGame() {
+    public DiyGame() {
         super();
     }
 

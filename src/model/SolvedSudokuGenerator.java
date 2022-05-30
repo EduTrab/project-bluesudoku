@@ -19,20 +19,20 @@ public class SolvedSudokuGenerator {
     };
 
     public Grid makeSudoku() {
-        int a = 0;
-        int b = 0;
-        int c = 0;
+        int aaa = 0;
+        int bbb = 0;
+        int ccc = 0;
 
         do {
-            a = (int) (Math.random() * 9);
-            b = (int) (Math.random() * 9);
-            c = (int) (Math.random() * 9);
-        } while (a == b || b == c || a == c);
+            aaa = (int) (Math.random() * 9);
+            bbb = (int) (Math.random() * 9);
+            ccc = (int) (Math.random() * 9);
+        } while (aaa == bbb || bbb == ccc || aaa == ccc);
         // this would show what a b adn c where randomly generated System.out.println(a + " " + b + " " + c);
 
-        sudoku[0][0] = a;
-        sudoku[0][1] = b;
-        sudoku[0][2] = c;
+        sudoku[0][0] = aaa;
+        sudoku[0][1] = bbb;
+        sudoku[0][2] = ccc;
         // this would show the sudoku the random sudoku generator would have to solve:
         // --> System.out.println(Arrays.deepToString(sudoku));
 

@@ -51,7 +51,7 @@ public class SudokuGrid {
                 }
                 pausaGenerator.pausa(in);
             } else if (option == 3) {
-                System.out.println(game.AIResult());
+                System.out.println(game.aiResult());
                 for (int row = 0; row < game.getSolver().getGridSize(); row++) {
                     for (int column = 0; column < game.getSolver().getGridSize(); column++) {
                         System.out.print(game.getSolver().getSudoku()[row][column]);

@@ -1,12 +1,11 @@
 package model;
 
-import java.util.Arrays;
 
 /**
  * A SudokuSolver can be considered as a computer player. It can try to
  * solve a given sudoku game by using exhausion.
  *
- * SudokuSolver class has 2 fields. GridSize is the size of the work sudoku
+ * SudokuSolver class has 2 fields. GRID_SIZE is the size of the work sudoku
  * grid. sudoku is the sudoku needs to be solved.
  *
  * @author hech@usi.ch
@@ -15,7 +14,7 @@ import java.util.Arrays;
  */
 
 public class SudokuSolver {
-    private static final int GridSize = 9;// GRID_SIZE
+    private static final int GRID_SIZE = 9;// GRID_SIZE
     private int[][] sudoku;
 
     /**
@@ -39,12 +38,12 @@ public class SudokuSolver {
     }
 
     /**
-     * Accessor method to get the GridSize.
+     * Accessor method to get the GRID_SIZE.
      * 
-     * @return the GridSize
+     * @return the GRID_SIZE
      */
     public int getGridSize() {
-        return this.GridSize;
+        return this.GRID_SIZE;
     }
 
     /**
@@ -66,7 +65,7 @@ public class SudokuSolver {
      * @return false if dont find the number we are checking then return false.
      */
     private boolean isNumberInRow(int[][] sudoku, int number, int row) {
-        for (int i = 0; i < GridSize; i++) {
+        for (int i = 0; i < GRID_SIZE; i++) {
             if (sudoku[row][i] == number) {
                 // if sudoku and the row that was pased in at the current colum i that its
                 // iterating through if we find the
@@ -87,7 +86,7 @@ public class SudokuSolver {
      * @return false if dont find the number we are checking then return false
      */
     private boolean isNumberInColumn(int[][] sudoku, int number, int column) {
-        for (int i = 0; i < GridSize; i++) {
+        for (int i = 0; i < GRID_SIZE; i++) {
             if (sudoku[i][column] == number) {
                 return true;
             }
@@ -144,10 +143,10 @@ public class SudokuSolver {
      * @return True if the sudoku is solvable. Otherwise return false.
      */
     public Object[] solveSudoku(int[][] sudoku) {
-        for (int row = 0; row < GridSize; row++) {
-            for (int column = 0; column < GridSize; column++) {
+        for (int row = 0; row < GRID_SIZE; row++) {
+            for (int column = 0; column < GRID_SIZE; column++) {
                 if (sudoku[row][column] == 0) {
-                    for (int numberToTry = 1; numberToTry <= GridSize; numberToTry++) {
+                    for (int numberToTry = 1; numberToTry <= GRID_SIZE; numberToTry++) {
                         if (isValidPlacement(sudoku, numberToTry, row, column)) {
                             sudoku[row][column] = numberToTry;
 

@@ -1,6 +1,6 @@
 package tui;
 
-import model.DIYGame;
+import model.DiyGame;
 import model.EasyGame;
 import model.Game;
 import model.HardGame;
@@ -62,12 +62,12 @@ public class Gametui {
                 ((HardGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 4) {
-                this.game = new DIYGame();
-                ((DIYGame) game).initialize();
+                this.game = new DiyGame();
+                ((DiyGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 5) {
-                this.game = new DIYGame();
-                ((DIYGame) game).initialize();
+                this.game = new DiyGame();
+                ((DiyGame) game).initialize();
                 game.setGrid(new SolvedSudokuGenerator().makeSudoku());
                 grid.sudokuGrid(this);
             } else if (option == 6) {

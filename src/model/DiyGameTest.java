@@ -9,16 +9,16 @@ import org.junit.Test;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class DIYGameTest {
+public class DiyGameTest {
     /**
      * Default constructor for test class DIYGameTest
      */
-    public DIYGameTest() {
+    public DiyGameTest() {
     }
 
     @Test
     public void testDIY() {
-        model.DIYGame dIYGame1 = new model.DIYGame();
+        model.DiyGame dIYGame1 = new model.DiyGame();
         dIYGame1.initialize();
     }
 }

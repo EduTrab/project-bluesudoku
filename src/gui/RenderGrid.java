@@ -7,6 +7,7 @@ import model.Game;
 import model.HardGame;
 import model.MediumGame;
 import model.SolvedSudokuGenerator;
+
 import java.awt.BorderLayout;
 import java.awt.ComponentOrientation;
 import java.awt.Container;
@@ -38,7 +39,7 @@ import model.Grid;
  */
 
 public class RenderGrid {
-    final boolean RIGHT_TO_LEFT = false;
+    private static final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
     private Game game;
 
@@ -285,15 +286,15 @@ public class RenderGrid {
                     // try catch converts iknistial string to an int
                     try {
                         var = Integer.parseInt(textField.getText());
-                    } catch (NumberFormatException e) {
+                    } catch (NumberFormatException exeption) {
                         var = 0;
                     }
                 } else {
-                    JLabel jLabel = (JLabel) centerLayoutPanel.getComponent(pos);
+                    JLabel jlabel = (JLabel) centerLayoutPanel.getComponent(pos);
                     // System.out.println(jLabel.getText() + " JLabel");
                     try { // This try catch might be unnecessary
-                        var = Integer.parseInt(jLabel.getText());
-                    } catch (NumberFormatException e) {
+                        var = Integer.parseInt(jlabel.getText());
+                    } catch (NumberFormatException exeption) {
                         var = 0;
                     }
                 }

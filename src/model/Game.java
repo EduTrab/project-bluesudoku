@@ -125,7 +125,7 @@ public class Game {
     /**
      * Ask the SudokuSolver of this game check if this sudoku solvable
      */
-    public String AIResult() {
+    public String aiResult() {
         String result = "";
         int[][] sudoku = solver.getSudoku();
         if ((boolean) solver.solveSudoku(sudoku)[0]) {
