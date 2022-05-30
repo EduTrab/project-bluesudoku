@@ -36,13 +36,7 @@ public class SolvedSudokuGenerator {
         Arrays.deepToString((int[][]) new SudokuSolver().solveSudoku(sudoku)[1]);
 
         Grid grid = new Grid();
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9; j++) {
-                Cell cell = new Cell(i, j, sudoku[i][j]);
-                grid.addCell(cell);
-            }
-        }
+        grid.initializeGrid(sudoku);
         return grid;
     }
-
 }

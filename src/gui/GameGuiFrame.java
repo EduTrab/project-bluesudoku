@@ -117,12 +117,7 @@ public class GameGuiFrame extends JFrame {
                 // check if the grid is correct
 
                 Grid grid = new Grid();
-                for (int i = 0; i < 9; i++) {
-                    for (int j = 0; j < 9; j++) {
-                        Cell cell = new Cell(i, j, sudoku[i][j]);
-                        grid.addCell(cell);
-                    }
-                }
+                grid.initializeGrid(sudoku);
                 AllWin allWin = new AllWin();
                 allWin.testAll(grid);
                 boolean res = allWin.isIfwin();

@@ -32,4 +32,15 @@ public class Grid {
         return this.cells;
     }
 
+    /**
+     * Initialize the Grid according to a Array of integrate, which represents a sudoku.
+     */
+    public void initializeGrid(int[][] sudoku) {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                Cell cell = new Cell(i, j, sudoku[i][j]);
+                addCell(cell);
+            }
+        }
+    }
 }
