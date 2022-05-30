@@ -3,21 +3,17 @@ package model;
 import java.util.Arrays;
 
 public class SolvedSudokuGenerator {
+    private int[][] sudoku;
 
-    // crea sudoku mettici dentro cosa randoica
-    // chiama su sudoku il metodo solveSudoku --> sudoku.solveSudoku
-    private int[][] sudoku = {
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
-            { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
-    };
-
+    public SolvedSudokuGenerator() {
+        sudoku = new int[9][9];
+        for(int i = 0; i < 9; i++) {
+            for(int t = 0; t < 9; t++) {
+                sudoku[i][t] = 0;
+            }
+        }
+    }
+    
     public Grid makeSudoku() {
         int aaa = 0;
         int bbb = 0;
