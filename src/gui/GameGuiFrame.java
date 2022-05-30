@@ -77,9 +77,9 @@ public class GameGuiFrame extends JFrame {
         JPanel main = new JPanel();
         main.setLayout(borderLayout);
 
-        // North
-        JLabel title = new JLabel("BlueSudoku", JLabel.CENTER);
-        main.add(title, BorderLayout.NORTH);
+        // // North
+        // JLabel title = new JLabel("BlueSudoku", JLabel.CENTER);
+        // main.add(title, BorderLayout.NORTH);
 
         // South
         FlowLayout flowLayout = new FlowLayout();
@@ -87,9 +87,9 @@ public class GameGuiFrame extends JFrame {
         mainSouth.setLayout(flowLayout);
         main.add(mainSouth, BorderLayout.SOUTH);
 
-        JButton check = new JButton("Check");
+        JButton check = new JButton("CHECK");
         mainSouth.add(check);
-        JButton menue = new JButton("Menu");
+        JButton menue = new JButton("MENU");
         mainSouth.add(menue);
 
         // Center
