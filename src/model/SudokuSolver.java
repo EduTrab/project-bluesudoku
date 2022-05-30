@@ -14,7 +14,7 @@ package model;
 
 public class SudokuSolver {
     private static final int GRID_SIZE = 9;// GRID_SIZE
-    private int[][] sudoku;
+    private int[][] sudoku = new int[9][9];
 
     /**
      * Initialize the SudokuSolver by create an array of int
@@ -34,8 +34,8 @@ public class SudokuSolver {
      * 
      * @return the GRID_SIZE
      */
-    public int getGridSize() {
-        return this.GRID_SIZE;
+    public static int getGridSize() {
+        return GRID_SIZE;
     }
 
     /**
