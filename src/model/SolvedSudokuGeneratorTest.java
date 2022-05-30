@@ -11,4 +11,5 @@ public class SolvedSudokuGeneratorTest {
         assertTrue(solvedSudokuGenerator.makeSudoku() instanceof Grid);
 
     }
+
 }

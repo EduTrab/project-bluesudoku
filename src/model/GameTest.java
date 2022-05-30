@@ -53,6 +53,16 @@ public class GameTest {
         model.Game game1 = new model.Game();
         game1.initialize("123");
     }
+    /*
+     * TODO
+     * 
+     * @Test
+     * public void testSetGrid() {
+     * Game testSetGrid = new Game();
+     * assertTrue(testSetGrid.setGrid(Grid grid) instanceof void);
+     * 
+     * }
+     */
 
     @Test
     public void testaiResult() {
