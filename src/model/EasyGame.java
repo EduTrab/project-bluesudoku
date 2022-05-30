@@ -2,7 +2,6 @@ package model;
 
 import java.util.Random;
 
-
 /**
  * EasyGame class is a childclass of Game class, which holds a method
  * to initalize itself with a easy sudoku file
@@ -10,19 +9,16 @@ import java.util.Random;
  * @author hech@usi.ch
  * @version 2022.05.29
  */
-public class EasyGame extends Game
-{
+public class EasyGame extends Game {
 
-    public EasyGame()
-    {
+    public EasyGame() {
         super();
     }
 
     /**
      * Initialize the EasyGame by randomly choosing a easy sudoku file.
      */
-    public void initialize()
-    {
+    public void initialize() {
         super.randomInitialize("easy");
     }
 }

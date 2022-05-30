@@ -44,10 +44,10 @@ public class Game {
         return this.grid;
     }
 
-    public void setGrid(Grid grid){
+    public void setGrid(Grid grid) {
         this.grid = grid;
     }
-    
+
     /**
      * An accessor method to get the SudokuSolver of the current game.
      * 
@@ -85,7 +85,7 @@ public class Game {
         }
         this.solver.initialize(this.getGrid());
     }
-    
+
     /**
      * Randomly choose a sudoku file of the given difficulty. Use it
      * to initialize the game.
@@ -121,16 +121,16 @@ public class Game {
     public void emptyCell(int xcoordinate, int ycoordinate) {
         this.changeCellValue(xcoordinate, ycoordinate, 0);
     }
-    
+
     /**
      * Ask the SudokuSolver of this game check if this sudoku solvable
      */
     public String AIResult() {
         String result = "";
         int[][] sudoku = solver.getSudoku();
-        if((boolean)solver.solveSudoku(sudoku)[0]) {
+        if ((boolean) solver.solveSudoku(sudoku)[0]) {
             result = "Solved successfully!!!";
-        } 
+        }
         return result;
     }
 

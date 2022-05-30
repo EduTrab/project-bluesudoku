@@ -16,7 +16,7 @@ public class Column extends CellCollection {
     /**
      * Constructor of instances of class Column.
      * 
-     * @param theGrid The grid in which this Column is.
+     * @param theGrid   The grid in which this Column is.
      * @param rowNumber The number of this Column.
      */
     public Column(Grid theGrid, int columnNumber) {
@@ -24,7 +24,7 @@ public class Column extends CellCollection {
     }
 
     /**
-     * Intialize the Column by adding corresponding cells of the Grid 
+     * Intialize the Column by adding corresponding cells of the Grid
      * to which this Column belongs as its elements.
      * 
      * This method overrides the method with the same name of CellCollection class.

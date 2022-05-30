@@ -28,7 +28,8 @@ public class SingleUnitWin {
     }
 
     /**
-     * Return true if there is no same elements in the CellCollection, otherwise return false.
+     * Return true if there is no same elements in the CellCollection, otherwise
+     * return false.
      * 
      * @param row The row needs to be tested
      * @return ifwin True if there is no same elements in the row, otherwise return

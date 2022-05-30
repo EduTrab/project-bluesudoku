@@ -15,16 +15,16 @@ public class Row extends CellCollection {
     /**
      * Constructor for instances of class Row with param theGrid and row.
      * 
-     * @param theGrid The grid in which this Row is.
+     * @param theGrid   The grid in which this Row is.
      * @param rowNumber The number of this Row.
      */
-    
+
     public Row(Grid theGrid, int rowNumber) {
         super(theGrid, rowNumber);
     }
-    
+
     /**
-     * Intialize the Row by adding corresponding cells of the Grid 
+     * Intialize the Row by adding corresponding cells of the Grid
      * to which this Row belongs as its elements.
      * 
      * This method overrides the method with the same name of CellCollection class.
@@ -32,9 +32,9 @@ public class Row extends CellCollection {
     @Override
     public void initializeCollection() {
         for (int i = 0; i < 9; i++) {
-          int current = i + (this.getNumber() - 1) * 9;
-          Cell objectCell = getGrid().getCells().get(current);
-          this.getCells().add(objectCell);
+            int current = i + (this.getNumber() - 1) * 9;
+            Cell objectCell = getGrid().getCells().get(current);
+            this.getCells().add(objectCell);
         }
     }
 }

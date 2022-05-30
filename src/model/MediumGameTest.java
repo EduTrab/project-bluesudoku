@@ -6,23 +6,19 @@ import org.junit.Test;
 /**
  * The test class MediumGameTest.
  *
- * @author  (your name)
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class MediumGameTest
-{
+public class MediumGameTest {
     /**
      * Default constructor for test class MediumGameTest
      */
-    public MediumGameTest()
-    {
+    public MediumGameTest() {
     }
 
     @Test
-    public void testMedium()
-    {
+    public void testMedium() {
         model.MediumGame mediumGa1 = new model.MediumGame();
         mediumGa1.initialize();
     }
 }
-

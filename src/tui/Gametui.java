@@ -19,14 +19,14 @@ public class Gametui {
     private SudokuPrinter printer;
     private SudokuPausa pausaGenerator;
     private SudokuGrid grid;
-    
+
     /**
      * Accessor method to get the Game of this Gametui.
      */
     public Game getGame() {
         return this.game;
     }
-    
+
     /**
      * Display the difficulty selection interface.
      * 
@@ -50,23 +50,23 @@ public class Gametui {
 
             if (option == 1) {
                 this.game = new EasyGame();
-                ((EasyGame)game).initialize();
+                ((EasyGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 2) {
                 this.game = new MediumGame();
-                ((MediumGame)game).initialize();
+                ((MediumGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 3) {
                 this.game = new HardGame();
-                ((HardGame)game).initialize();
+                ((HardGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 4) {
                 this.game = new DIYGame();
-                ((DIYGame)game).initialize();
+                ((DIYGame) game).initialize();
                 grid.sudokuGrid(this);
             } else if (option == 5) {
                 this.game = new DIYGame();
-                ((DIYGame)game).initialize();
+                ((DIYGame) game).initialize();
                 game.setGrid(new SolvedSudokuGenerator().makeSudoku());
                 grid.sudokuGrid(this);
             } else if (option == 6) {
@@ -77,5 +77,5 @@ public class Gametui {
         }
         System.out.println("Good bye");
     }
-        
+
 }

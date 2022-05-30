@@ -22,7 +22,8 @@ public class SingleKindWin {
     }
 
     /**
-     * Return true if all CellCollections of this kind met the win conditional, otherwise return false.
+     * Return true if all CellCollections of this kind met the win conditional,
+     * otherwise return false.
      * 
      * @param grid The current grid
      * @return True if all rows met the win conditional, otherwise return false
@@ -30,7 +31,7 @@ public class SingleKindWin {
     public boolean testSingleKind(Grid grid, String kind) {
         this.ifwin = true;
         for (int i = 1; i < 10; i++) {
-            switch(kind){
+            switch (kind) {
                 case "Column":
                     current = new Column(grid, i);
                     break;

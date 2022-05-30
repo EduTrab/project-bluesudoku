@@ -8,7 +8,7 @@ package model;
  * For example subGrid1 contains cell1,1, cell2,1, cell3,1, cell1,2, cell2,2,
  * cell3,2,..., cell3,3.
  * 
- * SubGrid class has 2 fields. 
+ * SubGrid class has 2 fields.
  * left and down are used to locate the elements of this SubGrid.
  * 
  * @author trabae@usi.ch
@@ -18,21 +18,21 @@ package model;
 public class SubGrid extends CellCollection {
     private int left;
     private int down;
-    
+
     /**
      * Constructor of instances of class subGrid.
      * 
-     * @param theGrid The grid in which this SubGrid is.
+     * @param theGrid       The grid in which this SubGrid is.
      * @param subGridNumber The number of this SubGrid.
      */
     public SubGrid(Grid theGrid, int subGridNumber) {
-        super(theGrid,subGridNumber);
+        super(theGrid, subGridNumber);
         int left = (this.getNumber() - 1) % 3;
         int down = (this.getNumber() - 1) / 3;
     }
 
     /**
-     * Intialize the SubGrid by adding corresponding cells of the Grid 
+     * Intialize the SubGrid by adding corresponding cells of the Grid
      * to which this SubGrid belongs as its elements.
      * 
      * This method overrides the method with the same name of CellCollection class.

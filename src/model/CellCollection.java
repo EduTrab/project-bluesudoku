@@ -10,7 +10,8 @@ import java.util.ArrayList;
  * 
  * CellCollection class has 3 field. cells is an ArrayList of Cell that
  * holds all elements of the CellCollection. grid is the Grid this CellColletion
- * belongs to. number is the number of this CellCollection (from 1 to 9, inclusive)
+ * belongs to. number is the number of this CellCollection (from 1 to 9,
+ * inclusive)
  *
  * @author trabae@usi.ch
  * @author hech@usi.ch
@@ -29,15 +30,15 @@ public class CellCollection {
         grid = theGrid;
         number = theNumber;
     }
-    
+
     public Grid getGrid() {
         return grid;
     }
-    
+
     public int getNumber() {
         return number;
     }
-    
+
     /**
      * Initialize the CellCollection by adding 9 empty Cells as its elements.
      */

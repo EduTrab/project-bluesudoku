@@ -24,7 +24,7 @@ public class SudokuSolver {
     public SudokuSolver() {
 
     }
-    
+
     /**
      * Initialize the SudokuSolver by create an array of int
      * according to the grid of the work sudoku.
@@ -33,7 +33,7 @@ public class SudokuSolver {
      */
     public void initialize(Grid grid) {
         sudoku = new int[9][9];
-        for(int i = 0; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
             createRowArray(grid, i);
         }
     }
@@ -55,7 +55,7 @@ public class SudokuSolver {
     public int[][] getSudoku() {
         return this.sudoku;
     }
-    
+
     /**
      * The check if the number which will be inserted is already exist in
      * this row.
@@ -152,25 +152,24 @@ public class SudokuSolver {
                             sudoku[row][column] = numberToTry;
 
                             if ((boolean) solveSudoku(sudoku)[0]) { // recursion
-                                return new Object[]{true, sudoku};
+                                return new Object[] { true, sudoku };
                             } else {
                                 sudoku[row][column] = 0;
                             }
                         }
                     }
-                    return new Object[]{false, sudoku};
-                     // sudoku not solvable
+                    return new Object[] { false, sudoku };
+                    // sudoku not solvable
                 }
             }
         }
-        return new Object[]{true, sudoku};
+        return new Object[] { true, sudoku };
     }
-    
-    
+
     /**
      * Convert a single row of the work sudoku to an array of integer/
      * 
-     * @param grid The grid of the work sudoku
+     * @param grid      The grid of the work sudoku
      * @param rowNumber The number of the object row
      */
     public void createRowArray(Grid grid, int rowNumber) {

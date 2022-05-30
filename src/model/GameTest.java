@@ -49,16 +49,13 @@ public class GameTest {
     }
 
     @Test
-    public void testInvalidSudokuFile()
-    {
+    public void testInvalidSudokuFile() {
         model.Game game1 = new model.Game();
         game1.initialize("123");
     }
-    
 
     @Test
-    public void testAIResult()
-    {
+    public void testAIResult() {
         model.Game game1 = new model.Game();
         game1.initialize("sudokuFiles/easy1.txt");
         game1.getSolver();
@@ -66,12 +63,8 @@ public class GameTest {
     }
 
     @Test
-    public void testRandomInitialize()
-    {
+    public void testRandomInitialize() {
         model.Game game1 = new model.Game();
         game1.randomInitialize("easy");
     }
 }
-
-
-

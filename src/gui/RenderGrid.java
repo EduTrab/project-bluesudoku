@@ -42,7 +42,6 @@ import model.SudokuSolver;
  * @version 27.05.2022
  */
 
-
 public class RenderGrid {
     final boolean RIGHT_TO_LEFT = false;
     private JFrame frame = new JFrame("BlueSudoku");
@@ -64,7 +63,6 @@ public class RenderGrid {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setMinimumSize(new Dimension(750, 750));
         frame.setPreferredSize(new Dimension(750, 750));
-        
 
         // Set up the content pane.
         setupPane(frame.getContentPane());
@@ -91,8 +89,6 @@ public class RenderGrid {
 
     }
 
-
-
     /**
      * this is the first interface of the user.
      * 
@@ -101,8 +97,6 @@ public class RenderGrid {
     public void setupMainPane(Container pane) {
         JPanel listPane = new JPanel();
         listPane.setLayout(new BoxLayout(listPane, BoxLayout.PAGE_AXIS));
-
-
 
         // first button
         JLabel title = new JLabel("BlueSudoku");
@@ -135,8 +129,6 @@ public class RenderGrid {
         JButton solvedSudkuGenerator = new JButton("solved Sudoku generator");
         listPane.add(solvedSudkuGenerator);
 
-
-
         if (RIGHT_TO_LEFT) {
             pane.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         }
@@ -149,7 +141,7 @@ public class RenderGrid {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 game = new EasyGame();
-                ((EasyGame)game).initialize();
+                ((EasyGame) game).initialize();
                 gameGUI();
                 return;
             }
@@ -160,7 +152,7 @@ public class RenderGrid {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 game = new MediumGame();
-                ((MediumGame)game).initialize();
+                ((MediumGame) game).initialize();
                 gameGUI();
                 return;
             }
@@ -171,7 +163,7 @@ public class RenderGrid {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 game = new HardGame();
-                ((HardGame)game).initialize();
+                ((HardGame) game).initialize();
                 gameGUI();
                 return;
             }
@@ -182,7 +174,7 @@ public class RenderGrid {
                 System.out.println("menue");
                 frame.getContentPane().removeAll();
                 game = new HardGame();
-                ((HardGame)game).initialize();
+                ((HardGame) game).initialize();
                 game.setGrid(new SolvedSudokuGenerator().makeSudoku());
                 gameGUI();
                 return;
@@ -198,7 +190,7 @@ public class RenderGrid {
      * 
      * @param pane the interface
      */
-    
+
     public void setupPane(Container pane) {
 
         // pane.add(new JLabel("test"));
@@ -227,13 +219,14 @@ public class RenderGrid {
         // new GridLayout(9,9); // have to spacify amount of rows and colums
         main.add(centerLayoutPanel, BorderLayout.CENTER);
 
-        /* first atempot
-        // West
-        res = true;
-        JLabel result = new JLabel(res + " play again", JLabel.CENTER);
-        main.add(result, BorderLayout.WEST);
-        result.setFont(new Font("Verdana", Font.PLAIN, 25));
-        */
+        /*
+         * first atempot
+         * // West
+         * res = true;
+         * JLabel result = new JLabel(res + " play again", JLabel.CENTER);
+         * main.add(result, BorderLayout.WEST);
+         * result.setFont(new Font("Verdana", Font.PLAIN, 25));
+         */
 
         // Listeners
         check.addActionListener(new ActionListener() {
@@ -241,19 +234,21 @@ public class RenderGrid {
                 System.out.println("check");
 
                 int[][] sudoku = getRealTimeSuoduku(centerLayoutPanel);
-                /* DEBUG
-                for (int i = 0; i < 9; i++) {
-                    for (int j = 0; j < 9; j++) {
-                        System.out.print(sudoku[i][j] + " ");
-                    }
-                    System.out.println();
-                }*/
+                /*
+                 * DEBUG
+                 * for (int i = 0; i < 9; i++) {
+                 * for (int j = 0; j < 9; j++) {
+                 * System.out.print(sudoku[i][j] + " ");
+                 * }
+                 * System.out.println();
+                 * }
+                 */
                 // check if the grid is correct
 
                 Grid grid = new Grid();
                 for (int i = 0; i < 9; i++) {
                     for (int j = 0; j < 9; j++) {
-                        Cell cell =  new Cell(i, j , sudoku[i][j]);
+                        Cell cell = new Cell(i, j, sudoku[i][j]);
                         grid.addCell(cell);
                     }
                 }
@@ -280,8 +275,6 @@ public class RenderGrid {
         pane.add(main);
     }
 
-
-
     private int[][] getRealTimeSuoduku(JPanel centerLayoutPanel) {
 
         int[][] tempSudoku = new int[9][9];
@@ -293,7 +286,7 @@ public class RenderGrid {
                 int var = 0;
                 if (centerLayoutPanel.getComponent(pos) instanceof JTextField) {
                     JTextField textField = (JTextField) centerLayoutPanel.getComponent(pos);
-                    //System.out.println(textField.getText() + " JTextField");
+                    // System.out.println(textField.getText() + " JTextField");
                     // try catch converts iknistial string to an int
                     try {
                         var = Integer.parseInt(textField.getText());
@@ -302,7 +295,7 @@ public class RenderGrid {
                     }
                 } else {
                     JLabel jLabel = (JLabel) centerLayoutPanel.getComponent(pos);
-                    //System.out.println(jLabel.getText() + " JLabel");
+                    // System.out.println(jLabel.getText() + " JLabel");
                     try { // This try catch might be unnecessary
                         var = Integer.parseInt(jLabel.getText());
                     } catch (NumberFormatException e) {

@@ -1,6 +1,6 @@
 package tui;
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 /**
  * This class offers a method that allows the tui pause for a while.
@@ -8,13 +8,11 @@ import java.util.Scanner;
  * @author hech@usi.ch
  * @version 2022.05.29
  */
-public class SudokuPausa
-{
+public class SudokuPausa {
     /**
      * Constructor for objects of class sudokuPausa
      */
-    public SudokuPausa()
-    {
+    public SudokuPausa() {
     }
 
     /**

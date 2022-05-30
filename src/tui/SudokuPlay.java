@@ -1,7 +1,7 @@
 package tui;
+
 import java.util.Scanner;
 import model.*;
-
 
 /**
  * Display the change value interface.
@@ -9,15 +9,13 @@ import model.*;
  * @author hech@usi.ch
  * @version 2022.05.29
  */
-public class SudokuPlay
-{
+public class SudokuPlay {
 
     /**
      * Constructor for objects of class SudokuPlay
      */
-    public SudokuPlay()
-    {
- 
+    public SudokuPlay() {
+
     }
 
     /**

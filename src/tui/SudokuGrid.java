@@ -1,7 +1,7 @@
 package tui;
+
 import java.util.Scanner;
 import model.*;
-
 
 /**
  * Display the current sudoku game and allow the users
@@ -10,14 +10,12 @@ import model.*;
  * @author hech@usi.ch
  * @version 2022.05.29
  */
-public class SudokuGrid
-{
-   
+public class SudokuGrid {
+
     /**
      * Constructor for objects of class SudokuGrid
      */
-    public SudokuGrid()
-    {
+    public SudokuGrid() {
     }
 
     /**
@@ -29,7 +27,7 @@ public class SudokuGrid
         Game game = tui.getGame();
         SudokuPlay play = new SudokuPlay();
         SudokuPrinter printer = new SudokuPrinter();
-        while(true) {
+        while (true) {
             Scanner in = new Scanner(System.in);
             printer.printGrid(game.getGrid().getCells());
             System.out.println(
@@ -39,7 +37,7 @@ public class SudokuGrid
             } catch (Exception exception) {
                 continue;
             }
-            
+
             if (option == 1) {
                 play.play(game);
             } else if (option == 2) {
@@ -53,10 +51,10 @@ public class SudokuGrid
             } else if (option == 3) {
                 System.out.println(game.AIResult());
                 for (int row = 0; row < game.getSolver().getGridSize(); row++) {
-                     for (int column = 0; column < game.getSolver().getGridSize(); column++) {
-                         System.out.print(game.getSolver().getSudoku()[row][column]);
-                     }
-                     System.out.println();
+                    for (int column = 0; column < game.getSolver().getGridSize(); column++) {
+                        System.out.print(game.getSolver().getSudoku()[row][column]);
+                    }
+                    System.out.println();
                 }
             } else if (option == 4) {
                 break;

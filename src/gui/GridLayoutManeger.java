@@ -32,25 +32,25 @@ public class GridLayoutManeger {
 
         int[][] sudoku = new int[9][9];
         int pos = 0;
-        for (int i = 0; i < grid.getCells().size(); i++){
-            sudoku[pos][i%9] = grid.getCells().get(i).getValue();
-            if (i%9 == 8){
+        for (int i = 0; i < grid.getCells().size(); i++) {
+            sudoku[pos][i % 9] = grid.getCells().get(i).getValue();
+            if (i % 9 == 8) {
                 pos++;
             }
         }
         /*
-        int[][] sudoku = {
-                { 0, 9, 7, 3, 8, 1, 2, 4, 5 },
-                { 8, 1, 3, 4, 2, 5, 7, 6, 9 },
-                { 2, 4, 5, 6, 7, 9, 1, 8, 3 },
-                { 9, 3, 4, 5, 1, 8, 6, 7, 2 },
-                { 7, 6, 8, 9, 3, 2, 4, 5, 1 },
-                { 5, 2, 1, 7, 4, 6, 9, 3, 8 },
-                { 1, 7, 9, 8, 6, 3, 5, 2, 4 },
-                { 3, 5, 6, 2, 9, 4, 8, 1, 7 },
-                { 4, 8, 2, 1, 5, 7, 3, 9, 6 }
-        }; // TODO automat sudoku insertion
-        */
+         * int[][] sudoku = {
+         * { 0, 9, 7, 3, 8, 1, 2, 4, 5 },
+         * { 8, 1, 3, 4, 2, 5, 7, 6, 9 },
+         * { 2, 4, 5, 6, 7, 9, 1, 8, 3 },
+         * { 9, 3, 4, 5, 1, 8, 6, 7, 2 },
+         * { 7, 6, 8, 9, 3, 2, 4, 5, 1 },
+         * { 5, 2, 1, 7, 4, 6, 9, 3, 8 },
+         * { 1, 7, 9, 8, 6, 3, 5, 2, 4 },
+         * { 3, 5, 6, 2, 9, 4, 8, 1, 7 },
+         * { 4, 8, 2, 1, 5, 7, 3, 9, 6 }
+         * }; // TODO automat sudoku insertion
+         */
 
         // initialys JLabel
         JLabel jlabel = new JLabel();
