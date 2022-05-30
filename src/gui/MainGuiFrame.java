@@ -19,6 +19,7 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -87,36 +88,29 @@ public class MainGuiFrame extends JFrame {
 
         // 2d button
         JLabel level = new JLabel("Level");
-        level.setFont(new Font("Verdana", Font.PLAIN, 20));
-        level.setAlignmentX(Component.CENTER_ALIGNMENT);
-        listPane.add(level);
-        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        initComponent(level, listPane);
+        
 
         // 3d button
         JButton easy = new JButton("EASY");
-        listPane.setFont(new Font("Verdana", Font.PLAIN, 20));
-        easy.setAlignmentX(Component.CENTER_ALIGNMENT);
-        listPane.add(easy);
-        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        initComponent(easy, listPane);
         //
 
         // 4th button
         JButton medium = new JButton("MEDIUM");
-        medium.setAlignmentX(Component.CENTER_ALIGNMENT);
-        listPane.add(medium);
-        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        initComponent(medium, listPane);
         //
 
         // 5t button
         JButton hard = new JButton("HARD");
-        hard.setAlignmentX(Component.CENTER_ALIGNMENT);
-        listPane.add(hard);
-        listPane.add(Box.createRigidArea(new Dimension(0, 5)));
+        initComponent(hard, listPane);
 
         // 6th button
         JButton solvedSudkuGenerator = new JButton("SOLVED SUDOKU GENERATO");
         solvedSudkuGenerator.setAlignmentX(Component.CENTER_ALIGNMENT);
         listPane.add(solvedSudkuGenerator);
+        initComponent(solvedSudkuGenerator, listPane);
+
 
         // Listener
         if (RIGHT_TO_LEFT) {
@@ -149,6 +143,13 @@ public class MainGuiFrame extends JFrame {
 
         pane.add(listPane);
 
+    }
+
+    private void initComponent(JComponent component, JPanel container) {
+        component.setFont(new Font("Verdana", Font.PLAIN, 20));
+        component.setAlignmentX(Component.CENTER_ALIGNMENT);
+        container.add(component);
+        container.add(Box.createRigidArea(new Dimension(0, 5)));
     }
 
     private void initGuiFrame(Game game) {

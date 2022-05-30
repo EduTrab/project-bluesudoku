@@ -17,12 +17,4 @@ public class Main {
         RenderGrid renderGrid = new RenderGrid();
         renderGrid.run();
     }
-
-    /**
-     * Run the GUI.
-     */
-    public void run() {
-        RenderGrid renderGrid = new RenderGrid();
-        renderGrid.run();
-    }
 }

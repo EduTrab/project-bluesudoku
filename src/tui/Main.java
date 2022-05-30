@@ -23,12 +23,4 @@ public class Main {
         Gametui gametui = new Gametui();
         gametui.chooseDifficulty();
     }
-
-    /**
-     * Run the TUI.
-     */
-    public void run() {
-        Gametui gametui = new Gametui();
-        gametui.chooseDifficulty();
-    }
 }
