@@ -27,36 +27,36 @@ The goal of the puzzle is to fill the rest of the grid, using all the numbers 1â
 
 ## Screenshots of TUI
 * Fill the cells
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_fill.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/tui_fill.png)
 
 * Check the answer
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_checkAnswer.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/tui_checkAnswer.png)
 
 * DIYSudoku puzzle
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_DIYSudoku.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/tui_DIYSudoku.png)
 
 * AI Solution
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/tui_aiSulution.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/tui_aiSulution.png)
 
 ## Screenshots of GUI
 * Main menu
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/gui_menu.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/gui_menu.png)
 
 * Sudoku puzzle
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/gui_game.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/gui_game.png)
 
 ## Screenshots of class diagrams
 * Packge
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_package.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/diagram_package.png)
 
 * Model
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_model.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/diagram_model.png)
 
 * TUI
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_tui.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/diagram_tui.png)
 
 * GUI
-![image](https://github.com/usi-pf2-2022/project-bluesudoku/blob/main/screenShots/diagram_gui.png)
+![image](https://github.com/EduTrab/project-bluesudoku/blob/main/screenShots/diagram_gui.png)
 
 ## Project Structure
 
